@@ -14,7 +14,7 @@ class LandingScreenViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        searchButton.layer.cornerRadius = 5.0
+        searchButton.defaultStyle()
     }
 
     override func didReceiveMemoryWarning() {

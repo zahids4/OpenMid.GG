@@ -14,6 +14,7 @@
 		30220EFB20C0A6B800CB21D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30220EF920C0A6B800CB21D0 /* LaunchScreen.storyboard */; };
 		30220F0620C0A6B800CB21D0 /* Project__NeteroTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30220F0520C0A6B800CB21D0 /* Project__NeteroTests.swift */; };
 		30220F1120C0AAC500CB21D0 /* LandingScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30220F1020C0AAC500CB21D0 /* LandingScreenViewController.swift */; };
+		30220F1320C0AE9500CB21D0 /* ButtonStyling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30220F1220C0AE9500CB21D0 /* ButtonStyling.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		30220F0520C0A6B800CB21D0 /* Project__NeteroTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project__NeteroTests.swift; sourceTree = "<group>"; };
 		30220F0720C0A6B800CB21D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		30220F1020C0AAC500CB21D0 /* LandingScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingScreenViewController.swift; sourceTree = "<group>"; };
+		30220F1220C0AE9500CB21D0 /* ButtonStyling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyling.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 		30220EEC20C0A6B600CB21D0 /* Project: Netero */ = {
 			isa = PBXGroup;
 			children = (
+				30220F1420C0AF2800CB21D0 /* Styles */,
 				30220EED20C0A6B600CB21D0 /* AppDelegate.swift */,
 				30220EF120C0A6B600CB21D0 /* Main.storyboard */,
 				30220EF720C0A6B800CB21D0 /* Assets.xcassets */,
@@ -97,6 +100,14 @@
 				30220F0720C0A6B800CB21D0 /* Info.plist */,
 			);
 			path = "Project: NeteroTests";
+			sourceTree = "<group>";
+		};
+		30220F1420C0AF2800CB21D0 /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				30220F1220C0AE9500CB21D0 /* ButtonStyling.swift */,
+			);
+			path = Styles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,6 +211,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30220F1320C0AE9500CB21D0 /* ButtonStyling.swift in Sources */,
 				30220F1120C0AAC500CB21D0 /* LandingScreenViewController.swift in Sources */,
 				30220EF620C0A6B600CB21D0 /* Project__Netero.xcdatamodeld in Sources */,
 				30220EEE20C0A6B600CB21D0 /* AppDelegate.swift in Sources */,

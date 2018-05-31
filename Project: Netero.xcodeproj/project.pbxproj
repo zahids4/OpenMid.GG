@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		30220EEE20C0A6B600CB21D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30220EED20C0A6B600CB21D0 /* AppDelegate.swift */; };
-		30220EF020C0A6B600CB21D0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30220EEF20C0A6B600CB21D0 /* ViewController.swift */; };
 		30220EF320C0A6B600CB21D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30220EF120C0A6B600CB21D0 /* Main.storyboard */; };
 		30220EF620C0A6B600CB21D0 /* Project__Netero.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 30220EF420C0A6B600CB21D0 /* Project__Netero.xcdatamodeld */; };
 		30220EF820C0A6B800CB21D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30220EF720C0A6B800CB21D0 /* Assets.xcassets */; };
 		30220EFB20C0A6B800CB21D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30220EF920C0A6B800CB21D0 /* LaunchScreen.storyboard */; };
 		30220F0620C0A6B800CB21D0 /* Project__NeteroTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30220F0520C0A6B800CB21D0 /* Project__NeteroTests.swift */; };
+		30220F1120C0AAC500CB21D0 /* LandingScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30220F1020C0AAC500CB21D0 /* LandingScreenViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,7 +29,6 @@
 /* Begin PBXFileReference section */
 		30220EEA20C0A6B600CB21D0 /* Project: Netero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project: Netero.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		30220EED20C0A6B600CB21D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		30220EEF20C0A6B600CB21D0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		30220EF220C0A6B600CB21D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		30220EF520C0A6B600CB21D0 /* Project__Netero.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Project__Netero.xcdatamodel; sourceTree = "<group>"; };
 		30220EF720C0A6B800CB21D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -38,6 +37,7 @@
 		30220F0120C0A6B800CB21D0 /* Project: NeteroTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Project: NeteroTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		30220F0520C0A6B800CB21D0 /* Project__NeteroTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project__NeteroTests.swift; sourceTree = "<group>"; };
 		30220F0720C0A6B800CB21D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		30220F1020C0AAC500CB21D0 /* LandingScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingScreenViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,12 +80,12 @@
 			isa = PBXGroup;
 			children = (
 				30220EED20C0A6B600CB21D0 /* AppDelegate.swift */,
-				30220EEF20C0A6B600CB21D0 /* ViewController.swift */,
 				30220EF120C0A6B600CB21D0 /* Main.storyboard */,
 				30220EF720C0A6B800CB21D0 /* Assets.xcassets */,
 				30220EF920C0A6B800CB21D0 /* LaunchScreen.storyboard */,
 				30220EFC20C0A6B800CB21D0 /* Info.plist */,
 				30220EF420C0A6B600CB21D0 /* Project__Netero.xcdatamodeld */,
+				30220F1020C0AAC500CB21D0 /* LandingScreenViewController.swift */,
 			);
 			path = "Project: Netero";
 			sourceTree = "<group>";
@@ -200,8 +200,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30220F1120C0AAC500CB21D0 /* LandingScreenViewController.swift in Sources */,
 				30220EF620C0A6B600CB21D0 /* Project__Netero.xcdatamodeld in Sources */,
-				30220EF020C0A6B600CB21D0 /* ViewController.swift in Sources */,
 				30220EEE20C0A6B600CB21D0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -12,17 +12,20 @@ import Alamofire
 class Communicator {
     let apiKey = "RGAPI-17f75ea7-2e99-4993-87f2-e3f989aafdd3"
     
-    func getSummoner(region: String, summonerName: String) {
+    func getSummoner(region: String, summonerName: String, completionHandler: @escaping ([String:Any]?, Error?) -> ()) {
+        getCallForSummunor(region: region, summonerName: summonerName, completionHandler: completionHandler)
+    }
+    
+    func getCallForSummunor(region: String, summonerName: String, completionHandler: @escaping ([String:Any]?, Error?) -> ()) {
         Alamofire.request("https://\(region).api.riotgames.com/lol/summoner/v3/summoners/by-name/\(summonerName)?api_key=" + apiKey).validate().responseJSON { response in
-            print("Result: \(response.result)")  // response
-            
+            print("Result: \(response.result)")
             switch response.result {
-            case .success:
-                if let json = response.result.value {
-                    print("JSON: \(json)")
-                }
+            case .success(let value):
+                print(type(of: value))
+                print("JSON: \(value)")
+                completionHandler(value as? [String:Any], nil)
             case .failure(let error):
-                print(error)
+                completionHandler(nil, error)
             }
         }
     }

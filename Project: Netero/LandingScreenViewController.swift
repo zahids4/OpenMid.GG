@@ -14,10 +14,15 @@ class LandingScreenViewController: UIViewController {
     @IBOutlet weak var searchButton: UIButton!
     
     let communicator = Communicator()
+    var responeObject: [String:Any]?
     override func viewDidLoad() {
         super.viewDidLoad()
         searchButton.defaultStyle()
-        communicator.getSummoner(region: "NA1", summonerName: "vocalizedpanda")
+        communicator.getSummoner(region: "NA1", summonerName: "vocalizedpanda") { responseObject, error in
+            print("responseObject = \(responseObject); error = \(error)")
+            self.responeObject = responseObject
+            return
+        }
     }
 
     override func didReceiveMemoryWarning() {

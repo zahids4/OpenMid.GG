@@ -15,7 +15,9 @@ class LandingScreenViewController: UIViewController {
     
     let communicator = Communicator()
     let errorHandler = ErrorHandler()
+    
     var resposneObject: [String:Any]?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         searchButton.defaultStyle()
@@ -27,19 +29,24 @@ class LandingScreenViewController: UIViewController {
     
     @IBAction func searchPressed(_ sender: Any) {
         let searchText = searchField.text
+        //ToDo: Add activity spinner later
+        searchButton.disable()
         if searchText!.range(of: "^[0-9\\p{L} _\\.]+$", options: .regularExpression) != nil {
             communicator.getSummoner(region: "NA1", summonerName: searchText!) { responseObject, error in
                 if responseObject != nil{
                     print(responseObject!)
+                    self.searchButton.enable()
                     self.resposneObject = responseObject
                 } else {
                     self.errorHandler.showErrorAlert(alertTitle: "Summoner not found", message: "Please enter a different Summoner Name", vc: self)
+                    self.searchButton.enable()
                 }
                 
                 return
             }
         } else {
             errorHandler.showErrorAlert(alertTitle: "Invalid Summoner Name", message: "Please enter a correct Summoner Name", vc: self)
+            searchButton.enable()
         }
     }
 }

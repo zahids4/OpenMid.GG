@@ -27,4 +27,19 @@ class Communicator {
         }
     }
     
+    func getMatchesForSummoner(region: String, accountId: String, completionHandler: @escaping ([[String:Any]]?, Error?) -> ()) {
+        getCallForSummunorMatches(region, accountId, completionHandler)
+    }
+    
+    func getCallForSummunorMatches(_ region: String,_ accountId: String,_ completionHandler: @escaping ([[String:Any]]?, Error?) -> ()) {
+        Alamofire.request("https://\(region).api.riotgames.com/lol/match/v3/matchlists/by-account/\(accountId)?api_key=" + apiKey).validate().responseJSON { response in
+            switch response.result {
+            case .success(let value):
+                completionHandler(value as? [[String:Any]], nil)
+            case .failure(let error):
+                completionHandler(nil, error)
+            }
+        }
+    }
+    
 }

@@ -1,0 +1,6 @@
+framework module Pods_Project__Netero {
+  umbrella header "Pods-Project: Netero-umbrella.h"
+
+  export *
+  module * { export * }
+}

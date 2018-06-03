@@ -1,0 +1,6 @@
+framework module Pods_Project__NeteroTests {
+  umbrella header "Pods-Project: NeteroTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

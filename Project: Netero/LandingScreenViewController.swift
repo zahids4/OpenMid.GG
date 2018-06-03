@@ -18,20 +18,27 @@ class LandingScreenViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         searchButton.defaultStyle()
-        communicator.getSummoner(region: "NA1", summonerName: "vocalizedpanda") { responseObject, error in
-            if responseObject != nil{
-                print(responseObject)
-                self.resposneObject = responseObject
-            } else {
-                print(error)
-            }
-            
-            return
-        }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-
+    
+    @IBAction func searchPressed(_ sender: Any) {
+        let searchText = searchField.text
+        if searchText!.range(of: "^[0-9\\p{L} _\\.]+$", options: .regularExpression) != nil {
+            communicator.getSummoner(region: "NA1", summonerName: searchText!) { responseObject, error in
+                if responseObject != nil{
+                    print(responseObject!)
+                    self.resposneObject = responseObject
+                } else {
+                    print("API Error" ,error!)
+                }
+                
+                return
+            }
+        } else {
+            print("text error")
+        }
+    }
 }

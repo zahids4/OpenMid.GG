@@ -14,6 +14,7 @@ class LandingScreenViewController: UIViewController {
     @IBOutlet weak var searchButton: UIButton!
     
     let communicator = Communicator()
+    let errorHandler = ErrorHandler()
     var resposneObject: [String:Any]?
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,13 +33,13 @@ class LandingScreenViewController: UIViewController {
                     print(responseObject!)
                     self.resposneObject = responseObject
                 } else {
-                    print("API Error" ,error!)
+                    self.errorHandler.showErrorAlert(alertTitle: "Summoner not found", message: "Please enter a different Summoner Name", vc: self)
                 }
                 
                 return
             }
         } else {
-            print("text error")
+            errorHandler.showErrorAlert(alertTitle: "Invalid Summoner Name", message: "Please enter a correct Summoner Name", vc: self)
         }
     }
 }

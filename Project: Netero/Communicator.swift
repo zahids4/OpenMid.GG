@@ -18,11 +18,8 @@ class Communicator {
     
     func getCallForSummunor(region: String, summonerName: String, completionHandler: @escaping ([String:Any]?, Error?) -> ()) {
         Alamofire.request("https://\(region).api.riotgames.com/lol/summoner/v3/summoners/by-name/\(summonerName)?api_key=" + apiKey).validate().responseJSON { response in
-            print("Result: \(response.result)")
             switch response.result {
             case .success(let value):
-                print(type(of: value))
-                print("JSON: \(value)")
                 completionHandler(value as? [String:Any], nil)
             case .failure(let error):
                 completionHandler(nil, error)

@@ -11,7 +11,6 @@ import UIKit
 extension UIButton {
     func defaultStyle() {
         self.layer.cornerRadius = 5.0
-        self.backgroundColor = UIColor(displayP3Red: 141/255, green: 221/255, blue: 251/255, alpha: 1.0)
-        self.tintColor = UIColor.white
+        self.backgroundColor = UIColor.white
     }
 }

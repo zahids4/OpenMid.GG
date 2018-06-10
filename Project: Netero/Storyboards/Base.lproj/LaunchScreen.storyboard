@@ -18,18 +18,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="NiV-GB-r6r">
-                                <rect key="frame" x="62" y="306.66666666666669" width="250" height="200"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="OpenMidGGLogo" translatesAutoresizingMaskIntoConstraints="NO" id="NiV-GB-r6r">
+                                <rect key="frame" x="16" y="307" width="343" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="0Xr-Aw-4Pd"/>
-                                    <constraint firstAttribute="width" constant="250" id="wov-XD-C1H"/>
+                                    <constraint firstAttribute="width" constant="343" id="wov-XD-C1H"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.44342765210000001" green="0.87737172839999999" blue="0.99928969140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="NiV-GB-r6r" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="JQH-hV-JVs"/>
-                            <constraint firstItem="NiV-GB-r6r" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="cpK-TA-KIk"/>
+                            <constraint firstItem="NiV-GB-r6r" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="1" id="cpK-TA-KIk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -40,6 +40,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Logo" width="200" height="200"/>
+        <image name="OpenMidGGLogo" width="1064" height="380"/>
     </resources>
 </document>

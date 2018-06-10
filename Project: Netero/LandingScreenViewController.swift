@@ -16,7 +16,7 @@ class LandingScreenViewController: UIViewController {
     let communicator = Communicator()
     let errorHandler = ErrorHandler()
     
-    var resposneObject: [String:Any]?
+    var responseObject: [String:Any]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +36,8 @@ class LandingScreenViewController: UIViewController {
                 if responseObject != nil{
                     print(responseObject!)
                     self.searchButton.enable()
-                    self.resposneObject = responseObject
+                    self.responseObject = responseObject
+                    self.performSegue(withIdentifier: "showSummonerProfileSegue", sender: self)
                 } else {
                     self.errorHandler.showErrorAlert(alertTitle: "Summoner not found", message: "Please enter a different Summoner Name", vc: self)
                     self.searchButton.enable()
@@ -47,6 +48,13 @@ class LandingScreenViewController: UIViewController {
         } else {
             errorHandler.showErrorAlert(alertTitle: "Invalid Summoner Name", message: "Please enter a correct Summoner Name", vc: self)
             searchButton.enable()
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showSummonerProfileSegue" {
+            let summonerProfileVC = segue.destination as! SummonerProfileViewController
+            summonerProfileVC.summonerObject = responseObject
         }
     }
 }

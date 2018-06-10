@@ -10,6 +10,7 @@
 		016283088580DE2FACB85FB4 /* Pods_Project__NeteroTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDE33A3F272D7461B0B068AA /* Pods_Project__NeteroTests.framework */; };
 		247448A86F53BD01B12D0E2B /* Pods_Project__Netero.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F63A8F30B4C1EB94735CE22 /* Pods_Project__Netero.framework */; };
 		300ACE4420CD907800E7C31B /* SummonerProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300ACE4320CD907800E7C31B /* SummonerProfileViewController.swift */; };
+		300ACE4620CD947E00E7C31B /* StringAny+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300ACE4520CD947E00E7C31B /* StringAny+Extensions.swift */; };
 		30220EEE20C0A6B600CB21D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30220EED20C0A6B600CB21D0 /* AppDelegate.swift */; };
 		30220EF320C0A6B600CB21D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30220EF120C0A6B600CB21D0 /* Main.storyboard */; };
 		30220EF620C0A6B600CB21D0 /* Project__Netero.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 30220EF420C0A6B600CB21D0 /* Project__Netero.xcdatamodeld */; };
@@ -37,6 +38,7 @@
 		09A686A220AA3CB402023D08 /* Pods-Project: Netero.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project: Netero.release.xcconfig"; path = "Pods/Target Support Files/Pods-Project: Netero/Pods-Project: Netero.release.xcconfig"; sourceTree = "<group>"; };
 		2F63A8F30B4C1EB94735CE22 /* Pods_Project__Netero.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Project__Netero.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		300ACE4320CD907800E7C31B /* SummonerProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummonerProfileViewController.swift; sourceTree = "<group>"; };
+		300ACE4520CD947E00E7C31B /* StringAny+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StringAny+Extensions.swift"; sourceTree = "<group>"; };
 		30220EEA20C0A6B600CB21D0 /* Project: Netero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project: Netero.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		30220EED20C0A6B600CB21D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30220EF220C0A6B600CB21D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				30220F1A20C4785F00CB21D0 /* UIButton+Extensions.swift */,
+				300ACE4520CD947E00E7C31B /* StringAny+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -357,6 +360,7 @@
 			files = (
 				30220F1620C462AA00CB21D0 /* Communicator.swift in Sources */,
 				30220F1B20C4785F00CB21D0 /* UIButton+Extensions.swift in Sources */,
+				300ACE4620CD947E00E7C31B /* StringAny+Extensions.swift in Sources */,
 				30220F1320C0AE9500CB21D0 /* ButtonStyling.swift in Sources */,
 				30220F1120C0AAC500CB21D0 /* LandingScreenViewController.swift in Sources */,
 				300ACE4420CD907800E7C31B /* SummonerProfileViewController.swift in Sources */,

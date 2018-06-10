@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cM4-Wh-mUd">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,11 +15,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="LandingScreenViewController" customModule="Project__Netero" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9t6-kZ-WaA">
-                                <rect key="frame" x="134" y="356.5" width="107" height="35"/>
+                                <rect key="frame" x="134" y="428.66666666666669" width="107" height="35"/>
                                 <color key="backgroundColor" red="1" green="0.98405645211195436" blue="0.97618378302580977" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="RF2-Mr-EYF"/>
@@ -31,7 +31,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Kr-mV-iz0">
-                                <rect key="frame" x="51" y="319" width="273" height="30"/>
+                                <rect key="frame" x="51" y="391" width="273" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="273" id="hRG-q5-qyt"/>
                                     <constraint firstAttribute="height" constant="30" id="uAe-dt-naW"/>
@@ -67,24 +67,47 @@
             <objects>
                 <viewController id="aFh-HD-Ohg" customClass="SummonerProfileViewController" customModule="Project__Netero" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WOE-UZ-OhK">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FXu-WU-vMy">
-                                <rect key="frame" x="16" y="96" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Summoner Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FXu-WU-vMy">
+                                <rect key="frame" x="15.999999999999986" y="96" width="224.66666666666663" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hZ6-TZ-AVS">
+                                <rect key="frame" x="16.000000000000004" y="140" width="61.333333333333343" height="28.666666666666657"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Summ Level" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vBZ-xe-egr">
+                                <rect key="frame" x="85" y="140" width="133" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.44342765210000001" green="0.87737172839999999" blue="0.99928969140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="hZ6-TZ-AVS" firstAttribute="leading" secondItem="6Jd-04-Djm" secondAttribute="leading" constant="16" id="DVI-zm-thp"/>
+                            <constraint firstItem="hZ6-TZ-AVS" firstAttribute="top" secondItem="FXu-WU-vMy" secondAttribute="bottom" constant="8" id="JgE-JX-KxJ"/>
+                            <constraint firstItem="FXu-WU-vMy" firstAttribute="leading" secondItem="6Jd-04-Djm" secondAttribute="leading" constant="16" id="T0h-jv-Ajt"/>
+                            <constraint firstItem="FXu-WU-vMy" firstAttribute="top" secondItem="6Jd-04-Djm" secondAttribute="top" constant="8" id="cHC-Et-n3L"/>
+                            <constraint firstItem="vBZ-xe-egr" firstAttribute="leading" secondItem="hZ6-TZ-AVS" secondAttribute="trailing" constant="8" id="sjR-WX-N9A"/>
+                            <constraint firstItem="vBZ-xe-egr" firstAttribute="centerY" secondItem="hZ6-TZ-AVS" secondAttribute="centerY" id="u4c-g6-GzZ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Jd-04-Djm"/>
                     </view>
+                    <connections>
+                        <outlet property="summonerLevelLabel" destination="vBZ-xe-egr" id="J4e-gq-OjS"/>
+                        <outlet property="summonerNameLabel" destination="FXu-WU-vMy" id="IuC-7O-Fbg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5qD-Z0-OOj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1456.5" y="33.5"/>
+            <point key="canvasLocation" x="1455.2" y="33.251231527093594"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="yA4-Ni-6tX">
@@ -92,7 +115,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cM4-Wh-mUd" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4kC-Ad-mfJ">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

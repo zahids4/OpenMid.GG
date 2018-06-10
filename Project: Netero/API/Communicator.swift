@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 
 class Communicator {
-    let apiKey = "RGAPI-17f75ea7-2e99-4993-87f2-e3f989aafdd3"
+    let apiKey = "RGAPI-00644bec-b656-407a-b918-e25ff3439ff0"
     
     func getSummoner(region: String, summonerName: String, completionHandler: @escaping ([String:Any]?, Error?) -> ()) {
         getCallForSummunor(region: region, summonerName: summonerName, completionHandler: completionHandler)
@@ -41,5 +41,7 @@ class Communicator {
             }
         }
     }
+    
+    
     
 }

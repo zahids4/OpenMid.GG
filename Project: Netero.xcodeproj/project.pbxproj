@@ -137,16 +137,16 @@
 		30220EEC20C0A6B600CB21D0 /* Project: Netero */ = {
 			isa = PBXGroup;
 			children = (
-				300ACE4220CD8FA600E7C31B /* Storyboards */,
-				300ACE4120CD8F9300E7C31B /* Views */,
-				30220F1920C4782600CB21D0 /* Extensions */,
-				30220F1420C0AF2800CB21D0 /* Styles */,
+				300ACE3F20CD8F5100E7C31B /* API */,
 				30220EED20C0A6B600CB21D0 /* AppDelegate.swift */,
 				30220EF720C0A6B800CB21D0 /* Assets.xcassets */,
+				300ACE4020CD8F5F00E7C31B /* Errors */,
+				30220F1920C4782600CB21D0 /* Extensions */,
 				30220EFC20C0A6B800CB21D0 /* Info.plist */,
 				30220EF420C0A6B600CB21D0 /* Project__Netero.xcdatamodeld */,
-				300ACE3F20CD8F5100E7C31B /* API */,
-				300ACE4020CD8F5F00E7C31B /* Errors */,
+				300ACE4220CD8FA600E7C31B /* Storyboards */,
+				30220F1420C0AF2800CB21D0 /* Styles */,
+				300ACE4120CD8F9300E7C31B /* Views */,
 			);
 			path = "Project: Netero";
 			sourceTree = "<group>";

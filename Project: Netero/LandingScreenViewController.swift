@@ -9,17 +9,21 @@
 import UIKit
 import Alamofire
 
-class LandingScreenViewController: UIViewController {
+class LandingScreenViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     @IBOutlet weak var searchField: UITextField!
     @IBOutlet weak var searchButton: UIButton!
+    @IBOutlet weak var regionPickerView: UIPickerView!
     
     let communicator = Communicator()
     let errorHandler = ErrorHandler()
+    let regions = ["North America", "Korea", "Japan", "Europe West", "Europe Nordic & East"]
     
     var responseObject: [String:Any]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        regionPickerView.dataSource = self
+        regionPickerView.delegate = self
         searchButton.defaultStyle()
     }
 
@@ -55,5 +59,19 @@ class LandingScreenViewController: UIViewController {
             let summonerProfileVC = segue.destination as! SummonerProfileViewController
             summonerProfileVC.summonerObject = responseObject
         }
+    }
+    
+    
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return regions.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return regions[row]
     }
 }

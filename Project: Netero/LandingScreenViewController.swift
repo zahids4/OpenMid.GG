@@ -34,7 +34,6 @@ class LandingScreenViewController: UIViewController {
         if searchText!.range(of: "^[0-9\\p{L} _\\.]+$", options: .regularExpression) != nil {
             communicator.getSummoner(region: "NA1", summonerName: searchText!) { responseObject, error in
                 if responseObject != nil{
-                    print(responseObject!)
                     self.searchButton.enable()
                     self.responseObject = responseObject
                     self.performSegue(withIdentifier: "showSummonerProfileSegue", sender: self)

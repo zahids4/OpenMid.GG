@@ -19,11 +19,13 @@ class LandingScreenViewController: UIViewController, UIPickerViewDataSource, UIP
     let regions = ["North America", "Korea", "Japan", "Europe West", "Europe Nordic & East"]
     
     var responseObject: [String:Any]?
+    var selectedRegion: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         regionPickerView.dataSource = self
         regionPickerView.delegate = self
+        selectedRegion = regions.first
         searchButton.defaultStyle()
     }
 
@@ -61,8 +63,6 @@ class LandingScreenViewController: UIViewController, UIPickerViewDataSource, UIP
         }
     }
     
-    
-    
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -73,5 +73,9 @@ class LandingScreenViewController: UIViewController, UIPickerViewDataSource, UIP
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return regions[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        selectedRegion = regions[row]
     }
 }

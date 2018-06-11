@@ -38,7 +38,8 @@ class LandingScreenViewController: UIViewController, UIPickerViewDataSource, UIP
         //ToDo: Add activity spinner later
         searchButton.disable()
         if searchText!.range(of: "^[0-9\\p{L} _\\.]+$", options: .regularExpression) != nil {
-            communicator.getSummoner(region: "NA1", summonerName: searchText!) { responseObject, error in
+            let platform = getRegionsAsscoiatedPlatform(selectedRegion!)
+            communicator.getSummoner(region: platform, summonerName: searchText!) { responseObject, error in
                 if responseObject != nil{
                     self.searchButton.enable()
                     self.responseObject = responseObject
@@ -77,5 +78,18 @@ class LandingScreenViewController: UIViewController, UIPickerViewDataSource, UIP
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         selectedRegion = regions[row]
+    }
+}
+
+extension LandingScreenViewController {
+    func getRegionsAsscoiatedPlatform(_ region: String) -> String {
+        switch region {
+        case "North America":
+            return "NA1"
+        case "Korea":
+            return "KR"
+        default:
+            return "NA1"
+        }
     }
 }

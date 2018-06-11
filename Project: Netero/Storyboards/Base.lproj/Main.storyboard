@@ -30,7 +30,7 @@
                                     <action selector="searchPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xUG-Mh-Eb4"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Kr-mV-iz0">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Kr-mV-iz0">
                                 <rect key="frame" x="51" y="391" width="273" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="273" id="hRG-q5-qyt"/>
@@ -51,9 +51,17 @@
                                     <outlet property="delegate" destination="8bC-Xf-vdC" id="nit-93-Yne"/>
                                 </connections>
                             </pickerView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="OpenMidGGLogo" translatesAutoresizingMaskIntoConstraints="NO" id="hrC-eh-FRn">
+                                <rect key="frame" x="16" y="104" width="343" height="112"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="4bi-eq-fbK"/>
+                                    <constraint firstAttribute="height" constant="112" id="lPQ-KB-Ly5"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.44342765210000001" green="0.87737172839999999" blue="0.99928969140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="hrC-eh-FRn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="4R2-tI-oMg"/>
                             <constraint firstItem="9Kr-mV-iz0" firstAttribute="top" secondItem="4cJ-ze-bbh" secondAttribute="bottom" constant="8" id="7Vu-kJ-9w3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9t6-kZ-WaA" secondAttribute="trailing" constant="134" id="BLd-yY-at6"/>
                             <constraint firstItem="9Kr-mV-iz0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EZ6-NT-ZHz"/>
@@ -61,6 +69,7 @@
                             <constraint firstItem="9Kr-mV-iz0" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="fti-tU-LvR"/>
                             <constraint firstItem="4cJ-ze-bbh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="n7R-dW-bTx"/>
                             <constraint firstItem="9t6-kZ-WaA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="134" id="rb0-Cm-zBo"/>
+                            <constraint firstItem="hrC-eh-FRn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tS2-TB-97S"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -142,4 +151,7 @@
             <point key="canvasLocation" x="32.5" y="33.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="OpenMidGGLogo" width="1064" height="380"/>
+    </resources>
 </document>

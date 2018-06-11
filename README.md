@@ -1,3 +1,3 @@
-# Project-Netero
+# OpenMid.GG (WIP)
 
-Personal Project using Riot API to get League stats. 
+Personal project using Riot API to get League stats. 

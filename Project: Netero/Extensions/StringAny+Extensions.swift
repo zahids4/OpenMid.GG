@@ -16,4 +16,8 @@ extension Dictionary where Key == String {
     func integerValueForKey(_ key: Key) -> Int {
         return self[key] as! Int
     }
+    
+    func id() -> Int {
+        return self["id"] as! Int
+    }
 }

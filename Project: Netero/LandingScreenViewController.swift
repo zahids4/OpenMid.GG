@@ -19,7 +19,13 @@ class LandingScreenViewController: UIViewController, UIPickerViewDataSource, UIP
     let regions = ["North America", "Korea", "Japan", "Europe West", "Europe Nordic & East"]
     
     var responseObject: [String:Any]?
-    var selectedRegion: String?
+    var selectedRegion: String! {
+        didSet {
+            regionPlatform = getRegionsAsscoiatedPlatform(selectedRegion!)
+        }
+    }
+    
+    var regionPlatform: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,8 +44,7 @@ class LandingScreenViewController: UIViewController, UIPickerViewDataSource, UIP
         //ToDo: Add activity spinner later
         searchButton.disable()
         if searchText!.range(of: "^[0-9\\p{L} _\\.]+$", options: .regularExpression) != nil {
-            let platform = getRegionsAsscoiatedPlatform(selectedRegion!)
-            communicator.getSummoner(region: platform, summonerName: searchText!) { responseObject, error in
+            communicator.getSummoner(region: regionPlatform, summonerName: searchText!) { responseObject, error in
                 if responseObject != nil{
                     self.searchButton.enable()
                     self.responseObject = responseObject
@@ -61,6 +66,7 @@ class LandingScreenViewController: UIViewController, UIPickerViewDataSource, UIP
         if segue.identifier == "showSummonerProfileSegue" {
             let summonerProfileVC = segue.destination as! SummonerProfileViewController
             summonerProfileVC.summonerObject = responseObject
+            summonerProfileVC.regionPlatform = regionPlatform
         }
     }
     

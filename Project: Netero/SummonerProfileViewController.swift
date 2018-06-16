@@ -11,6 +11,7 @@ import UIKit
 class SummonerProfileViewController: UIViewController {
     @IBOutlet weak var summonerNameLabel: UILabel!
     @IBOutlet weak var summonerLevelLabel: UILabel!
+    @IBOutlet weak var rankAndTierLabel: UILabel!
     let communicator = Communicator()
     var summonerObject: [String:Any]!
     var regionPlatform: String!
@@ -36,14 +37,24 @@ class SummonerProfileViewController: UIViewController {
     }
     
     private func getSummunorRankAttributes(_ summonerId: String) {
-        communicator.getCallForSummunorRank(regionPlatform, summonerId) { rankObject, error in
-            if rankObject != nil {
-                print("Rank Object", rankObject!)
+        communicator.getCallForSummunorRank(regionPlatform, summonerId) { rankObjects, error in
+            if rankObjects != nil {
+                self.constructRankAndTierLabel(rankObjects)
             } else {
                 print("An error occured", error as Any)
             }
             
             return
+        }
+    }
+    
+    fileprivate func constructRankAndTierLabel(_ rankObjects: [[String : Any]]?) {
+        for rankObject in rankObjects! {
+            if rankObject.stringValueForKey("queueType") == "RANKED_SOLO_5x5" {
+                let rank = rankObject.stringValueForKey("rank")
+                let tier = rankObject.stringValueForKey("tier")
+                self.rankAndTierLabel.text! = tier + " " + rank
+            }
         }
     }
 }

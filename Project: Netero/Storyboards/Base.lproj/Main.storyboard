@@ -41,7 +41,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4cJ-ze-bbh">
-                                <rect key="frame" x="28" y="298" width="320" height="85"/>
+                                <rect key="frame" x="27.666666666666657" y="298" width="320" height="85"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="85" id="N2W-JZ-OuF"/>
@@ -93,47 +93,58 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dummy profile Icon" translatesAutoresizingMaskIntoConstraints="NO" id="YiT-hx-g2P">
+                                <rect key="frame" x="8" y="96" width="99.666666666666671" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Kbe-f4-iy6"/>
+                                    <constraint firstAttribute="height" constant="100" id="iLr-Rl-5Zs"/>
+                                </constraints>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Summoner Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FXu-WU-vMy">
-                                <rect key="frame" x="15.999999999999986" y="96" width="224.66666666666663" height="36"/>
+                                <rect key="frame" x="116" y="110" width="224" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hZ6-TZ-AVS">
-                                <rect key="frame" x="16.000000000000004" y="140" width="61.333333333333343" height="28.666666666666657"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Summ Level" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vBZ-xe-egr">
+                                <rect key="frame" x="115" y="154" width="226" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Summ Level" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vBZ-xe-egr">
-                                <rect key="frame" x="85" y="140" width="133" height="29"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BvY-Tc-eIB">
-                                <rect key="frame" x="272" y="96" width="73" height="73"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="twv-4X-Ott">
+                                <rect key="frame" x="137" y="213" width="100" height="100"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="73" id="2Ia-Ke-z4y"/>
-                                    <constraint firstAttribute="height" constant="73" id="7Wi-ov-y2O"/>
+                                    <constraint firstAttribute="height" constant="100" id="e20-iX-C8n"/>
+                                    <constraint firstAttribute="width" constant="100" id="hNW-hu-mbv"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rank + Tier" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LF7-0y-Gsk">
+                                <rect key="frame" x="138.33333333333334" y="321" width="99" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.44342765210000001" green="0.87737172839999999" blue="0.99928969140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="hZ6-TZ-AVS" firstAttribute="leading" secondItem="6Jd-04-Djm" secondAttribute="leading" constant="16" id="DVI-zm-thp"/>
-                            <constraint firstItem="6Jd-04-Djm" firstAttribute="trailing" secondItem="BvY-Tc-eIB" secondAttribute="trailing" constant="30.5" id="HJ9-l8-SMq"/>
-                            <constraint firstItem="hZ6-TZ-AVS" firstAttribute="top" secondItem="FXu-WU-vMy" secondAttribute="bottom" constant="8" id="JgE-JX-KxJ"/>
-                            <constraint firstItem="FXu-WU-vMy" firstAttribute="leading" secondItem="6Jd-04-Djm" secondAttribute="leading" constant="16" id="T0h-jv-Ajt"/>
-                            <constraint firstItem="FXu-WU-vMy" firstAttribute="top" secondItem="6Jd-04-Djm" secondAttribute="top" constant="8" id="cHC-Et-n3L"/>
-                            <constraint firstItem="BvY-Tc-eIB" firstAttribute="leading" secondItem="FXu-WU-vMy" secondAttribute="trailing" constant="30.5" id="exb-tG-iMn"/>
-                            <constraint firstItem="BvY-Tc-eIB" firstAttribute="top" secondItem="6Jd-04-Djm" secondAttribute="top" constant="8" id="jDT-uQ-NHO"/>
-                            <constraint firstItem="vBZ-xe-egr" firstAttribute="leading" secondItem="hZ6-TZ-AVS" secondAttribute="trailing" constant="8" id="sjR-WX-N9A"/>
-                            <constraint firstItem="vBZ-xe-egr" firstAttribute="centerY" secondItem="hZ6-TZ-AVS" secondAttribute="centerY" id="u4c-g6-GzZ"/>
+                            <constraint firstItem="vBZ-xe-egr" firstAttribute="leading" secondItem="YiT-hx-g2P" secondAttribute="trailing" constant="7.6666666666666714" id="20O-VB-r0a"/>
+                            <constraint firstItem="LF7-0y-Gsk" firstAttribute="centerX" secondItem="twv-4X-Ott" secondAttribute="centerX" id="Brq-Da-d1Q"/>
+                            <constraint firstItem="6Jd-04-Djm" firstAttribute="trailing" secondItem="FXu-WU-vMy" secondAttribute="trailing" constant="34.333333333333371" id="Cfb-e5-edu"/>
+                            <constraint firstItem="vBZ-xe-egr" firstAttribute="top" secondItem="FXu-WU-vMy" secondAttribute="bottom" constant="8" id="EwF-Hh-uf2"/>
+                            <constraint firstItem="vBZ-xe-egr" firstAttribute="centerX" secondItem="FXu-WU-vMy" secondAttribute="centerX" id="Lkg-Zo-oC5"/>
+                            <constraint firstItem="FXu-WU-vMy" firstAttribute="top" secondItem="6Jd-04-Djm" secondAttribute="top" constant="22" id="Oho-D3-PkQ"/>
+                            <constraint firstItem="twv-4X-Ott" firstAttribute="centerX" secondItem="WOE-UZ-OhK" secondAttribute="centerX" id="QUE-LW-qF1"/>
+                            <constraint firstItem="twv-4X-Ott" firstAttribute="top" secondItem="vBZ-xe-egr" secondAttribute="bottom" constant="30" id="cDi-u1-QAO"/>
+                            <constraint firstItem="LF7-0y-Gsk" firstAttribute="top" secondItem="twv-4X-Ott" secondAttribute="bottom" constant="8" id="klX-Nf-n6E"/>
+                            <constraint firstItem="YiT-hx-g2P" firstAttribute="top" secondItem="6Jd-04-Djm" secondAttribute="top" constant="8" id="sP9-gI-pEa"/>
+                            <constraint firstItem="YiT-hx-g2P" firstAttribute="leading" secondItem="6Jd-04-Djm" secondAttribute="leading" constant="8" id="vwh-x1-hjl"/>
+                            <constraint firstItem="FXu-WU-vMy" firstAttribute="leading" secondItem="YiT-hx-g2P" secondAttribute="trailing" constant="8.6666666666666714" id="zYD-Us-DIu"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Jd-04-Djm"/>
                     </view>
                     <connections>
+                        <outlet property="rankAndTierLabel" destination="LF7-0y-Gsk" id="Bnu-Ww-qlZ"/>
                         <outlet property="summonerLevelLabel" destination="vBZ-xe-egr" id="J4e-gq-OjS"/>
                         <outlet property="summonerNameLabel" destination="FXu-WU-vMy" id="IuC-7O-Fbg"/>
                     </connections>
@@ -162,6 +173,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Dummy profile Icon" width="800" height="530"/>
         <image name="OpenMidGGLogo" width="1064" height="380"/>
     </resources>
 </document>

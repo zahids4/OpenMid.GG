@@ -111,13 +111,23 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BvY-Tc-eIB">
+                                <rect key="frame" x="272" y="96" width="73" height="73"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="73" id="2Ia-Ke-z4y"/>
+                                    <constraint firstAttribute="height" constant="73" id="7Wi-ov-y2O"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.44342765210000001" green="0.87737172839999999" blue="0.99928969140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="hZ6-TZ-AVS" firstAttribute="leading" secondItem="6Jd-04-Djm" secondAttribute="leading" constant="16" id="DVI-zm-thp"/>
+                            <constraint firstItem="6Jd-04-Djm" firstAttribute="trailing" secondItem="BvY-Tc-eIB" secondAttribute="trailing" constant="30.5" id="HJ9-l8-SMq"/>
                             <constraint firstItem="hZ6-TZ-AVS" firstAttribute="top" secondItem="FXu-WU-vMy" secondAttribute="bottom" constant="8" id="JgE-JX-KxJ"/>
                             <constraint firstItem="FXu-WU-vMy" firstAttribute="leading" secondItem="6Jd-04-Djm" secondAttribute="leading" constant="16" id="T0h-jv-Ajt"/>
                             <constraint firstItem="FXu-WU-vMy" firstAttribute="top" secondItem="6Jd-04-Djm" secondAttribute="top" constant="8" id="cHC-Et-n3L"/>
+                            <constraint firstItem="BvY-Tc-eIB" firstAttribute="leading" secondItem="FXu-WU-vMy" secondAttribute="trailing" constant="30.5" id="exb-tG-iMn"/>
+                            <constraint firstItem="BvY-Tc-eIB" firstAttribute="top" secondItem="6Jd-04-Djm" secondAttribute="top" constant="8" id="jDT-uQ-NHO"/>
                             <constraint firstItem="vBZ-xe-egr" firstAttribute="leading" secondItem="hZ6-TZ-AVS" secondAttribute="trailing" constant="8" id="sjR-WX-N9A"/>
                             <constraint firstItem="vBZ-xe-egr" firstAttribute="centerY" secondItem="hZ6-TZ-AVS" secondAttribute="centerY" id="u4c-g6-GzZ"/>
                         </constraints>
@@ -130,7 +140,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5qD-Z0-OOj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2231" y="33"/>
+            <point key="canvasLocation" x="2229.5999999999999" y="32.512315270935964"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="yA4-Ni-6tX">

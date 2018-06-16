@@ -125,10 +125,17 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="League" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zto-kV-3wh">
+                                <rect key="frame" x="159" y="353" width="56" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.44342765210000001" green="0.87737172839999999" blue="0.99928969140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="vBZ-xe-egr" firstAttribute="leading" secondItem="YiT-hx-g2P" secondAttribute="trailing" constant="7.6666666666666714" id="20O-VB-r0a"/>
+                            <constraint firstItem="zto-kV-3wh" firstAttribute="top" secondItem="LF7-0y-Gsk" secondAttribute="bottom" constant="8" id="5SD-Fq-c1P"/>
                             <constraint firstItem="LF7-0y-Gsk" firstAttribute="centerX" secondItem="twv-4X-Ott" secondAttribute="centerX" id="Brq-Da-d1Q"/>
                             <constraint firstItem="6Jd-04-Djm" firstAttribute="trailing" secondItem="FXu-WU-vMy" secondAttribute="trailing" constant="34.333333333333371" id="Cfb-e5-edu"/>
                             <constraint firstItem="vBZ-xe-egr" firstAttribute="top" secondItem="FXu-WU-vMy" secondAttribute="bottom" constant="8" id="EwF-Hh-uf2"/>
@@ -139,11 +146,13 @@
                             <constraint firstItem="LF7-0y-Gsk" firstAttribute="top" secondItem="twv-4X-Ott" secondAttribute="bottom" constant="8" id="klX-Nf-n6E"/>
                             <constraint firstItem="YiT-hx-g2P" firstAttribute="top" secondItem="6Jd-04-Djm" secondAttribute="top" constant="8" id="sP9-gI-pEa"/>
                             <constraint firstItem="YiT-hx-g2P" firstAttribute="leading" secondItem="6Jd-04-Djm" secondAttribute="leading" constant="8" id="vwh-x1-hjl"/>
+                            <constraint firstItem="zto-kV-3wh" firstAttribute="centerX" secondItem="LF7-0y-Gsk" secondAttribute="centerX" id="zAB-kE-pzy"/>
                             <constraint firstItem="FXu-WU-vMy" firstAttribute="leading" secondItem="YiT-hx-g2P" secondAttribute="trailing" constant="8.6666666666666714" id="zYD-Us-DIu"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Jd-04-Djm"/>
                     </view>
                     <connections>
+                        <outlet property="leagueLabel" destination="zto-kV-3wh" id="WN7-qM-rrm"/>
                         <outlet property="rankAndTierLabel" destination="LF7-0y-Gsk" id="Bnu-Ww-qlZ"/>
                         <outlet property="summonerLevelLabel" destination="vBZ-xe-egr" id="J4e-gq-OjS"/>
                         <outlet property="summonerNameLabel" destination="FXu-WU-vMy" id="IuC-7O-Fbg"/>

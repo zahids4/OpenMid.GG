@@ -56,5 +56,12 @@ class Communicator {
             }
         }
     }
-    
+}
+
+extension Communicator {
+    func performOnMainThread(_ closure: @escaping () -> ()){
+        DispatchQueue.main.async {
+            closure()
+        }
+    }
 }

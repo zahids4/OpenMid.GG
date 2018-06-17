@@ -16,12 +16,11 @@ class LandingScreenViewController: UIViewController, UIPickerViewDataSource, UIP
     
     let communicator = Communicator()
     let errorHandler = ErrorHandler()
-    let regions = ["North America", "Korea", "Japan", "Europe West", "Europe Nordic & East"]
     
     var responseObject: [String:Any]?
     var selectedRegion: String! {
         didSet {
-            regionPlatform = getRegionsAsscoiatedPlatform(selectedRegion!)
+            regionPlatform = getRegionsAsscoiatedPlatform(selectedRegion!).lowercased()
         }
     }
     
@@ -31,7 +30,7 @@ class LandingScreenViewController: UIViewController, UIPickerViewDataSource, UIP
         super.viewDidLoad()
         regionPickerView.dataSource = self
         regionPickerView.delegate = self
-        selectedRegion = regions.first
+        selectedRegion = RiotApiHelpers.REGIONS.first
         searchButton.defaultStyle()
     }
 
@@ -75,15 +74,15 @@ class LandingScreenViewController: UIViewController, UIPickerViewDataSource, UIP
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return regions.count
+        return RiotApiHelpers.REGIONS.count
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return regions[row]
+        return RiotApiHelpers.REGIONS[row]
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        selectedRegion = regions[row]
+        selectedRegion = RiotApiHelpers.REGIONS[row]
     }
 }
 
@@ -94,6 +93,26 @@ extension LandingScreenViewController {
             return "NA1"
         case "Korea":
             return "KR"
+        case "Japan":
+            return "JP1"
+        case "Europe West":
+            return "EUW1"
+        case "Europe Nordic & East":
+            return "EUN1"
+        case "Oceania":
+            return "OC1"
+        case "Brazil":
+            return "BR1"
+        case "LAS":
+            return "LA2"
+        case "LAN":
+            return "LA1"
+        case "Russia":
+            return "RU"
+        case "Turkey":
+            return "TR1"
+        case "PBE":
+            return "PBE1"
         default:
             return "NA1"
         }

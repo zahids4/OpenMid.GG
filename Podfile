@@ -7,6 +7,7 @@ target 'Project: Netero' do
 
   # Pods for Project: Netero
   pod 'Alamofire', '~> 4.7'
+  pod "SkeletonView"
 
   target 'Project: NeteroTests' do
     inherit! :search_paths

@@ -40,7 +40,6 @@ class LandingScreenViewController: UIViewController, UIPickerViewDataSource, UIP
     
     @IBAction func searchPressed(_ sender: Any) {
         let searchText = searchField.text
-        //ToDo: Add activity spinner later
         searchButton.disable()
         if searchText!.range(of: "^[0-9\\p{L} _\\.]+$", options: .regularExpression) != nil {
             communicator.getSummoner(region: regionPlatform, summonerName: searchText!) { responseObject, error in

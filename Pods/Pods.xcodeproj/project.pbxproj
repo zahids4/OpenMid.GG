@@ -7,32 +7,60 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		10EB23E9ECC4B33E16933BB1EA560B6A /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87882A1F5A92C8138D54545E51D51E6F /* Timeline.swift */; };
-		1B9EDEDC964E6B08F78920B4F4B9DB84 /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 03DECE84DC850B04690604AB7C521277 /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2A95C0CDACB3D5C0C784306307ED1151 /* Pods-Project: Netero-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 720AFCD3696F605735B22FA3976C9640 /* Pods-Project: Netero-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3626B94094672CB1C9DEA32B9F9502E1 /* TaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01C037B4034EDA3D7955BC5E4E9D9D6 /* TaskDelegate.swift */; };
+		03486151680805B31FA9BCCF88FFF241 /* SkeletonGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCEF8321B3638D04E431EDA560E2616E /* SkeletonGradient.swift */; };
+		10EB23E9ECC4B33E16933BB1EA560B6A /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC36DF44DEB99D8B04E1FE722FE3C833 /* Timeline.swift */; };
+		1265EFC8707D93A1E5CD68352DE2C0D4 /* UIView+UIApplicationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FF1CCE5650DFD0CC44688051FBD569 /* UIView+UIApplicationDelegate.swift */; };
+		1B9EDEDC964E6B08F78920B4F4B9DB84 /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C59C0E39DDC4CA978CA549902B61203 /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		202C033493A1C426CECF12CEA7B74330 /* SkeletonTableViewProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2279366073E8E2012E8B842E8CBA3625 /* SkeletonTableViewProtocols.swift */; };
+		20B10C8E1E334559BFA0E0D215518B50 /* SkeletonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9E9C791008EB110955243B88D09496 /* SkeletonView.swift */; };
+		21DDED1C8D3D4354D0397A59B49C0B78 /* SkeletonCollectionViewProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 092E110852FE4E86035609A712E396D0 /* SkeletonCollectionViewProtocols.swift */; };
+		30E7BE47A0A63468DF6B54F6D25B0D21 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
+		3626B94094672CB1C9DEA32B9F9502E1 /* TaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C76A530355DFC303CD1EB4A9810BE4D /* TaskDelegate.swift */; };
+		36394EC448CD046FBA86E62B9C3041F3 /* UIView+IBInspectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC521F6D7257C02F9AC210FC00F2BA9 /* UIView+IBInspectable.swift */; };
+		3FE107325835185F3F489580653B9185 /* SkeletonDefaultConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB26459A300761AB153F68D25E701B9 /* SkeletonDefaultConfig.swift */; };
+		41F9A6C458D9AE286DC40B84368E64A9 /* UIColor+Skeleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B099600D3C04D0BF579A26667BC54E4C /* UIColor+Skeleton.swift */; };
 		4350F034D8A60C0B69B1DDEE80A66092 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
-		5387216E723A3C68E851CA15573CDD71 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E230A0448B394DE26E688DAC8E6201E /* Request.swift */; };
-		599F2A1ED71342FB0665CCBA442AA42F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
-		61200D01A1855D7920CEF835C8BE00B0 /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCBF1EED873F61C6D46CE37FA5C39D3 /* DispatchQueue+Alamofire.swift */; };
-		6166425442547F55F30D934935CB736A /* Pods-Project: Netero-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8852135FCAF56EA5F9BFDDACAC306224 /* Pods-Project: Netero-dummy.m */; };
+		474FC4BA2AA26ABF68DA1B3357171E27 /* AssociationPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA297C9B7024EDD1022D22A9541D8FFB /* AssociationPolicy.swift */; };
+		4F4C789EEAD9336252B700994BF28AC9 /* PrepareForSkeletonProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9260AAC8BC19C3F3EE027482A23A42 /* PrepareForSkeletonProtocol.swift */; };
+		50E111BDFF3A9A45DCD5F04739F84E6F /* Pods-Project: Netero-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 720AFCD3696F605735B22FA3976C9640 /* Pods-Project: Netero-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5387216E723A3C68E851CA15573CDD71 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435104B44941C334F04CDABEDEEA2CC3 /* Request.swift */; };
+		61200D01A1855D7920CEF835C8BE00B0 /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2C8F874607FC6FDE7572D118B3F145 /* DispatchQueue+Alamofire.swift */; };
+		625D6BBC652EB9CBD526C44CF5EB61E3 /* SkeletonFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E216C7E372A7C9DFC052BCEF0C115B8F /* SkeletonFlow.swift */; };
 		628C583FA51C0EAF0792C447B6874E33 /* Pods-Project: NeteroTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FE2DE44C2C279C340B99EE7851589981 /* Pods-Project: NeteroTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		62F65AD8DC4F0F9610F4B8B4738EC094 /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B030D27CAC730C5EB0F22390645310 /* ServerTrustPolicy.swift */; };
-		7B5FE28C7EA4122B0598738E54DBEBD8 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195D73DD9EF275A3C56569E2B1CA8026 /* SessionDelegate.swift */; };
-		7D8CC01E8C9EFFF9F4D65406CDE0AB66 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D60BC9955B4F7FFA62D7440CB385C11 /* Result.swift */; };
+		62F65AD8DC4F0F9610F4B8B4738EC094 /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1640808487A48D28247A5E4833FA34 /* ServerTrustPolicy.swift */; };
+		7014AF5EEE0B1C622A6A710670B3FD03 /* ContainsMultilineText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3B2542DACB2D236D4FB1B540A8E82A /* ContainsMultilineText.swift */; };
+		72B06F98E345960FBF4062D4C9BB1DB9 /* CALayer+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F8E86FCA582B97E3A3E95E9F4E4CD5 /* CALayer+Extensions.swift */; };
+		73FD1EDF1D93F7DDF472541CD1293453 /* SkeletonView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BD0684C91F5E60AD61C48356E40B1AF /* SkeletonView-dummy.m */; };
+		7B5FE28C7EA4122B0598738E54DBEBD8 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C034B27073983A5A76955F6BF05D8B4A /* SessionDelegate.swift */; };
+		7D8CC01E8C9EFFF9F4D65406CDE0AB66 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3F8E7FF037930AEB9A8DE55DAF74E1 /* Result.swift */; };
+		7E885F61DEE2E6A792BD9D4F88250DAF /* SkeletonView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 89F55E1BD7888274AF88D5C96D2B4069 /* SkeletonView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7EC56329DAE847B318A5121B4C466DBD /* Pods-Project: NeteroTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6086639A328FC0E1BBEC525C12B34F50 /* Pods-Project: NeteroTests-dummy.m */; };
+		80E280812A874323CE6907B9B72B02C0 /* GenericCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F104120350CF87AB26491FEE669AC7 /* GenericCollectionView.swift */; };
 		834F4D9819C6010E611A7E151B8899C3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
-		9ED2BB2981896E0A39EFA365503F58CE /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF006B0AD5765D1BFA8253C2DCBB126 /* AFError.swift */; };
-		A2A6F71B727312BD45CC7A4AAD7B0AB7 /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A8AA5F9EDED0A0BDDE7E830BF4AEE0 /* NetworkReachabilityManager.swift */; };
-		A9EEEA7477981DEEBC72432DE9990A4B /* Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D1F50F37DFB6DC0B7B9D8C373E5A3EAE /* Alamofire-dummy.m */; };
-		AE1EF48399533730D0066E04B22CA2D6 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CDAC6C1187C5467E576980E1062C8B /* SessionManager.swift */; };
-		B65FCF589DA398C3EFE0128064E510EC /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155538D91ACEEEDF82069ACF6C1A02E7 /* MultipartFormData.swift */; };
-		BBEFE2F9CEB73DC7BD97FFA66A0D9D4F /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B029DBC43E49A740F12B5E4D2E6DD452 /* Validation.swift */; };
-		BE5C67A07E289FE1F9BE27335B159997 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6639346628280A0D0FAD35196BF56108 /* ParameterEncoding.swift */; };
-		CB6D60925223897FFA2662667DF83E8A /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F47F5C9CDB035C5AFADEBA5BF44F1C /* Response.swift */; };
-		EFD264FC408EBF3BA2528E70B08DDD94 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A46F517F0AF7E85A16D723F6406896 /* Notifications.swift */; };
-		F6BECD98B97CBFEBE2C96F0E9E72A6C0 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F9510473F6FFD7AA66524DB16C2263 /* ResponseSerialization.swift */; };
-		F8B3D3092ED0417E8CDF32033F6122F5 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCB8C44DE758E906C0BCDA455937B85 /* Alamofire.swift */; };
+		870E7789228DB0929D80C1277C760A32 /* UICollectionView+CollectionSkeleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAD79463804C379DBCF3340BDC5D7E2 /* UICollectionView+CollectionSkeleton.swift */; };
+		87F2463524D02018E45752119D15345C /* UITableView+CollectionSkeleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C7596445059B4853B8B6B5E1D95489 /* UITableView+CollectionSkeleton.swift */; };
+		8C218E11B4C97F6AAFCBB92C656C71E0 /* RecursiveProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F238721BF3BBBCA5699B77055F280CC0 /* RecursiveProtocol.swift */; };
+		8E9201A6ADD29E84ECD858DA0E3382F5 /* SkeletonAnimationBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFDD52436B8D40E720EE09079FCA85D /* SkeletonAnimationBuilder.swift */; };
+		9ED2BB2981896E0A39EFA365503F58CE /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D28648602812C4C4115B1DF2F4F34C /* AFError.swift */; };
+		A2A6F71B727312BD45CC7A4AAD7B0AB7 /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6515C414E4DA322A79391F6E13E93F62 /* NetworkReachabilityManager.swift */; };
+		A47F53369651ED0426BC6B3405299A1D /* Pods-Project: Netero-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8852135FCAF56EA5F9BFDDACAC306224 /* Pods-Project: Netero-dummy.m */; };
+		A9EEEA7477981DEEBC72432DE9990A4B /* Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BDE06833B1F8E3C8DED6AE613BE994D /* Alamofire-dummy.m */; };
+		AB5DA202AEE1AF55E4176EAE35CE2BF4 /* UIView+Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11918AA36AF1AAF7F6A009DFDAA86751 /* UIView+Frame.swift */; };
+		AE1EF48399533730D0066E04B22CA2D6 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E0EA3E1FCAD25B6400DAD57B9E2A8F /* SessionManager.swift */; };
+		B1F3CAC1EBD1F98D8A870505C3EB2D07 /* UIView+CollectionSkeleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C947489FBEEA6EDF10465ADAB01F17AA /* UIView+CollectionSkeleton.swift */; };
+		B65FCF589DA398C3EFE0128064E510EC /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C617C46E42A0349A0831CD6C31897749 /* MultipartFormData.swift */; };
+		BBEFE2F9CEB73DC7BD97FFA66A0D9D4F /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158031A66922E8A63F01307AF4675982 /* Validation.swift */; };
+		BE5C67A07E289FE1F9BE27335B159997 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A747568B6F3ACD8644FEB09C84CC527 /* ParameterEncoding.swift */; };
+		C27AC9DE23E6CE7FFC99066F02D29697 /* SkeletonLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC07E3751EF3731B645D53322DE56E0 /* SkeletonLayer.swift */; };
+		CB6D60925223897FFA2662667DF83E8A /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5454449642F2F0B2BC4EE67360A171EA /* Response.swift */; };
+		CBBB27ADA6288CFACD7370EC62F20C43 /* SkeletonCollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D251E5BA64D2BC967B0D62E0B547A2B8 /* SkeletonCollectionDataSource.swift */; };
+		E1FDE363D2D727E5B8A732DDCB6AB83E /* SkeletonCollectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BD0A2B89AECF91484D637CA8361948 /* SkeletonCollectionDelegate.swift */; };
+		EAA290E17042AAD16D151CCBCEBDA502 /* CollectionSkeletonProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EDB120EFB3F6373F9EACB0CD5B0993 /* CollectionSkeletonProtocol.swift */; };
+		EFD264FC408EBF3BA2528E70B08DDD94 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27028680D8EE8B74FDBBA42B99DFE692 /* Notifications.swift */; };
+		F6BECD98B97CBFEBE2C96F0E9E72A6C0 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334F74D068F4D48CF5098AC2060915F6 /* ResponseSerialization.swift */; };
+		F8B3D3092ED0417E8CDF32033F6122F5 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA61C85BD4E455AEAA9EF7B0E70530B /* Alamofire.swift */; };
+		FB1EE3E6AA1F10FE3E994E20792759A9 /* SkeletonReusableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF06BD8B07590040537513E070AE2D3 /* SkeletonReusableCell.swift */; };
+		FC064F5EB487CFCC685D6AA17F8E2311 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,10 +68,17 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 6F78EC19D8A3F3B58E860548B0166709;
+			remoteGlobalIDString = C9C1218E75F0D2A8370265EA2EB7DD62;
 			remoteInfo = "Pods-Project: Netero";
 		};
-		F8FC57818C5990E5A29D1589398D00D8 /* PBXContainerItemProxy */ = {
+		637F4D0EBC6F758261D261E4FB84D26F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0B5A823E610C175FB9148AB74271D73B;
+			remoteInfo = SkeletonView;
+		};
+		CF8955253EEE18CE054662132BE28CF3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
@@ -53,70 +88,102 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		03DECE84DC850B04690604AB7C521277 /* Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
-		04F47F5C9CDB035C5AFADEBA5BF44F1C /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Response.swift; sourceTree = "<group>"; };
+		02E0EA3E1FCAD25B6400DAD57B9E2A8F /* SessionManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionManager.swift; path = Source/SessionManager.swift; sourceTree = "<group>"; };
 		0557C7B07362BAC6278BA83B1F798B98 /* Pods-Project: NeteroTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Project: NeteroTests-resources.sh"; sourceTree = "<group>"; };
-		0A02142300437146EF599D0BD2D28D55 /* Pods_Project__Netero.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Project__Netero.framework; path = "Pods-Project: Netero.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0FCBF1EED873F61C6D46CE37FA5C39D3 /* DispatchQueue+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Alamofire.swift"; path = "Source/DispatchQueue+Alamofire.swift"; sourceTree = "<group>"; };
-		117EFB31D9AD9673BAF51B48596F19E2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0690B7B83529CD023D32626178EB51F3 /* Alamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.xcconfig; sourceTree = "<group>"; };
+		092E110852FE4E86035609A712E396D0 /* SkeletonCollectionViewProtocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SkeletonCollectionViewProtocols.swift; path = Sources/Collections/CollectionViews/SkeletonCollectionViewProtocols.swift; sourceTree = "<group>"; };
+		0BA61C85BD4E455AEAA9EF7B0E70530B /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
+		0BD0684C91F5E60AD61C48356E40B1AF /* SkeletonView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SkeletonView-dummy.m"; sourceTree = "<group>"; };
+		0E1640808487A48D28247A5E4833FA34 /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustPolicy.swift; path = Source/ServerTrustPolicy.swift; sourceTree = "<group>"; };
+		0FC07E3751EF3731B645D53322DE56E0 /* SkeletonLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SkeletonLayer.swift; path = Sources/SkeletonLayer.swift; sourceTree = "<group>"; };
+		11918AA36AF1AAF7F6A009DFDAA86751 /* UIView+Frame.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Frame.swift"; path = "Sources/Extensions/UIView+Frame.swift"; sourceTree = "<group>"; };
 		151E5C9440C1A05E037157B8FA53A105 /* Pods-Project: Netero.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Project: Netero.debug.xcconfig"; sourceTree = "<group>"; };
-		155538D91ACEEEDF82069ACF6C1A02E7 /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/MultipartFormData.swift; sourceTree = "<group>"; };
-		195D73DD9EF275A3C56569E2B1CA8026 /* SessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDelegate.swift; path = Source/SessionDelegate.swift; sourceTree = "<group>"; };
-		1E230A0448B394DE26E688DAC8E6201E /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
-		210971763CB2FC0DC4E378271A37BE32 /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Alamofire.modulemap; sourceTree = "<group>"; };
-		32B030D27CAC730C5EB0F22390645310 /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustPolicy.swift; path = Source/ServerTrustPolicy.swift; sourceTree = "<group>"; };
-		33A04B5D27E86AF4B84D95E21CF3F452 /* Alamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.xcconfig; sourceTree = "<group>"; };
-		3D60BC9955B4F7FFA62D7440CB385C11 /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Source/Result.swift; sourceTree = "<group>"; };
+		158031A66922E8A63F01307AF4675982 /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
+		18167353B1ADFDC6CE5555E59B9F9F2A /* Pods_Project__NeteroTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Project__NeteroTests.framework; path = "Pods-Project: NeteroTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2279366073E8E2012E8B842E8CBA3625 /* SkeletonTableViewProtocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SkeletonTableViewProtocols.swift; path = Sources/Collections/TableViews/SkeletonTableViewProtocols.swift; sourceTree = "<group>"; };
+		27028680D8EE8B74FDBBA42B99DFE692 /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
+		294AD4B4BF27C615D4944A99A1E2DEDE /* SkeletonView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SkeletonView.xcconfig; sourceTree = "<group>"; };
+		29FF1CCE5650DFD0CC44688051FBD569 /* UIView+UIApplicationDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+UIApplicationDelegate.swift"; path = "Sources/Extensions/UIView+UIApplicationDelegate.swift"; sourceTree = "<group>"; };
+		2E3B2542DACB2D236D4FB1B540A8E82A /* ContainsMultilineText.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ContainsMultilineText.swift; path = Sources/Helpers/ContainsMultilineText.swift; sourceTree = "<group>"; };
+		334F74D068F4D48CF5098AC2060915F6 /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
+		33C2A0E1D13992E85991FD53F01EE38B /* SkeletonView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SkeletonView.modulemap; sourceTree = "<group>"; };
+		3420A3A0C958EA97FFEE86FE9FFC6F69 /* SkeletonView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SkeletonView.framework; path = SkeletonView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CB5A0A1A155363158D1311FB109F829 /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Alamofire.modulemap; sourceTree = "<group>"; };
 		3ECB7186960E8873BE238B39E95E3595 /* Pods-Project: Netero.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Project: Netero.modulemap"; sourceTree = "<group>"; };
-		44B1CECDCEBF4A8757B2B1146A9CCEF3 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Alamofire.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		46CDAC6C1187C5467E576980E1062C8B /* SessionManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionManager.swift; path = Source/SessionManager.swift; sourceTree = "<group>"; };
-		4AF006B0AD5765D1BFA8253C2DCBB126 /* AFError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AFError.swift; path = Source/AFError.swift; sourceTree = "<group>"; };
+		435104B44941C334F04CDABEDEEA2CC3 /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
+		537C1A3BB4B415B80A94ED8D8CA14CE4 /* SkeletonView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SkeletonView-prefix.pch"; sourceTree = "<group>"; };
+		5454449642F2F0B2BC4EE67360A171EA /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Response.swift; sourceTree = "<group>"; };
+		573D81E5E3800BEA564267F09B205C51 /* Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-prefix.pch"; sourceTree = "<group>"; };
 		5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		5C067C1A37651E8C047C21A008E49BAA /* Pods-Project: NeteroTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Project: NeteroTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		6086639A328FC0E1BBEC525C12B34F50 /* Pods-Project: NeteroTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Project: NeteroTests-dummy.m"; sourceTree = "<group>"; };
-		61D920D6E48023BCBF18CD83450D05F5 /* Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-prefix.pch"; sourceTree = "<group>"; };
-		6639346628280A0D0FAD35196BF56108 /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
-		66A46F517F0AF7E85A16D723F6406896 /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
+		6515C414E4DA322A79391F6E13E93F62 /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
 		68B9BEE163C2DCB6E8A7D0BC3B31D7D5 /* Pods-Project: NeteroTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Project: NeteroTests.modulemap"; sourceTree = "<group>"; };
+		6C59C0E39DDC4CA978CA549902B61203 /* Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
+		6C76A530355DFC303CD1EB4A9810BE4D /* TaskDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TaskDelegate.swift; path = Source/TaskDelegate.swift; sourceTree = "<group>"; };
 		6CE17F6E5823B145E15A13ABA6F36F17 /* Pods-Project: Netero-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Project: Netero-frameworks.sh"; sourceTree = "<group>"; };
 		720AFCD3696F605735B22FA3976C9640 /* Pods-Project: Netero-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Project: Netero-umbrella.h"; sourceTree = "<group>"; };
+		7A747568B6F3ACD8644FEB09C84CC527 /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
 		7A7BC6ADB0546E310AB095DF94AEEBAA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8197D3EE857C48F9B92A2D2E26320834 /* Pods-Project: NeteroTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Project: NeteroTests.release.xcconfig"; sourceTree = "<group>"; };
-		87882A1F5A92C8138D54545E51D51E6F /* Timeline.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Timeline.swift; path = Source/Timeline.swift; sourceTree = "<group>"; };
+		84EDB120EFB3F6373F9EACB0CD5B0993 /* CollectionSkeletonProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CollectionSkeletonProtocol.swift; path = Sources/Collections/CollectionSkeletonProtocol.swift; sourceTree = "<group>"; };
+		87C44A70DFA4335FAD36B81DCE06C854 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Alamofire.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8852135FCAF56EA5F9BFDDACAC306224 /* Pods-Project: Netero-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Project: Netero-dummy.m"; sourceTree = "<group>"; };
+		89F55E1BD7888274AF88D5C96D2B4069 /* SkeletonView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SkeletonView-umbrella.h"; sourceTree = "<group>"; };
+		8DC521F6D7257C02F9AC210FC00F2BA9 /* UIView+IBInspectable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+IBInspectable.swift"; path = "Sources/Extensions/UIView+IBInspectable.swift"; sourceTree = "<group>"; };
+		8DF06BD8B07590040537513E070AE2D3 /* SkeletonReusableCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SkeletonReusableCell.swift; path = Sources/Collections/Generics/SkeletonReusableCell.swift; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		97ADDD5A86B12175AD70A667C5AD3D20 /* Pods-Project: Netero-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Project: Netero-resources.sh"; sourceTree = "<group>"; };
-		A01C037B4034EDA3D7955BC5E4E9D9D6 /* TaskDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TaskDelegate.swift; path = Source/TaskDelegate.swift; sourceTree = "<group>"; };
-		B029DBC43E49A740F12B5E4D2E6DD452 /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
+		9BDE06833B1F8E3C8DED6AE613BE994D /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
+		9C9260AAC8BC19C3F3EE027482A23A42 /* PrepareForSkeletonProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PrepareForSkeletonProtocol.swift; path = Sources/Helpers/PrepareForSkeletonProtocol.swift; sourceTree = "<group>"; };
+		9CB26459A300761AB153F68D25E701B9 /* SkeletonDefaultConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SkeletonDefaultConfig.swift; path = Sources/SkeletonDefaultConfig.swift; sourceTree = "<group>"; };
+		AA3F8E7FF037930AEB9A8DE55DAF74E1 /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Source/Result.swift; sourceTree = "<group>"; };
+		AD9E9C791008EB110955243B88D09496 /* SkeletonView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SkeletonView.swift; path = Sources/SkeletonView.swift; sourceTree = "<group>"; };
+		ADFDD52436B8D40E720EE09079FCA85D /* SkeletonAnimationBuilder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SkeletonAnimationBuilder.swift; path = Sources/SkeletonAnimationBuilder.swift; sourceTree = "<group>"; };
+		B099600D3C04D0BF579A26667BC54E4C /* UIColor+Skeleton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIColor+Skeleton.swift"; path = "Sources/Extensions/UIColor+Skeleton.swift"; sourceTree = "<group>"; };
+		B1C7596445059B4853B8B6B5E1D95489 /* UITableView+CollectionSkeleton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITableView+CollectionSkeleton.swift"; path = "Sources/Collections/TableViews/UITableView+CollectionSkeleton.swift"; sourceTree = "<group>"; };
+		B288E492212D62BF97407790EA900045 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B8F8E86FCA582B97E3A3E95E9F4E4CD5 /* CALayer+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CALayer+Extensions.swift"; path = "Sources/Extensions/CALayer+Extensions.swift"; sourceTree = "<group>"; };
+		BFAD79463804C379DBCF3340BDC5D7E2 /* UICollectionView+CollectionSkeleton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UICollectionView+CollectionSkeleton.swift"; path = "Sources/Collections/CollectionViews/UICollectionView+CollectionSkeleton.swift"; sourceTree = "<group>"; };
+		C034B27073983A5A76955F6BF05D8B4A /* SessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDelegate.swift; path = Source/SessionDelegate.swift; sourceTree = "<group>"; };
+		C4F104120350CF87AB26491FEE669AC7 /* GenericCollectionView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GenericCollectionView.swift; path = Sources/Collections/Generics/GenericCollectionView.swift; sourceTree = "<group>"; };
+		C617C46E42A0349A0831CD6C31897749 /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/MultipartFormData.swift; sourceTree = "<group>"; };
+		C947489FBEEA6EDF10465ADAB01F17AA /* UIView+CollectionSkeleton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+CollectionSkeleton.swift"; path = "Sources/Collections/UIView+CollectionSkeleton.swift"; sourceTree = "<group>"; };
 		CF4D8E8B956DB5D04422036C45451F17 /* Pods-Project: NeteroTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Project: NeteroTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		D1F50F37DFB6DC0B7B9D8C373E5A3EAE /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
+		D251E5BA64D2BC967B0D62E0B547A2B8 /* SkeletonCollectionDataSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SkeletonCollectionDataSource.swift; path = Sources/Collections/SkeletonCollectionDataSource.swift; sourceTree = "<group>"; };
 		D697AB83FC0BD0F66DC6AC9D97EB692B /* Pods-Project: NeteroTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Project: NeteroTests.debug.xcconfig"; sourceTree = "<group>"; };
-		DFCB8C44DE758E906C0BCDA455937B85 /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
+		DC36DF44DEB99D8B04E1FE722FE3C833 /* Timeline.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Timeline.swift; path = Source/Timeline.swift; sourceTree = "<group>"; };
+		DCEF8321B3638D04E431EDA560E2616E /* SkeletonGradient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SkeletonGradient.swift; path = Sources/SkeletonGradient.swift; sourceTree = "<group>"; };
+		E0D28648602812C4C4115B1DF2F4F34C /* AFError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AFError.swift; path = Source/AFError.swift; sourceTree = "<group>"; };
 		E18B5F18A8AF110A2196688125C5C0FA /* Pods-Project: Netero-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Project: Netero-acknowledgements.plist"; sourceTree = "<group>"; };
-		E2F9510473F6FFD7AA66524DB16C2263 /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
-		E5A8AA5F9EDED0A0BDDE7E830BF4AEE0 /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
+		E216C7E372A7C9DFC052BCEF0C115B8F /* SkeletonFlow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SkeletonFlow.swift; path = Sources/SkeletonFlow.swift; sourceTree = "<group>"; };
+		E2BD0A2B89AECF91484D637CA8361948 /* SkeletonCollectionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SkeletonCollectionDelegate.swift; path = Sources/Collections/SkeletonCollectionDelegate.swift; sourceTree = "<group>"; };
 		E93CF2A5008DDEA4B3B38CED8D72E1C7 /* Pods-Project: NeteroTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Project: NeteroTests-frameworks.sh"; sourceTree = "<group>"; };
-		E992EA5B0B4742C52FA44D00BB21284C /* Pods_Project__NeteroTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Project__NeteroTests.framework; path = "Pods-Project: NeteroTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA297C9B7024EDD1022D22A9541D8FFB /* AssociationPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AssociationPolicy.swift; path = Sources/Helpers/AssociationPolicy.swift; sourceTree = "<group>"; };
 		EF4C6A4E10F5F9A6C4781B1C76AE4A70 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F238721BF3BBBCA5699B77055F280CC0 /* RecursiveProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RecursiveProtocol.swift; path = Sources/Helpers/RecursiveProtocol.swift; sourceTree = "<group>"; };
 		F5A96F4560D82E03ECB4EF87DD4832F2 /* Pods-Project: Netero.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Project: Netero.release.xcconfig"; sourceTree = "<group>"; };
 		F813BE49ED47C92C24463C0973687D57 /* Pods-Project: Netero-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Project: Netero-acknowledgements.markdown"; sourceTree = "<group>"; };
+		FA1522F3C06912B87CDA77198B5188D1 /* Pods_Project__Netero.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Project__Netero.framework; path = "Pods-Project: Netero.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA2C8F874607FC6FDE7572D118B3F145 /* DispatchQueue+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Alamofire.swift"; path = "Source/DispatchQueue+Alamofire.swift"; sourceTree = "<group>"; };
 		FE2DE44C2C279C340B99EE7851589981 /* Pods-Project: NeteroTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Project: NeteroTests-umbrella.h"; sourceTree = "<group>"; };
+		FF0CADB9584DA5F62BDD20304A682DDE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		2414EA19D8B41B0E89F775A3954DD1BF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC064F5EB487CFCC685D6AA17F8E2311 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3B44355D4EBDFD74EBB6FFC33EB46040 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				4350F034D8A60C0B69B1DDEE80A66092 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4831A396A2BFD4E08F2E91556091AD72 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				599F2A1ED71342FB0665CCBA442AA42F /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,55 +195,63 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C713FFBAAC4BB3E32EDF1A9EDEDDAB9F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30E7BE47A0A63468DF6B54F6D25B0D21 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		200D10EB20F0397D47F022B50CF0433F /* Alamofire */ = {
+		08602D658D17804AA63C14D2EDB8960E /* SkeletonView */ = {
 			isa = PBXGroup;
 			children = (
-				4AF006B0AD5765D1BFA8253C2DCBB126 /* AFError.swift */,
-				DFCB8C44DE758E906C0BCDA455937B85 /* Alamofire.swift */,
-				0FCBF1EED873F61C6D46CE37FA5C39D3 /* DispatchQueue+Alamofire.swift */,
-				155538D91ACEEEDF82069ACF6C1A02E7 /* MultipartFormData.swift */,
-				E5A8AA5F9EDED0A0BDDE7E830BF4AEE0 /* NetworkReachabilityManager.swift */,
-				66A46F517F0AF7E85A16D723F6406896 /* Notifications.swift */,
-				6639346628280A0D0FAD35196BF56108 /* ParameterEncoding.swift */,
-				1E230A0448B394DE26E688DAC8E6201E /* Request.swift */,
-				04F47F5C9CDB035C5AFADEBA5BF44F1C /* Response.swift */,
-				E2F9510473F6FFD7AA66524DB16C2263 /* ResponseSerialization.swift */,
-				3D60BC9955B4F7FFA62D7440CB385C11 /* Result.swift */,
-				32B030D27CAC730C5EB0F22390645310 /* ServerTrustPolicy.swift */,
-				195D73DD9EF275A3C56569E2B1CA8026 /* SessionDelegate.swift */,
-				46CDAC6C1187C5467E576980E1062C8B /* SessionManager.swift */,
-				A01C037B4034EDA3D7955BC5E4E9D9D6 /* TaskDelegate.swift */,
-				87882A1F5A92C8138D54545E51D51E6F /* Timeline.swift */,
-				B029DBC43E49A740F12B5E4D2E6DD452 /* Validation.swift */,
-				2E5925946A4DE3B8F7E4137BACAD9618 /* Support Files */,
+				EA297C9B7024EDD1022D22A9541D8FFB /* AssociationPolicy.swift */,
+				B8F8E86FCA582B97E3A3E95E9F4E4CD5 /* CALayer+Extensions.swift */,
+				84EDB120EFB3F6373F9EACB0CD5B0993 /* CollectionSkeletonProtocol.swift */,
+				2E3B2542DACB2D236D4FB1B540A8E82A /* ContainsMultilineText.swift */,
+				C4F104120350CF87AB26491FEE669AC7 /* GenericCollectionView.swift */,
+				9C9260AAC8BC19C3F3EE027482A23A42 /* PrepareForSkeletonProtocol.swift */,
+				F238721BF3BBBCA5699B77055F280CC0 /* RecursiveProtocol.swift */,
+				ADFDD52436B8D40E720EE09079FCA85D /* SkeletonAnimationBuilder.swift */,
+				D251E5BA64D2BC967B0D62E0B547A2B8 /* SkeletonCollectionDataSource.swift */,
+				E2BD0A2B89AECF91484D637CA8361948 /* SkeletonCollectionDelegate.swift */,
+				092E110852FE4E86035609A712E396D0 /* SkeletonCollectionViewProtocols.swift */,
+				9CB26459A300761AB153F68D25E701B9 /* SkeletonDefaultConfig.swift */,
+				E216C7E372A7C9DFC052BCEF0C115B8F /* SkeletonFlow.swift */,
+				DCEF8321B3638D04E431EDA560E2616E /* SkeletonGradient.swift */,
+				0FC07E3751EF3731B645D53322DE56E0 /* SkeletonLayer.swift */,
+				8DF06BD8B07590040537513E070AE2D3 /* SkeletonReusableCell.swift */,
+				2279366073E8E2012E8B842E8CBA3625 /* SkeletonTableViewProtocols.swift */,
+				AD9E9C791008EB110955243B88D09496 /* SkeletonView.swift */,
+				BFAD79463804C379DBCF3340BDC5D7E2 /* UICollectionView+CollectionSkeleton.swift */,
+				B099600D3C04D0BF579A26667BC54E4C /* UIColor+Skeleton.swift */,
+				B1C7596445059B4853B8B6B5E1D95489 /* UITableView+CollectionSkeleton.swift */,
+				C947489FBEEA6EDF10465ADAB01F17AA /* UIView+CollectionSkeleton.swift */,
+				11918AA36AF1AAF7F6A009DFDAA86751 /* UIView+Frame.swift */,
+				8DC521F6D7257C02F9AC210FC00F2BA9 /* UIView+IBInspectable.swift */,
+				29FF1CCE5650DFD0CC44688051FBD569 /* UIView+UIApplicationDelegate.swift */,
+				9AEFFFA6739B7E1AFD4C72B5EC68F5F8 /* Support Files */,
 			);
-			name = Alamofire;
-			path = Alamofire;
+			name = SkeletonView;
+			path = SkeletonView;
 			sourceTree = "<group>";
 		};
-		2E5925946A4DE3B8F7E4137BACAD9618 /* Support Files */ = {
+		11DFE87D472FC444384BB7874DE21758 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				210971763CB2FC0DC4E378271A37BE32 /* Alamofire.modulemap */,
-				33A04B5D27E86AF4B84D95E21CF3F452 /* Alamofire.xcconfig */,
-				D1F50F37DFB6DC0B7B9D8C373E5A3EAE /* Alamofire-dummy.m */,
-				61D920D6E48023BCBF18CD83450D05F5 /* Alamofire-prefix.pch */,
-				03DECE84DC850B04690604AB7C521277 /* Alamofire-umbrella.h */,
-				117EFB31D9AD9673BAF51B48596F19E2 /* Info.plist */,
+				3CB5A0A1A155363158D1311FB109F829 /* Alamofire.modulemap */,
+				0690B7B83529CD023D32626178EB51F3 /* Alamofire.xcconfig */,
+				9BDE06833B1F8E3C8DED6AE613BE994D /* Alamofire-dummy.m */,
+				573D81E5E3800BEA564267F09B205C51 /* Alamofire-prefix.pch */,
+				6C59C0E39DDC4CA978CA549902B61203 /* Alamofire-umbrella.h */,
+				FF0CADB9584DA5F62BDD20304A682DDE /* Info.plist */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/Alamofire";
-			sourceTree = "<group>";
-		};
-		35F128EB69B6F7FB7DA93BBF6C130FAE /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				200D10EB20F0397D47F022B50CF0433F /* Alamofire */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 		3F74DA5C2742955A535114BC3E70E726 /* Targets Support Files */ = {
@@ -186,6 +261,26 @@
 				A39034482471460777C5D08461EB97F8 /* Pods-Project: NeteroTests */,
 			);
 			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		4F9703E32A3304D17A0C87E1A8132E4A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				87C44A70DFA4335FAD36B81DCE06C854 /* Alamofire.framework */,
+				FA1522F3C06912B87CDA77198B5188D1 /* Pods_Project__Netero.framework */,
+				18167353B1ADFDC6CE5555E59B9F9F2A /* Pods_Project__NeteroTests.framework */,
+				3420A3A0C958EA97FFEE86FE9FFC6F69 /* SkeletonView.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		51C010BF23D8D46B8017523B55174A42 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				80199A52861B88FF435A4D47902CEEF4 /* Alamofire */,
+				08602D658D17804AA63C14D2EDB8960E /* SkeletonView */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		5E0D919E635D23B70123790B8308F8EF /* iOS */ = {
@@ -219,10 +314,50 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				35F128EB69B6F7FB7DA93BBF6C130FAE /* Pods */,
-				AF261075A001F9632DBE4E75B1E045FD /* Products */,
+				51C010BF23D8D46B8017523B55174A42 /* Pods */,
+				4F9703E32A3304D17A0C87E1A8132E4A /* Products */,
 				3F74DA5C2742955A535114BC3E70E726 /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		80199A52861B88FF435A4D47902CEEF4 /* Alamofire */ = {
+			isa = PBXGroup;
+			children = (
+				E0D28648602812C4C4115B1DF2F4F34C /* AFError.swift */,
+				0BA61C85BD4E455AEAA9EF7B0E70530B /* Alamofire.swift */,
+				FA2C8F874607FC6FDE7572D118B3F145 /* DispatchQueue+Alamofire.swift */,
+				C617C46E42A0349A0831CD6C31897749 /* MultipartFormData.swift */,
+				6515C414E4DA322A79391F6E13E93F62 /* NetworkReachabilityManager.swift */,
+				27028680D8EE8B74FDBBA42B99DFE692 /* Notifications.swift */,
+				7A747568B6F3ACD8644FEB09C84CC527 /* ParameterEncoding.swift */,
+				435104B44941C334F04CDABEDEEA2CC3 /* Request.swift */,
+				5454449642F2F0B2BC4EE67360A171EA /* Response.swift */,
+				334F74D068F4D48CF5098AC2060915F6 /* ResponseSerialization.swift */,
+				AA3F8E7FF037930AEB9A8DE55DAF74E1 /* Result.swift */,
+				0E1640808487A48D28247A5E4833FA34 /* ServerTrustPolicy.swift */,
+				C034B27073983A5A76955F6BF05D8B4A /* SessionDelegate.swift */,
+				02E0EA3E1FCAD25B6400DAD57B9E2A8F /* SessionManager.swift */,
+				6C76A530355DFC303CD1EB4A9810BE4D /* TaskDelegate.swift */,
+				DC36DF44DEB99D8B04E1FE722FE3C833 /* Timeline.swift */,
+				158031A66922E8A63F01307AF4675982 /* Validation.swift */,
+				11DFE87D472FC444384BB7874DE21758 /* Support Files */,
+			);
+			name = Alamofire;
+			path = Alamofire;
+			sourceTree = "<group>";
+		};
+		9AEFFFA6739B7E1AFD4C72B5EC68F5F8 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B288E492212D62BF97407790EA900045 /* Info.plist */,
+				33C2A0E1D13992E85991FD53F01EE38B /* SkeletonView.modulemap */,
+				294AD4B4BF27C615D4944A99A1E2DEDE /* SkeletonView.xcconfig */,
+				0BD0684C91F5E60AD61C48356E40B1AF /* SkeletonView-dummy.m */,
+				537C1A3BB4B415B80A94ED8D8CA14CE4 /* SkeletonView-prefix.pch */,
+				89F55E1BD7888274AF88D5C96D2B4069 /* SkeletonView-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SkeletonView";
 			sourceTree = "<group>";
 		};
 		A39034482471460777C5D08461EB97F8 /* Pods-Project: NeteroTests */ = {
@@ -243,16 +378,6 @@
 			path = "Target Support Files/Pods-Project: NeteroTests";
 			sourceTree = "<group>";
 		};
-		AF261075A001F9632DBE4E75B1E045FD /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				44B1CECDCEBF4A8757B2B1146A9CCEF3 /* Alamofire.framework */,
-				0A02142300437146EF599D0BD2D28D55 /* Pods_Project__Netero.framework */,
-				E992EA5B0B4742C52FA44D00BB21284C /* Pods_Project__NeteroTests.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -264,11 +389,19 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		3A70116A0268C58D6D9882B1CAD03E32 /* Headers */ = {
+		03DDE15F7BD36F4490291BA836A9E2B7 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A95C0CDACB3D5C0C784306307ED1151 /* Pods-Project: Netero-umbrella.h in Headers */,
+				50E111BDFF3A9A45DCD5F04739F84E6F /* Pods-Project: Netero-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		30C5E0908BE307D6A582D62A0B59C417 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E885F61DEE2E6A792BD9D4F88250DAF /* SkeletonView-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,22 +424,21 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		6F78EC19D8A3F3B58E860548B0166709 /* Pods-Project: Netero */ = {
+		0B5A823E610C175FB9148AB74271D73B /* SkeletonView */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8730A722AB7187BABE1327FE08CB9C3D /* Build configuration list for PBXNativeTarget "Pods-Project: Netero" */;
+			buildConfigurationList = 7F09D72C109BCE807ECF54EBD3E3BCE6 /* Build configuration list for PBXNativeTarget "SkeletonView" */;
 			buildPhases = (
-				3030F342AE71486100BF3EC03D3DBDCC /* Sources */,
-				4831A396A2BFD4E08F2E91556091AD72 /* Frameworks */,
-				3A70116A0268C58D6D9882B1CAD03E32 /* Headers */,
+				983AF91E9C14FC185DE10F0A516B7897 /* Sources */,
+				2414EA19D8B41B0E89F775A3954DD1BF /* Frameworks */,
+				30C5E0908BE307D6A582D62A0B59C417 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				DDCBC0E00BFC59985FDBC279E911542E /* PBXTargetDependency */,
 			);
-			name = "Pods-Project: Netero";
-			productName = "Pods-Project: Netero";
-			productReference = 0A02142300437146EF599D0BD2D28D55 /* Pods_Project__Netero.framework */;
+			name = SkeletonView;
+			productName = SkeletonView;
+			productReference = 3420A3A0C958EA97FFEE86FE9FFC6F69 /* SkeletonView.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		88E9EC28B8B46C3631E6B242B50F4442 /* Alamofire */ = {
@@ -323,7 +455,7 @@
 			);
 			name = Alamofire;
 			productName = Alamofire;
-			productReference = 44B1CECDCEBF4A8757B2B1146A9CCEF3 /* Alamofire.framework */;
+			productReference = 87C44A70DFA4335FAD36B81DCE06C854 /* Alamofire.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		AB93958DE01B7BCAC523034C1EF05288 /* Pods-Project: NeteroTests */ = {
@@ -341,7 +473,26 @@
 			);
 			name = "Pods-Project: NeteroTests";
 			productName = "Pods-Project: NeteroTests";
-			productReference = E992EA5B0B4742C52FA44D00BB21284C /* Pods_Project__NeteroTests.framework */;
+			productReference = 18167353B1ADFDC6CE5555E59B9F9F2A /* Pods_Project__NeteroTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C9C1218E75F0D2A8370265EA2EB7DD62 /* Pods-Project: Netero */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1315C8BB7D20FF2F0ABCF4438B729B01 /* Build configuration list for PBXNativeTarget "Pods-Project: Netero" */;
+			buildPhases = (
+				634B55C49AB82A24E8053D79B47D68B2 /* Sources */,
+				C713FFBAAC4BB3E32EDF1A9EDEDDAB9F /* Frameworks */,
+				03DDE15F7BD36F4490291BA836A9E2B7 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				09121324F5D6BA53D65502622075E794 /* PBXTargetDependency */,
+				8CA452D25CFF721CD03D497B310734D3 /* PBXTargetDependency */,
+			);
+			name = "Pods-Project: Netero";
+			productName = "Pods-Project: Netero";
+			productReference = FA1522F3C06912B87CDA77198B5188D1 /* Pods_Project__Netero.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -361,13 +512,14 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = AF261075A001F9632DBE4E75B1E045FD /* Products */;
+			productRefGroup = 4F9703E32A3304D17A0C87E1A8132E4A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				88E9EC28B8B46C3631E6B242B50F4442 /* Alamofire */,
-				6F78EC19D8A3F3B58E860548B0166709 /* Pods-Project: Netero */,
+				C9C1218E75F0D2A8370265EA2EB7DD62 /* Pods-Project: Netero */,
 				AB93958DE01B7BCAC523034C1EF05288 /* Pods-Project: NeteroTests */,
+				0B5A823E610C175FB9148AB74271D73B /* SkeletonView */,
 			);
 		};
 /* End PBXProject section */
@@ -378,14 +530,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7EC56329DAE847B318A5121B4C466DBD /* Pods-Project: NeteroTests-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3030F342AE71486100BF3EC03D3DBDCC /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6166425442547F55F30D934935CB736A /* Pods-Project: Netero-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,20 +558,67 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		634B55C49AB82A24E8053D79B47D68B2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A47F53369651ED0426BC6B3405299A1D /* Pods-Project: Netero-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		983AF91E9C14FC185DE10F0A516B7897 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				474FC4BA2AA26ABF68DA1B3357171E27 /* AssociationPolicy.swift in Sources */,
+				72B06F98E345960FBF4062D4C9BB1DB9 /* CALayer+Extensions.swift in Sources */,
+				EAA290E17042AAD16D151CCBCEBDA502 /* CollectionSkeletonProtocol.swift in Sources */,
+				7014AF5EEE0B1C622A6A710670B3FD03 /* ContainsMultilineText.swift in Sources */,
+				80E280812A874323CE6907B9B72B02C0 /* GenericCollectionView.swift in Sources */,
+				4F4C789EEAD9336252B700994BF28AC9 /* PrepareForSkeletonProtocol.swift in Sources */,
+				8C218E11B4C97F6AAFCBB92C656C71E0 /* RecursiveProtocol.swift in Sources */,
+				8E9201A6ADD29E84ECD858DA0E3382F5 /* SkeletonAnimationBuilder.swift in Sources */,
+				CBBB27ADA6288CFACD7370EC62F20C43 /* SkeletonCollectionDataSource.swift in Sources */,
+				E1FDE363D2D727E5B8A732DDCB6AB83E /* SkeletonCollectionDelegate.swift in Sources */,
+				21DDED1C8D3D4354D0397A59B49C0B78 /* SkeletonCollectionViewProtocols.swift in Sources */,
+				3FE107325835185F3F489580653B9185 /* SkeletonDefaultConfig.swift in Sources */,
+				625D6BBC652EB9CBD526C44CF5EB61E3 /* SkeletonFlow.swift in Sources */,
+				03486151680805B31FA9BCCF88FFF241 /* SkeletonGradient.swift in Sources */,
+				C27AC9DE23E6CE7FFC99066F02D29697 /* SkeletonLayer.swift in Sources */,
+				FB1EE3E6AA1F10FE3E994E20792759A9 /* SkeletonReusableCell.swift in Sources */,
+				202C033493A1C426CECF12CEA7B74330 /* SkeletonTableViewProtocols.swift in Sources */,
+				73FD1EDF1D93F7DDF472541CD1293453 /* SkeletonView-dummy.m in Sources */,
+				20B10C8E1E334559BFA0E0D215518B50 /* SkeletonView.swift in Sources */,
+				870E7789228DB0929D80C1277C760A32 /* UICollectionView+CollectionSkeleton.swift in Sources */,
+				41F9A6C458D9AE286DC40B84368E64A9 /* UIColor+Skeleton.swift in Sources */,
+				87F2463524D02018E45752119D15345C /* UITableView+CollectionSkeleton.swift in Sources */,
+				B1F3CAC1EBD1F98D8A870505C3EB2D07 /* UIView+CollectionSkeleton.swift in Sources */,
+				AB5DA202AEE1AF55E4176EAE35CE2BF4 /* UIView+Frame.swift in Sources */,
+				36394EC448CD046FBA86E62B9C3041F3 /* UIView+IBInspectable.swift in Sources */,
+				1265EFC8707D93A1E5CD68352DE2C0D4 /* UIView+UIApplicationDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		97A5307C7A1CBFB554F8E4F26DB47B0D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-Project: Netero";
-			target = 6F78EC19D8A3F3B58E860548B0166709 /* Pods-Project: Netero */;
-			targetProxy = 1B25E0B9C284732447FD327231191693 /* PBXContainerItemProxy */;
-		};
-		DDCBC0E00BFC59985FDBC279E911542E /* PBXTargetDependency */ = {
+		09121324F5D6BA53D65502622075E794 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Alamofire;
 			target = 88E9EC28B8B46C3631E6B242B50F4442 /* Alamofire */;
-			targetProxy = F8FC57818C5990E5A29D1589398D00D8 /* PBXContainerItemProxy */;
+			targetProxy = CF8955253EEE18CE054662132BE28CF3 /* PBXContainerItemProxy */;
+		};
+		8CA452D25CFF721CD03D497B310734D3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SkeletonView;
+			target = 0B5A823E610C175FB9148AB74271D73B /* SkeletonView */;
+			targetProxy = 637F4D0EBC6F758261D261E4FB84D26F /* PBXContainerItemProxy */;
+		};
+		97A5307C7A1CBFB554F8E4F26DB47B0D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-Project: Netero";
+			target = C9C1218E75F0D2A8370265EA2EB7DD62 /* Pods-Project: Netero */;
+			targetProxy = 1B25E0B9C284732447FD327231191693 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -464,6 +655,43 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4D95C554C20E1335E07F847C021D5EB9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 294AD4B4BF27C615D4944A99A1E2DEDE /* SkeletonView.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SkeletonView/SkeletonView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SkeletonView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SkeletonView/SkeletonView.modulemap";
+				PRODUCT_MODULE_NAME = SkeletonView;
+				PRODUCT_NAME = SkeletonView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -534,9 +762,49 @@
 			};
 			name = Debug;
 		};
+		7FBC8A9C1500135788ABB53527A0ACD1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 151E5C9440C1A05E037157B8FA53A105 /* Pods-Project: Netero.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Project: Netero/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Project: Netero/Pods-Project: Netero.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		A18C9CC7E37563F2891E7DC87F2DE6CE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 33A04B5D27E86AF4B84D95E21CF3F452 /* Alamofire.xcconfig */;
+			baseConfigurationReference = 0690B7B83529CD023D32626178EB51F3 /* Alamofire.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -629,7 +897,117 @@
 			};
 			name = Release;
 		};
-		C4652EF445D369EE7373F9317A5E2165 /* Release */ = {
+		DC270AFD2BC589BC013570872D086D51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D697AB83FC0BD0F66DC6AC9D97EB692B /* Pods-Project: NeteroTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Project: NeteroTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Project: NeteroTests/Pods-Project: NeteroTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E7D7312591D08A595C964D50B6237123 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 294AD4B4BF27C615D4944A99A1E2DEDE /* SkeletonView.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SkeletonView/SkeletonView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SkeletonView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SkeletonView/SkeletonView.modulemap";
+				PRODUCT_MODULE_NAME = SkeletonView;
+				PRODUCT_NAME = SkeletonView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		EA0ADC75B20BB62958101306980460E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0690B7B83529CD023D32626178EB51F3 /* Alamofire.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Alamofire/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
+				PRODUCT_MODULE_NAME = Alamofire;
+				PRODUCT_NAME = Alamofire;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		EDD523B6593D7E72DABAF6CB392CF647 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F5A96F4560D82E03ECB4EF87DD4832F2 /* Pods-Project: Netero.release.xcconfig */;
 			buildSettings = {
@@ -669,123 +1047,18 @@
 			};
 			name = Release;
 		};
-		DC270AFD2BC589BC013570872D086D51 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D697AB83FC0BD0F66DC6AC9D97EB692B /* Pods-Project: NeteroTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Project: NeteroTests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Project: NeteroTests/Pods-Project: NeteroTests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		EA0ADC75B20BB62958101306980460E6 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 33A04B5D27E86AF4B84D95E21CF3F452 /* Alamofire.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Alamofire/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
-				PRODUCT_MODULE_NAME = Alamofire;
-				PRODUCT_NAME = Alamofire;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		FFBAB3D35179B7B8370071B202CC9D82 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 151E5C9440C1A05E037157B8FA53A105 /* Pods-Project: Netero.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Project: Netero/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Project: Netero/Pods-Project: Netero.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1315C8BB7D20FF2F0ABCF4438B729B01 /* Build configuration list for PBXNativeTarget "Pods-Project: Netero" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7FBC8A9C1500135788ABB53527A0ACD1 /* Debug */,
+				EDD523B6593D7E72DABAF6CB392CF647 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -804,11 +1077,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8730A722AB7187BABE1327FE08CB9C3D /* Build configuration list for PBXNativeTarget "Pods-Project: Netero" */ = {
+		7F09D72C109BCE807ECF54EBD3E3BCE6 /* Build configuration list for PBXNativeTarget "SkeletonView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FFBAB3D35179B7B8370071B202CC9D82 /* Debug */,
-				C4652EF445D369EE7373F9317A5E2165 /* Release */,
+				E7D7312591D08A595C964D50B6237123 /* Debug */,
+				4D95C554C20E1335E07F847C021D5EB9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

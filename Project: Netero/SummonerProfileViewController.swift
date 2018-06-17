@@ -57,10 +57,10 @@ class SummonerProfileViewController: UIViewController {
     
     fileprivate func constructRankingLabels(_ rankObjects: [[String : Any]]?) {
         for rankObject in rankObjects! {
-            if rankObject.stringValueForKey("queueType") == "RANKED_SOLO_5x5" {
+            if rankObject.stringValueForKey("queueType") == ApiKeys.RANKED_SOLO {
                 let rank = rankObject.stringValueForKey("rank")
                 let tier = rankObject.stringValueForKey("tier")
-                let leagueName = rankObject.stringValueForKey(("leagueName"))
+                let leagueName = rankObject.stringValueForKey(ApiKeys.LEAGUE_NAME)
                 self.rankAndTierLabel.text! = tier + " " + rank
                 self.leagueLabel.text! = leagueName
             }

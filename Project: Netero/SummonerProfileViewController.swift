@@ -16,6 +16,8 @@ class SummonerProfileViewController: UIViewController {
     @IBOutlet weak var rankAndTierLabel: UILabel!
     @IBOutlet weak var leagueLabel: UILabel!
     @IBOutlet weak var tierImageView: UIImageView!
+    @IBOutlet weak var winLossLPLabel: UILabel!
+    @IBOutlet weak var winRatioLabel: UILabel!
     
     let communicator = Communicator()
     let gradient = SkeletonGradient(baseColor: UIColor.clouds)
@@ -58,6 +60,7 @@ class SummonerProfileViewController: UIViewController {
         communicator.getCallForSummunorRank(regionPlatform, stringifiedSummunorId) { rankObjects, error in
             if rankObjects != nil {
                 self.constructRankingLabels(rankObjects)
+                self.constructWinLossLPLabel(rankObjects)
             } else {
                 print("An error occured", error as Any)
             }
@@ -78,8 +81,31 @@ class SummonerProfileViewController: UIViewController {
         }
     }
     
+    fileprivate func constructWinLossLPLabel(_ rankObjects: [[String:Any]]?) {
+        for rankObject in rankObjects! {
+            if rankObject.stringValueForKey("queueType") == ApiKeys.RANKED_SOLO {
+                let wins = rankObject.integerValueForKey("wins")
+                let losses = rankObject.integerValueForKey("losses")
+                let leaguePoints = rankObject.integerValueForKey("leaguePoints")
+                winLossLPLabel.text! = "\(wins) W \(losses) L \(leaguePoints) LP"
+                constructWinRatioLabel(wins, losses)
+            }
+        }
+    }
+    
+    fileprivate func constructWinRatioLabel(_ wins: Int,_ losses: Int) {
+        let winRatio = getWinRatio(wins, losses)
+        winRatioLabel.text! = "You have won \(winRatio)% of your games"
+    }
+    
     fileprivate func showSkeletonViews() {
         tierImageView.showAnimatedGradientSkeleton(usingGradient: gradient)
         summonerProfileIcon.showAnimatedGradientSkeleton(usingGradient: gradient)
+    }
+}
+
+extension SummonerProfileViewController {
+    func getWinRatio(_ rhs: Int,_ lhs: Int) -> Double {
+        return round((Double(rhs) / Double(rhs + lhs)) * 100)
     }
 }

@@ -7,18 +7,25 @@
 //
 
 import UIKit
+import SkeletonView
 
 class SummonerProfileViewController: UIViewController {
     @IBOutlet weak var summonerNameLabel: UILabel!
     @IBOutlet weak var summonerLevelLabel: UILabel!
+    @IBOutlet weak var summonerProfileIcon: UIImageView!
     @IBOutlet weak var rankAndTierLabel: UILabel!
     @IBOutlet weak var leagueLabel: UILabel!
+    @IBOutlet weak var tierImageView: UIImageView!
+    
     let communicator = Communicator()
+    let gradient = SkeletonGradient(baseColor: UIColor.clouds)
+    
     var summonerObject: [String:Any]!
     var regionPlatform: String!
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        showSkeletonViews()
         communicator.performOnMainThread {
             self.configueView()
         }
@@ -33,16 +40,20 @@ class SummonerProfileViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    private func configueView() {
-        let summonerName = summonerObject.stringValueForKey("name")
-        let summonerLevel = summonerObject.integerValueForKey("summonerLevel")
-        let summonerId = summonerObject.id()
-        summonerNameLabel.text = summonerName
-        summonerLevelLabel.text = String(summonerLevel)
-        getSummunorRankAttributes(summonerId)
+    fileprivate func configueView() {
+        constructNameAndLevelLabels(summonerObject!)
+        getSummunorRankAttributes(summonerObject!)
     }
     
-    private func getSummunorRankAttributes(_ summonerId: Int) {
+    fileprivate func constructNameAndLevelLabels(_ summonerObject: [String:Any]) {
+        let summonerName = summonerObject.stringValueForKey("name")
+        let summonerLevel = summonerObject.integerValueForKey("summonerLevel")
+        summonerNameLabel.text = summonerName
+        summonerLevelLabel.text = String(summonerLevel)
+    }
+    
+    fileprivate func getSummunorRankAttributes(_ summonerObject: [String:Any]) {
+        let summonerId = summonerObject.id()
         let stringifiedSummunorId = String(summonerId)
         communicator.getCallForSummunorRank(regionPlatform, stringifiedSummunorId) { rankObjects, error in
             if rankObjects != nil {
@@ -65,5 +76,10 @@ class SummonerProfileViewController: UIViewController {
                 self.leagueLabel.text! = leagueName
             }
         }
+    }
+    
+    fileprivate func showSkeletonViews() {
+        tierImageView.showAnimatedGradientSkeleton(usingGradient: gradient)
+        summonerProfileIcon.showAnimatedGradientSkeleton(usingGradient: gradient)
     }
 }

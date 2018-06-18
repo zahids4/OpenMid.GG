@@ -93,7 +93,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dummy profile Icon" translatesAutoresizingMaskIntoConstraints="NO" id="YiT-hx-g2P">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YiT-hx-g2P">
                                 <rect key="frame" x="8" y="96" width="99.666666666666671" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="Kbe-f4-iy6"/>
@@ -118,6 +118,9 @@
                                     <constraint firstAttribute="height" constant="100" id="e20-iX-C8n"/>
                                     <constraint firstAttribute="width" constant="100" id="hNW-hu-mbv"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rank + Tier" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LF7-0y-Gsk">
                                 <rect key="frame" x="138.33333333333334" y="321" width="99" height="24"/>
@@ -156,6 +159,8 @@
                         <outlet property="rankAndTierLabel" destination="LF7-0y-Gsk" id="Bnu-Ww-qlZ"/>
                         <outlet property="summonerLevelLabel" destination="vBZ-xe-egr" id="J4e-gq-OjS"/>
                         <outlet property="summonerNameLabel" destination="FXu-WU-vMy" id="IuC-7O-Fbg"/>
+                        <outlet property="summonerProfileIcon" destination="YiT-hx-g2P" id="2FP-yF-lNu"/>
+                        <outlet property="tierImageView" destination="twv-4X-Ott" id="8lv-xz-6NQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5qD-Z0-OOj" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -182,7 +187,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Dummy profile Icon" width="800" height="530"/>
         <image name="OpenMidGGLogo" width="1064" height="380"/>
     </resources>
 </document>

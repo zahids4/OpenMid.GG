@@ -28,6 +28,7 @@ class SummonerProfileViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         communicator.performOnMainThread {
+            self.showSkeletonViews()
             self.configueView()
         }
     }
@@ -103,8 +104,7 @@ class SummonerProfileViewController: UIViewController {
     }
     
     fileprivate func showSkeletonViews() {
-        tierImageView.showAnimatedGradientSkeleton(usingGradient: gradient)
-        summonerProfileIcon.showAnimatedGradientSkeleton(usingGradient: gradient)
+        view.showAnimatedGradientSkeleton(usingGradient: gradient)
     }
 }
 

@@ -27,7 +27,6 @@ class SummonerProfileViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        showSkeletonViews()
         communicator.performOnMainThread {
             self.configueView()
         }
@@ -45,6 +44,7 @@ class SummonerProfileViewController: UIViewController {
     fileprivate func configueView() {
         constructNameAndLevelLabels(summonerObject!)
         getSummunorRankAttributes(summonerObject!)
+        setProfileIcon()
     }
     
     fileprivate func constructNameAndLevelLabels(_ summonerObject: [String:Any]) {
@@ -96,6 +96,10 @@ class SummonerProfileViewController: UIViewController {
     fileprivate func constructWinRatioLabel(_ wins: Int,_ losses: Int) {
         let winRatio = getWinRatio(wins, losses)
         winRatioLabel.text! = "You have won \(winRatio)% of your games"
+    }
+    
+    fileprivate func setProfileIcon() {
+        summonerProfileIcon.setProfileIconWith(id: summonerObject.integerValueForKey("profileIconId"))
     }
     
     fileprivate func showSkeletonViews() {

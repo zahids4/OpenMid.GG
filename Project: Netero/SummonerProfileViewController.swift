@@ -27,10 +27,8 @@ class SummonerProfileViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        communicator.performOnMainThread {
-            self.showSkeletonViews()
-            self.configueView()
-        }
+        showSkeletonViews()
+        configueView()
     }
     
     override func viewDidLoad() {
@@ -41,6 +39,7 @@ class SummonerProfileViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     
     fileprivate func configueView() {
         constructNameAndLevelLabels(summonerObject!)
@@ -60,7 +59,7 @@ class SummonerProfileViewController: UIViewController {
         let stringifiedSummunorId = String(summonerId)
         communicator.getCallForSummunorRank(regionPlatform, stringifiedSummunorId) { rankObjects, error in
             if rankObjects != nil {
-                self.constructRankingLabels(rankObjects)
+                self.constructRankingAttributes(rankObjects)
                 self.constructWinLossLPLabel(rankObjects)
             } else {
                 print("An error occured", error as Any)
@@ -70,11 +69,12 @@ class SummonerProfileViewController: UIViewController {
         }
     }
     
-    fileprivate func constructRankingLabels(_ rankObjects: [[String : Any]]?) {
+    fileprivate func constructRankingAttributes(_ rankObjects: [[String : Any]]?) {
         for rankObject in rankObjects! {
             if rankObject.stringValueForKey("queueType") == ApiKeys.RANKED_SOLO {
                 let rank = rankObject.stringValueForKey("rank")
                 let tier = rankObject.stringValueForKey("tier")
+                self.setTierIcon(tier, rank)
                 let leagueName = rankObject.stringValueForKey(ApiKeys.LEAGUE_NAME)
                 self.rankAndTierLabel.text! = tier + " " + rank
                 self.leagueLabel.text! = leagueName
@@ -103,12 +103,21 @@ class SummonerProfileViewController: UIViewController {
         summonerProfileIcon.setProfileIconWith(id: summonerObject.integerValueForKey("profileIconId"))
     }
     
+    fileprivate func setTierIcon(_ tier: String, _ rank: String) {
+        let imageName = getImageNameFromTierAndRank(tier, rank)
+        tierImageView.image = UIImage(named: imageName)
+    }
+    
     fileprivate func showSkeletonViews() {
-        view.showAnimatedGradientSkeleton(usingGradient: gradient)
+        //view.showAnimatedGradientSkeleton(usingGradient: gradient)
     }
 }
 
 extension SummonerProfileViewController {
+    func getImageNameFromTierAndRank(_ tier: String, _ rank: String) -> String {
+        return tier.lowercased() + "_" + rank.lowercased()
+    }
+    
     func getWinRatio(_ rhs: Int,_ lhs: Int) -> Double {
         return round((Double(rhs) / Double(rhs + lhs)) * 100)
     }

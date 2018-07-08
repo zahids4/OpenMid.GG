@@ -53,20 +53,33 @@ class SummonerProfileViewController: UIViewController {
         summonerNameLabel.text = summonerName
         summonerLevelLabel.text = String(summonerLevel)
     }
+
     
     fileprivate func getSummunorRankAttributes(_ summonerObject: [String:Any]) {
         let summonerId = summonerObject.id()
         let stringifiedSummunorId = String(summonerId)
         communicator.getCallForSummunorRank(regionPlatform, stringifiedSummunorId) { rankObjects, error in
             if rankObjects != nil {
-                self.constructRankingAttributes(rankObjects)
-                self.constructWinLossLPLabel(rankObjects)
+                if (rankObjects?.isEmpty)! {
+                    self.configureUIForUnrankedSummoner()
+                } else {
+                    self.constructRankingAttributes(rankObjects)
+                    self.constructWinLossLPLabel(rankObjects)
+                }
             } else {
                 print("An error occured", error as Any)
             }
             
             return
         }
+    }
+    
+    fileprivate func configureUIForUnrankedSummoner() {
+        self.tierImageView.image = UIImage(named: "provisional")
+        self.rankAndTierLabel.text! = "Unranked"
+        self.leagueLabel.hide()
+        self.winLossLPLabel.hide()
+        self.winRatioLabel.hide()
     }
     
     fileprivate func constructRankingAttributes(_ rankObjects: [[String : Any]]?) {

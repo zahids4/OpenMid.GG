@@ -124,6 +124,14 @@ class SummonerProfileViewController: UIViewController {
     fileprivate func showSkeletonViews() {
         //view.showAnimatedGradientSkeleton(usingGradient: gradient)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "matchesTableVCSegue" {
+            let matchesTableVC = segue.destination as! MatchesTableViewController
+            matchesTableVC.accountId = summonerObject.integerValueForKey("accountId")
+            matchesTableVC.regionPlatform = regionPlatform
+        }
+    }
 }
 
 extension SummonerProfileViewController {

@@ -17,6 +17,10 @@ extension Dictionary where Key == String {
         return self[key] as! Int
     }
     
+    func arrayForKey(_ key: Key) -> Array<Any> {
+        return self[key] as! Array
+    }
+    
     func id() -> Int {
         return self["id"] as! Int
     }

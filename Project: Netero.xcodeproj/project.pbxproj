@@ -23,6 +23,7 @@
 		30220F1820C475D300CB21D0 /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30220F1720C475D300CB21D0 /* ErrorHandler.swift */; };
 		30220F1B20C4785F00CB21D0 /* UIButton+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30220F1A20C4785F00CB21D0 /* UIButton+Extensions.swift */; };
 		308EDB9A20F1AB5B00AC65D1 /* UILabel+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308EDB9920F1AB5B00AC65D1 /* UILabel+Extensions.swift */; };
+		308EDB9C20F1B50300AC65D1 /* MatchesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308EDB9B20F1B50300AC65D1 /* MatchesTableViewController.swift */; };
 		30C9523B20D759AA00F64EC0 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9523A20D759AA00F64EC0 /* UIImageView+Extensions.swift */; };
 		30F2650E20D61DDF008B16C5 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F2650D20D61DDF008B16C5 /* Keys.swift */; };
 /* End PBXBuildFile section */
@@ -58,6 +59,7 @@
 		30220F1720C475D300CB21D0 /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
 		30220F1A20C4785F00CB21D0 /* UIButton+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extensions.swift"; sourceTree = "<group>"; };
 		308EDB9920F1AB5B00AC65D1 /* UILabel+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extensions.swift"; sourceTree = "<group>"; };
+		308EDB9B20F1B50300AC65D1 /* MatchesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesTableViewController.swift; sourceTree = "<group>"; };
 		30C9523A20D759AA00F64EC0 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
 		30F2650D20D61DDF008B16C5 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		4DC1F49AD8FEEE5072AECCAE /* Pods-Project: NeteroTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project: NeteroTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Project: NeteroTests/Pods-Project: NeteroTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 			children = (
 				30220F1020C0AAC500CB21D0 /* LandingScreenViewController.swift */,
 				300ACE4320CD907800E7C31B /* SummonerProfileViewController.swift */,
+				308EDB9B20F1B50300AC65D1 /* MatchesTableViewController.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -377,6 +380,7 @@
 				30220F1320C0AE9500CB21D0 /* ButtonStyling.swift in Sources */,
 				30220F1120C0AAC500CB21D0 /* LandingScreenViewController.swift in Sources */,
 				300ACE4420CD907800E7C31B /* SummonerProfileViewController.swift in Sources */,
+				308EDB9C20F1B50300AC65D1 /* MatchesTableViewController.swift in Sources */,
 				30220F1820C475D300CB21D0 /* ErrorHandler.swift in Sources */,
 				30220EF620C0A6B600CB21D0 /* Project__Netero.xcdatamodeld in Sources */,
 				30220EEE20C0A6B600CB21D0 /* AppDelegate.swift in Sources */,

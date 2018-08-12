@@ -11,9 +11,9 @@ import UIKit
 class MatchesTableViewController: UITableViewController {
     let communicator = Communicator()
     
-    var matchArray = [[String:Any]]()
     var accountId: Int!
     var regionPlatform: String!
+    var dataSource = [Bool]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +24,29 @@ class MatchesTableViewController: UITableViewController {
     fileprivate func getMatches() {
         communicator.getCallForSummunorMatches(regionPlatform, String(accountId)) { matches, error in
             if matches != nil {
-                self.populateMatchIdArrayFrom(matches!)
+                let dispatchGroup = DispatchGroup()
+                for match in matches! {
+                    dispatchGroup.enter()
+                    
+                    self.communicator.getMatcheDetails(region: self.regionPlatform, matchId: String(match.integerValueForKey("gameId"))) { matchDetails, error in
+                        dispatchGroup.leave()
+                        if matchDetails != nil {
+                            let participantsArray = matchDetails!.arrayForKey("participants") as! [[String: Any]]
+                            let summoner = participantsArray.first(where: {$0["championId"] as! Int == match.integerValueForKey("champion")})
+                            let teamId = summoner?.integerValueForKey("teamId")
+                            let teamsArray = matchDetails!.arrayForKey("teams") as! [[String: Any]]
+                            let summonerTeam = teamsArray.first(where: {($0["teamId"] as! Int) == teamId})
+                            let didWin = summonerTeam?.stringValueForKey("win") == "Win"
+                            self.dataSource.append(didWin)
+                        } else {
+                            print("ERROR")
+                        }
+                    }
+                }
+                dispatchGroup.notify(queue: .main) {
+                    print("Finished getting all match.")
+                    print(self.dataSource)
+                }
             } else {
                 print("An error occured", error as Any)
             }
@@ -32,21 +54,8 @@ class MatchesTableViewController: UITableViewController {
         }
     }
     
-    fileprivate func populateMatchIdArrayFrom(_ matches: [[String: Any]]) {
-        matchLoop: for match in matches {
-            matchArray.append(match)
-            if matchArray.count == 5 {
-                break matchLoop
-            }
-        }
+    fileprivate func createMatchHistoryTableDatasource() {
         
-        communicator.getMatcheDetails(region: regionPlatform, matchId: String(matchArray[0].integerValueForKey("gameId"))) { matchDetails, error in
-            if matchDetails != nil {
-                print(matchDetails)
-            } else {
-                print("ERROR")
-            }
-        }
     }
 
     override func didReceiveMemoryWarning() {

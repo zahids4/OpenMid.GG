@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 
 class Communicator {
-    let apiKey = "RGAPI-33ee34fa-0629-4cc1-ac82-19f654c945ec"
+    let apiKey = "RGAPI-a9208b17-cd08-4313-9b10-8c1d419890d5"
 
     func getSummoner(region: String, summonerName: String, completionHandler: @escaping ([String:Any]?, Error?) -> ()) {
         getCallForSummunor(region: region, summonerName: summonerName, completionHandler: completionHandler)
@@ -36,6 +36,21 @@ class Communicator {
             switch response.result {
             case .success(let value):
                 completionHandler((value as! [String:Any])["matches"] as? [[String:Any]], nil)
+            case .failure(let error):
+                completionHandler(nil, error)
+            }
+        }
+    }
+    
+    func getMatcheDetails(region: String, matchId: String, completionHandler: @escaping ([String:Any]?, Error?) -> ()) {
+        getCallForMatch(region, matchId, completionHandler)
+    }
+    
+    func getCallForMatch(_ region: String,_ matchId: String,_ completionHandler: @escaping ([String:Any]?, Error?) -> ()) {
+        Alamofire.request("https://\(region).api.riotgames.com/lol/match/v3/matches/\(matchId)?api_key=" + apiKey).validate().responseJSON { response in
+            switch response.result {
+            case .success(let value):
+                completionHandler((value as! [String:Any]), nil)
             case .failure(let error):
                 completionHandler(nil, error)
             }

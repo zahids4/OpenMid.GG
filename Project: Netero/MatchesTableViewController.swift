@@ -11,6 +11,7 @@ import UIKit
 class MatchesTableViewController: UITableViewController {
     let communicator = Communicator()
     
+    var matchArray = [[String:Any]]()
     var accountId: Int!
     var regionPlatform: String!
     
@@ -23,11 +24,28 @@ class MatchesTableViewController: UITableViewController {
     fileprivate func getMatches() {
         communicator.getCallForSummunorMatches(regionPlatform, String(accountId)) { matches, error in
             if matches != nil {
-                print(matches!)
+                self.populateMatchIdArrayFrom(matches!)
             } else {
                 print("An error occured", error as Any)
             }
             
+        }
+    }
+    
+    fileprivate func populateMatchIdArrayFrom(_ matches: [[String: Any]]) {
+        matchLoop: for match in matches {
+            matchArray.append(match)
+            if matchArray.count == 5 {
+                break matchLoop
+            }
+        }
+        
+        communicator.getMatcheDetails(region: regionPlatform, matchId: String(matchArray[0].integerValueForKey("gameId"))) { matchDetails, error in
+            if matchDetails != nil {
+                print(matchDetails)
+            } else {
+                print("ERROR")
+            }
         }
     }
 

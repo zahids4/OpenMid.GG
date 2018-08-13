@@ -13,48 +13,17 @@ class MatchesTableViewController: UITableViewController {
     
     var accountId: Int!
     var regionPlatform: String!
-    var dataSource = [Bool]()
+    var dataSource = [[String:Any]]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         getMatches()
     }
     
     fileprivate func getMatches() {
         communicator.getCallForSummunorMatches(regionPlatform, String(accountId)) { matches, error in
             if matches != nil {
-                let dispatchGroup = DispatchGroup()
-                let dispatchQueue = DispatchQueue(label: "taskQueue")
-                let dispatchSemaphore = DispatchSemaphore(value: 0)
-                dispatchQueue.async {
-                    for match in matches! {
-                        dispatchGroup.enter()
-                        
-                        self.communicator.getMatcheDetails(region: self.regionPlatform, matchId: String(match.integerValueForKey("gameId"))) { matchDetails, error in
-                            if matchDetails != nil {
-                                let participantsArray = matchDetails!.arrayForKey("participants") as! [[String: Any]]
-                                let summoner = participantsArray.first(where: {$0["championId"] as! Int == match.integerValueForKey("champion")})
-                                let teamId = summoner?.integerValueForKey("teamId")
-                                let teamsArray = matchDetails!.arrayForKey("teams") as! [[String: Any]]
-                                let summonerTeam = teamsArray.first(where: {($0["teamId"] as! Int) == teamId})
-                                let didWin = summonerTeam?.stringValueForKey("win") == "Win"
-                                self.dataSource.append(didWin)
-                            } else {
-                                print("ERROR")
-                            }
-                            dispatchSemaphore.signal()
-                            dispatchGroup.leave()
-                        }
-                        dispatchSemaphore.wait()
-                    }
-                }
-                dispatchGroup.notify(queue: dispatchQueue) {
-                    DispatchQueue.main.async {
-                        print("Finished getting all match.")
-                        print(self.dataSource)
-                    }
-                }
+                self.buildMatchesDatasource(matches)
             } else {
                 print("An error occured", error as Any)
             }
@@ -62,8 +31,47 @@ class MatchesTableViewController: UITableViewController {
         }
     }
     
-    fileprivate func createMatchHistoryTableDatasource() {
-        
+    
+    fileprivate func buildMatchesDatasource(_ matches: [[String : Any]]?) {
+        let dispatchGroup = DispatchGroup()
+        let dispatchQueue = DispatchQueue(label: "taskQueue")
+        let dispatchSemaphore = DispatchSemaphore(value: 0)
+        dispatchQueue.async {
+            for match in matches! {
+                var matchObject = [String:Any]()
+                dispatchGroup.enter()
+                self.communicator.getMatcheDetails(region: self.regionPlatform, matchId: String(match.integerValueForKey("gameId"))) { matchDetails, error in
+                    if matchDetails != nil {
+                        let participantsArray = matchDetails!.arrayForKey("participants") as! [[String: Any]]
+                        let championId = match.integerValueForKey("champion")
+                        let summoner = participantsArray.first(where: {$0["championId"] as! Int == championId})
+                        let teamId = summoner?.integerValueForKey("teamId")
+                        let teamsArray = matchDetails!.arrayForKey("teams") as! [[String: Any]]
+                        let summonerTeam = teamsArray.first(where: {($0["teamId"] as! Int) == teamId})
+                        let didWin = summonerTeam?.stringValueForKey("win") == "Win"
+                        let stats = summoner?.stringAnyObjectForKey("stats")
+                        matchObject["didWin"] = didWin
+                        matchObject["championId"] = championId
+                        matchObject["kills"] = stats!.integerValueForKey("kills")
+                        matchObject["assists"] = stats!.integerValueForKey("assists")
+                        matchObject["deaths"] = stats!.integerValueForKey("deaths")
+                        self.dataSource.append(matchObject)
+                    } else {
+                        print("ERROR")
+                    }
+                    dispatchSemaphore.signal()
+                    dispatchGroup.leave()
+                }
+                dispatchSemaphore.wait()
+            }
+        }
+        dispatchGroup.notify(queue: dispatchQueue) {
+            DispatchQueue.main.async {
+                print("Finished getting all matches.")
+                print(self.dataSource)
+                
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {

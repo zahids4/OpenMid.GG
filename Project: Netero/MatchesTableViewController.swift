@@ -69,7 +69,7 @@ class MatchesTableViewController: UITableViewController {
             DispatchQueue.main.async {
                 print("Finished getting all matches.")
                 print(self.dataSource)
-                
+                self.tableView.reloadData()
             }
         }
     }
@@ -88,14 +88,19 @@ class MatchesTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 3
+        return dataSource.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "matchCell", for: indexPath)
-
-        // Configure the cell...
-
+        let match = dataSource[indexPath.row]
+        let didWin = match.boolForKey("didWin")
+        if didWin {
+            cell.textLabel?.text = "WIN"
+        } else {
+            cell.textLabel?.text = "LOSS"
+        }
+        cell.detailTextLabel?.text = String(match.integerValueForKey("kills")) + "Kills"
         return cell
     }
 

@@ -13,6 +13,10 @@ extension Dictionary where Key == String {
         return self[key] as! String
     }
     
+    func boolForKey(_ key: Key) -> Bool {
+        return self[key] as! Bool
+    }
+    
     func stringAnyObjectForKey(_ key: Key) -> [String: Any] {
         return self[key] as! [String: Any]
     }

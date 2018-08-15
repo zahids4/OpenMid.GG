@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -214,13 +215,56 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="matchCell" rowHeight="72" id="xGE-2u-EgM">
-                                <rect key="frame" x="0.0" y="28" width="343" height="72"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="matchCell" rowHeight="100" id="xGE-2u-EgM" customClass="MatchTableViewCell" customModule="Project__Netero" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="343" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xGE-2u-EgM" id="dqH-pe-7dK">
-                                    <rect key="frame" x="0.0" y="0.0" width="343" height="71.666666666666671"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="343" height="99.666666666666671"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6Sv-id-gru">
+                                            <rect key="frame" x="16" y="20" width="60" height="59"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="60" id="23k-7A-NIl"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kill Death Assist" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1te-ez-nDY">
+                                            <rect key="frame" x="84" y="58" width="123" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KDA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lS3-fX-qch">
+                                            <rect key="frame" x="215" y="58" width="34" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Champion Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xKT-y3-rdJ">
+                                            <rect key="frame" x="84" y="20" width="128" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="1te-ez-nDY" firstAttribute="leading" secondItem="6Sv-id-gru" secondAttribute="trailing" constant="8" id="5QV-Du-Ezn"/>
+                                        <constraint firstItem="lS3-fX-qch" firstAttribute="leading" secondItem="1te-ez-nDY" secondAttribute="trailing" constant="8" id="8eD-6O-Pwc"/>
+                                        <constraint firstItem="lS3-fX-qch" firstAttribute="centerY" secondItem="1te-ez-nDY" secondAttribute="centerY" id="Fs7-Gy-92k"/>
+                                        <constraint firstItem="6Sv-id-gru" firstAttribute="top" secondItem="dqH-pe-7dK" secondAttribute="top" constant="20" id="GLR-hq-OsA"/>
+                                        <constraint firstItem="6Sv-id-gru" firstAttribute="leading" secondItem="dqH-pe-7dK" secondAttribute="leading" constant="16" id="Kok-SR-jmu"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="1te-ez-nDY" secondAttribute="bottom" constant="10" id="LmJ-Jg-QDX"/>
+                                        <constraint firstItem="xKT-y3-rdJ" firstAttribute="top" secondItem="dqH-pe-7dK" secondAttribute="topMargin" constant="9" id="aDc-84-fte"/>
+                                        <constraint firstItem="xKT-y3-rdJ" firstAttribute="leading" secondItem="6Sv-id-gru" secondAttribute="trailing" constant="8" id="d94-k1-wv7"/>
+                                        <constraint firstAttribute="bottom" secondItem="6Sv-id-gru" secondAttribute="bottom" constant="20" id="nHr-xY-EF3"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="championIconImage" destination="6Sv-id-gru" id="EAv-fp-S74"/>
+                                    <outlet property="championNameLabel" destination="xKT-y3-rdJ" id="bz0-CO-DSC"/>
+                                    <outlet property="kdaLabel" destination="lS3-fX-qch" id="KbW-tp-RFo"/>
+                                    <outlet property="matchStatsLabel" destination="1te-ez-nDY" id="g1p-Ba-tiU"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

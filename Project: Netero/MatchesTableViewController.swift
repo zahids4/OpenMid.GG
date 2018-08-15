@@ -104,20 +104,10 @@ class MatchesTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "matchCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "matchCell", for: indexPath) as! MatchTableViewCell
         let match = dataSource[indexPath.row]
-        configureMatchCell(cell, match)
+        cell.configureUsing(match)
         return cell
-    }
-    
-    fileprivate func configureMatchCell(_ cell: UITableViewCell,_ match: [String: Any]) {
-        let didWin = match.boolForKey("didWin")
-        if didWin {
-            cell.textLabel?.text = "WIN"
-        } else {
-            cell.textLabel?.text = "LOSS"
-        }
-        cell.detailTextLabel?.text = String(match.integerValueForKey("kills")) + "Kills"
     }
 
     /*

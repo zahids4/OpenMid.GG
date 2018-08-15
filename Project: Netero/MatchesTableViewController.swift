@@ -50,7 +50,6 @@ class MatchesTableViewController: UITableViewController {
         dispatchGroup.notify(queue: dispatchQueue) {
             DispatchQueue.main.async {
                 print("Finished getting all matches.")
-                print(self.dataSource)
                 self.tableView.reloadData()
             }
         }
@@ -66,15 +65,16 @@ class MatchesTableViewController: UITableViewController {
             let summonerTeam = teamsArray.first(where: {($0["teamId"] as! Int) == teamId})
             let didWin = summonerTeam?.stringValueForKey("win") == "Win"
             let stats = summoner?.stringAnyObjectForKey("stats")
-            let matchObject = self.buildMatchObject(didWin, championId, stats)
+            let matchObject = self.buildMatchObject(didWin, championId, stats, matchDetails)
             self.dataSource.append(matchObject)
         } else {
             print("An error occured: ", error!)
         }
     }
     
-    fileprivate func buildMatchObject(_ didWin: Bool, _ championId: Int, _ stats: [String : Any]?) -> [String:Any] {
+    fileprivate func buildMatchObject(_ didWin: Bool, _ championId: Int, _ stats: [String : Any]?, _ matchDetails: [String:Any]?) -> [String:Any] {
         var matchObject = [String: Any]()
+        matchObject["matchDetails"] = matchDetails
         matchObject["didWin"] = didWin
         matchObject["championId"] = championId
         matchObject["kills"] = stats!.integerValueForKey("kills")

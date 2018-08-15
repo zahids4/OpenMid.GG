@@ -25,7 +25,7 @@ class MatchesTableViewController: UITableViewController {
             if matches != nil {
                 self.buildMatchesDatasource(matches)
             } else {
-                print("An error occured", error as Any)
+                print("An error occured: ", error as Any)
             }
             
         }
@@ -69,7 +69,7 @@ class MatchesTableViewController: UITableViewController {
             let matchObject = self.buildMatchObject(didWin, championId, stats)
             self.dataSource.append(matchObject)
         } else {
-            print("ERROR", error!)
+            print("An error occured: ", error!)
         }
     }
     

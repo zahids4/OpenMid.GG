@@ -14,11 +14,11 @@ class Communicator {
     let endIndexForGetMatchesCall = 5
 
     func getSummoner(region: String, summonerName: String, completionHandler: @escaping ([String:Any]?, Error?) -> ()) {
-        getCallForSummunor(region: region, summonerName: summonerName, completionHandler: completionHandler)
+        let encodedName = summonerName.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
+        getCallForSummunor(region: region, encodedName: encodedName, completionHandler: completionHandler)
     }
     
-    func getCallForSummunor(region: String, summonerName: String, completionHandler: @escaping ([String:Any]?, Error?) -> ()) {
-        let encodedName = summonerName.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
+    func getCallForSummunor(region: String, encodedName: String, completionHandler: @escaping ([String:Any]?, Error?) -> ()) {
         Alamofire.request("https://\(region).api.riotgames.com/lol/summoner/v3/summoners/by-name/\(encodedName)?api_key=" + apiKey).validate().responseJSON { response in
             switch response.result {
             case .success(let value):

@@ -31,14 +31,12 @@ class MatchesTableViewController: UITableViewController {
         }
     }
     
-    
     fileprivate func buildMatchesDatasource(_ matches: [[String : Any]]?) {
         let dispatchGroup = DispatchGroup()
         let dispatchQueue = DispatchQueue(label: "taskQueue")
         let dispatchSemaphore = DispatchSemaphore(value: 0)
         dispatchQueue.async {
             for match in matches! {
-                var matchObject = [String:Any]()
                 dispatchGroup.enter()
                 self.communicator.getMatcheDetails(region: self.regionPlatform, matchId: String(match.integerValueForKey("gameId"))) { matchDetails, error in
                     if matchDetails != nil {
@@ -50,11 +48,7 @@ class MatchesTableViewController: UITableViewController {
                         let summonerTeam = teamsArray.first(where: {($0["teamId"] as! Int) == teamId})
                         let didWin = summonerTeam?.stringValueForKey("win") == "Win"
                         let stats = summoner?.stringAnyObjectForKey("stats")
-                        matchObject["didWin"] = didWin
-                        matchObject["championId"] = championId
-                        matchObject["kills"] = stats!.integerValueForKey("kills")
-                        matchObject["assists"] = stats!.integerValueForKey("assists")
-                        matchObject["deaths"] = stats!.integerValueForKey("deaths")
+                        let matchObject = self.buildMatchObject(didWin, championId, stats)
                         self.dataSource.append(matchObject)
                     } else {
                         print("ERROR")
@@ -65,6 +59,7 @@ class MatchesTableViewController: UITableViewController {
                 dispatchSemaphore.wait()
             }
         }
+        
         dispatchGroup.notify(queue: dispatchQueue) {
             DispatchQueue.main.async {
                 print("Finished getting all matches.")
@@ -73,6 +68,18 @@ class MatchesTableViewController: UITableViewController {
             }
         }
     }
+    
+    fileprivate func buildMatchObject(_ didWin: Bool, _ championId: Int, _ stats: [String : Any]?) -> [String:Any] {
+        var matchObject = [String: Any]()
+        matchObject["didWin"] = didWin
+        matchObject["championId"] = championId
+        matchObject["kills"] = stats!.integerValueForKey("kills")
+        matchObject["assists"] = stats!.integerValueForKey("assists")
+        matchObject["deaths"] = stats!.integerValueForKey("deaths")
+        
+        return matchObject
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -80,7 +80,6 @@ class MatchesTableViewController: UITableViewController {
         matchObject["kills"] = stats!.integerValueForKey("kills")
         matchObject["assists"] = stats!.integerValueForKey("assists")
         matchObject["deaths"] = stats!.integerValueForKey("deaths")
-        
         return matchObject
     }
     
@@ -93,18 +92,25 @@ class MatchesTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return dataSource.count
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100.0
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "matchCell", for: indexPath)
         let match = dataSource[indexPath.row]
+        configureMatchCell(cell, match)
+        return cell
+    }
+    
+    fileprivate func configureMatchCell(_ cell: UITableViewCell,_ match: [String: Any]) {
         let didWin = match.boolForKey("didWin")
         if didWin {
             cell.textLabel?.text = "WIN"
@@ -112,7 +118,6 @@ class MatchesTableViewController: UITableViewController {
             cell.textLabel?.text = "LOSS"
         }
         cell.detailTextLabel?.text = String(match.integerValueForKey("kills")) + "Kills"
-        return cell
     }
 
     /*

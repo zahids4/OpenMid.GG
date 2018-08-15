@@ -10,7 +10,7 @@ import UIKit
 
 extension UIImageView {
     func setProfileIconWith(id: Int) {
-        let url = URL(string: "https://ddragon.leagueoflegends.com/cdn/8.12.1/img/profileicon/\(id).png")
+        let url = URL(string: "https://ddragon.leagueoflegends.com/cdn/\(ApiKeys.CURRENT_PATCH)/img/profileicon/\(id).png")
         let data = try? Data(contentsOf: url!)
         self.image = UIImage(data: data!)
     }

@@ -9,6 +9,7 @@
 import Foundation
 
 struct ApiKeys {
+    static let CURRENT_PATCH = "8.15.1"
     static let LEAGUE_NAME = "leagueName"
     static let RANKED_SOLO = "RANKED_SOLO_5x5"
 }

@@ -16,7 +16,8 @@ class SummonerProfileViewController: UIViewController {
     @IBOutlet weak var rankAndTierLabel: UILabel!
     @IBOutlet weak var leagueLabel: UILabel!
     @IBOutlet weak var tierImageView: UIImageView!
-    @IBOutlet weak var winLossLPLabel: UILabel!
+    @IBOutlet weak var winLossLabel: UILabel!
+    @IBOutlet weak var lpLabel: UILabel!
     @IBOutlet weak var winRatioLabel: UILabel!
     
     let communicator = Communicator()
@@ -78,7 +79,8 @@ class SummonerProfileViewController: UIViewController {
         self.tierImageView.image = UIImage(named: "provisional")
         self.rankAndTierLabel.text! = "Unranked"
         self.leagueLabel.hide()
-        self.winLossLPLabel.hide()
+        self.winLossLabel.hide()
+        self.lpLabel.hide()
         self.winRatioLabel.hide()
     }
     
@@ -101,7 +103,8 @@ class SummonerProfileViewController: UIViewController {
                 let wins = rankObject.integerValueForKey("wins")
                 let losses = rankObject.integerValueForKey("losses")
                 let leaguePoints = rankObject.integerValueForKey("leaguePoints")
-                winLossLPLabel.text! = "\(wins) W \(losses) L \(leaguePoints) LP"
+                winLossLabel.text! = "\(wins) W \(losses) L"
+                lpLabel.text! = "\(leaguePoints) LP"
                 constructWinRatioLabel(wins, losses)
             }
         }

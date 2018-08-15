@@ -129,34 +129,40 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="League" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zto-kV-3wh">
-                                <rect key="frame" x="159" y="353" width="56" height="21"/>
+                                <rect key="frame" x="159" y="382" width="56" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WIN LOSS LP LABEL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9sD-R8-zgR">
-                                <rect key="frame" x="95.666666666666686" y="382" width="183" height="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WIN LOSS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9sD-R8-zgR">
+                                <rect key="frame" x="140.66666666666666" y="411" width="93" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Win Ratio Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m2r-f0-phQ">
-                                <rect key="frame" x="119" y="414" width="136" height="24"/>
+                                <rect key="frame" x="119" y="443" width="136" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hTA-ym-hfE">
-                                <rect key="frame" x="16" y="446" width="343" height="341"/>
+                                <rect key="frame" x="16" y="475" width="343" height="312"/>
                                 <connections>
                                     <segue destination="Qc9-FC-035" kind="embed" identifier="matchesTableVCSegue" id="Qdf-eg-eRe"/>
                                 </connections>
                             </containerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LP LABEL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O6r-6Z-ubG">
+                                <rect key="frame" x="150" y="353" width="75" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.44342765210000001" green="0.87737172839999999" blue="0.99928969140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="vBZ-xe-egr" firstAttribute="leading" secondItem="YiT-hx-g2P" secondAttribute="trailing" constant="7.6666666666666714" id="20O-VB-r0a"/>
-                            <constraint firstItem="zto-kV-3wh" firstAttribute="top" secondItem="LF7-0y-Gsk" secondAttribute="bottom" constant="8" id="5SD-Fq-c1P"/>
+                            <constraint firstItem="O6r-6Z-ubG" firstAttribute="top" secondItem="LF7-0y-Gsk" secondAttribute="bottom" constant="8" id="7IM-te-27Z"/>
                             <constraint firstItem="m2r-f0-phQ" firstAttribute="centerX" secondItem="9sD-R8-zgR" secondAttribute="centerX" id="Adn-K6-yKg"/>
                             <constraint firstItem="LF7-0y-Gsk" firstAttribute="centerX" secondItem="twv-4X-Ott" secondAttribute="centerX" id="Brq-Da-d1Q"/>
                             <constraint firstItem="6Jd-04-Djm" firstAttribute="trailing" secondItem="FXu-WU-vMy" secondAttribute="trailing" constant="34.333333333333371" id="Cfb-e5-edu"/>
@@ -168,8 +174,11 @@
                             <constraint firstItem="FXu-WU-vMy" firstAttribute="top" secondItem="6Jd-04-Djm" secondAttribute="top" constant="22" id="Oho-D3-PkQ"/>
                             <constraint firstItem="twv-4X-Ott" firstAttribute="centerX" secondItem="WOE-UZ-OhK" secondAttribute="centerX" id="QUE-LW-qF1"/>
                             <constraint firstItem="hTA-ym-hfE" firstAttribute="bottom" secondItem="6Jd-04-Djm" secondAttribute="bottom" constant="9" id="RHI-84-cf1"/>
+                            <constraint firstItem="O6r-6Z-ubG" firstAttribute="centerX" secondItem="LF7-0y-Gsk" secondAttribute="centerX" id="SXd-Fs-uNE"/>
                             <constraint firstItem="twv-4X-Ott" firstAttribute="top" secondItem="vBZ-xe-egr" secondAttribute="bottom" constant="30" id="cDi-u1-QAO"/>
-                            <constraint firstItem="hTA-ym-hfE" firstAttribute="top" secondItem="m2r-f0-phQ" secondAttribute="bottom" constant="8" id="k70-7E-QEQ"/>
+                            <constraint firstItem="zto-kV-3wh" firstAttribute="top" secondItem="O6r-6Z-ubG" secondAttribute="bottom" constant="8" id="eCe-n7-ws9"/>
+                            <constraint firstItem="zto-kV-3wh" firstAttribute="centerX" secondItem="LF7-0y-Gsk" secondAttribute="centerX" id="g2N-tD-aaW"/>
+                            <constraint firstItem="hTA-ym-hfE" firstAttribute="top" secondItem="m2r-f0-phQ" secondAttribute="bottom" constant="8" id="jK7-8I-Br6"/>
                             <constraint firstItem="LF7-0y-Gsk" firstAttribute="top" secondItem="twv-4X-Ott" secondAttribute="bottom" constant="8" id="klX-Nf-n6E"/>
                             <constraint firstItem="9sD-R8-zgR" firstAttribute="top" secondItem="zto-kV-3wh" secondAttribute="bottom" constant="8" id="qjh-39-Hoa"/>
                             <constraint firstItem="YiT-hx-g2P" firstAttribute="top" secondItem="6Jd-04-Djm" secondAttribute="top" constant="8" id="sP9-gI-pEa"/>
@@ -182,12 +191,13 @@
                     </view>
                     <connections>
                         <outlet property="leagueLabel" destination="zto-kV-3wh" id="WN7-qM-rrm"/>
+                        <outlet property="lpLabel" destination="O6r-6Z-ubG" id="5VA-y9-QHu"/>
                         <outlet property="rankAndTierLabel" destination="LF7-0y-Gsk" id="Bnu-Ww-qlZ"/>
                         <outlet property="summonerLevelLabel" destination="vBZ-xe-egr" id="J4e-gq-OjS"/>
                         <outlet property="summonerNameLabel" destination="FXu-WU-vMy" id="IuC-7O-Fbg"/>
                         <outlet property="summonerProfileIcon" destination="YiT-hx-g2P" id="2FP-yF-lNu"/>
                         <outlet property="tierImageView" destination="twv-4X-Ott" id="8lv-xz-6NQ"/>
-                        <outlet property="winLossLPLabel" destination="9sD-R8-zgR" id="dgq-vs-cN2"/>
+                        <outlet property="winLossLabel" destination="9sD-R8-zgR" id="Lf6-aH-Nbh"/>
                         <outlet property="winRatioLabel" destination="m2r-f0-phQ" id="gii-DR-phU"/>
                     </connections>
                 </viewController>
@@ -200,7 +210,7 @@
             <objects>
                 <tableViewController id="Qc9-FC-035" customClass="MatchesTableViewController" customModule="Project__Netero" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="FSw-ku-TXz">
-                        <rect key="frame" x="0.0" y="0.0" width="343" height="341"/>
+                        <rect key="frame" x="0.0" y="0.0" width="343" height="312"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>

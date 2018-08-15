@@ -39,20 +39,7 @@ class MatchesTableViewController: UITableViewController {
             for match in matches! {
                 dispatchGroup.enter()
                 self.communicator.getMatcheDetails(region: self.regionPlatform, matchId: String(match.integerValueForKey("gameId"))) { matchDetails, error in
-                    if matchDetails != nil {
-                        let participantsArray = matchDetails!.arrayForKey("participants") as! [[String: Any]]
-                        let championId = match.integerValueForKey("champion")
-                        let summoner = participantsArray.first(where: {$0["championId"] as! Int == championId})
-                        let teamId = summoner?.integerValueForKey("teamId")
-                        let teamsArray = matchDetails!.arrayForKey("teams") as! [[String: Any]]
-                        let summonerTeam = teamsArray.first(where: {($0["teamId"] as! Int) == teamId})
-                        let didWin = summonerTeam?.stringValueForKey("win") == "Win"
-                        let stats = summoner?.stringAnyObjectForKey("stats")
-                        let matchObject = self.buildMatchObject(didWin, championId, stats)
-                        self.dataSource.append(matchObject)
-                    } else {
-                        print("ERROR")
-                    }
+                    self.createDatasourceWith(match, matchDetails, error)
                     dispatchSemaphore.signal()
                     dispatchGroup.leave()
                 }
@@ -66,6 +53,23 @@ class MatchesTableViewController: UITableViewController {
                 print(self.dataSource)
                 self.tableView.reloadData()
             }
+        }
+    }
+    
+    fileprivate func createDatasourceWith(_ match: [String:Any] ,_ matchDetails: [String:Any]?, _ error: Error?) {
+        if matchDetails != nil {
+            let participantsArray = matchDetails!.arrayForKey("participants") as! [[String: Any]]
+            let championId = match.integerValueForKey("champion")
+            let summoner = participantsArray.first(where: {$0["championId"] as! Int == championId})
+            let teamId = summoner?.integerValueForKey("teamId")
+            let teamsArray = matchDetails!.arrayForKey("teams") as! [[String: Any]]
+            let summonerTeam = teamsArray.first(where: {($0["teamId"] as! Int) == teamId})
+            let didWin = summonerTeam?.stringValueForKey("win") == "Win"
+            let stats = summoner?.stringAnyObjectForKey("stats")
+            let matchObject = self.buildMatchObject(didWin, championId, stats)
+            self.dataSource.append(matchObject)
+        } else {
+            print("ERROR", error!)
         }
     }
     

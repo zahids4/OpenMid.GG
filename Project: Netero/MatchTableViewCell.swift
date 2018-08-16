@@ -32,7 +32,7 @@ class MatchTableViewCell: UITableViewCell {
             if allChampions != nil {
                 for (key, value) in allChampions! {
                     if Int((value as! [String:Any]).stringValueForKey("key")) == id {
-                        self.championNameLabel.text! = key.toSpaceSeperated
+                        self.championNameLabel.text! = key.toSpaceSeperated.convertFromApiNameToChampionName
                         self.championIconImage.setChampionIconWith(name: key)
                     }
                 }

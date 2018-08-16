@@ -16,7 +16,6 @@ extension UIImageView {
     }
     
     func setChampionIconWith(name: String) {
-        print(name)
         let url = URL(string: "http://ddragon.leagueoflegends.com/cdn/\(ApiKeys.CURRENT_PATCH)/img/champion/\(name).png")
         let data = try? Data(contentsOf: url!)
         self.image = UIImage(data: data!)

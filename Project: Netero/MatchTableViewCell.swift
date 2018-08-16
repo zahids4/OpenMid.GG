@@ -32,7 +32,7 @@ class MatchTableViewCell: UITableViewCell {
     }
     
     fileprivate func createKdaLabel(_ kills: Int,_ assists: Int, _ deaths: Int) -> String {
-        let kda = Double((kills + assists) / deaths).rounded(toPlaces: 2)
+        let kda =  Double(Double(kills + assists) / Double(deaths)).rounded(toPlaces: 2)
         return "\(kda) KDA"
     }
     

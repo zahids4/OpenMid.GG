@@ -17,9 +17,9 @@ extension String {
         return Seperation.regex.stringByReplacingMatches(in: self, range: NSRange(0..<self.utf16.count), withTemplate: " $0")
     }
     
-    var convertFromApiNameToChampionName: String {
+    func convertFromApiNameToChampionName() -> String {
         switch self {
-        case "Monkey King":
+        case "MonkeyKing":
             return "Wukong"
         default:
             return self

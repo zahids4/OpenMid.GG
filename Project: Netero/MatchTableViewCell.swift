@@ -59,9 +59,9 @@ class MatchTableViewCell: UITableViewCell {
     
     fileprivate func setBackgroundColor(_ match: [String : Any]) {
         if match.boolForKey("didWin") {
-            self.backgroundColor = UIColor.green
+            self.backgroundColor = UIColor(displayP3Red: 117/255, green: 251/255, blue: 172/255, alpha: 0.8)
         } else {
-            self.backgroundColor = UIColor.red
+            self.backgroundColor = UIColor(displayP3Red: 176/255, green: 50/255, blue: 53/255, alpha: 0.8)
         }
     }
 

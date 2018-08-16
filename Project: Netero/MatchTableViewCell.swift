@@ -32,16 +32,17 @@ class MatchTableViewCell: UITableViewCell {
             if allChampions != nil {
                 for (key, value) in allChampions! {
                     if Int((value as! [String:Any]).stringValueForKey("key")) == id {
-                        self.championNameLabel.text! = key
+                        self.championNameLabel.text! = key.toSpaceSeperated
                         self.championIconImage.setChampionIconWith(name: key)
                     }
                 }
             } else {
-                print("An error occured: ", error)
+                print("An error occured: ", error as Any)
             }
             
         }
     }
+    
     
     fileprivate func setStatsLabels(_ match: [String : Any]) {
         let kills = match.integerValueForKey("kills")

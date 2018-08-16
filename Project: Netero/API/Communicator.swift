@@ -73,4 +73,15 @@ class Communicator {
             }
         }
     }
+    
+    func getAllChampions(completionHandler: @escaping ([String:Any]?, Error?) -> ()) {
+        Alamofire.request("http://ddragon.leagueoflegends.com/cdn/\(ApiKeys.CURRENT_PATCH)/data/en_US/champion.json").validate().responseJSON { response in
+            switch response.result {
+            case .success(let value):
+                completionHandler((value as! [String:Any])["data"] as? [String:Any], nil)
+            case .failure(let error):
+                completionHandler(nil, error)
+            }
+        }
+    }
 }

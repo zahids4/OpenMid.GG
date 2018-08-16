@@ -21,6 +21,10 @@ extension Dictionary where Key == String {
         return self[key] as! [String: Any]
     }
     
+    func arrayOfStringAnyObjectForKey(_ key: Key) -> [[String: Any]] {
+        return self[key] as! [[String: Any]]
+    }
+    
     func integerValueForKey(_ key: Key) -> Int {
         return self[key] as! Int
     }

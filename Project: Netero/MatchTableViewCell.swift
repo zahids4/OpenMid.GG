@@ -14,13 +14,32 @@ class MatchTableViewCell: UITableViewCell {
     @IBOutlet weak var matchStatsLabel: UILabel!
     @IBOutlet weak var kdaLabel: UILabel!
     
+    let communicator = Communicator()
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
     
+    
     func configureUsing(_ match: [String:Any]) {
+        setChampionIconFrom(id: match.integerValueForKey("championId"))
         setBackgroundColor(match)
         setStatsLabels(match)
+    }
+    
+    fileprivate func setChampionIconFrom(id: Int) {
+        communicator.getAllChampions() { allChampions, error in
+            if allChampions != nil {
+                for (key, value) in allChampions! {
+                    if Int((value as! [String:Any]).stringValueForKey("key")) == id {
+                        self.championIconImage.setChampionIconWith(name: key)
+                    }
+                }
+            } else {
+                print("An error occured: ", error)
+            }
+            
+        }
     }
     
     fileprivate func setStatsLabels(_ match: [String : Any]) {

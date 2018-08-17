@@ -213,6 +213,7 @@
                         <outlet property="leagueLabel" destination="zto-kV-3wh" id="WN7-qM-rrm"/>
                         <outlet property="lpLabel" destination="O6r-6Z-ubG" id="5VA-y9-QHu"/>
                         <outlet property="rankAndTierLabel" destination="LF7-0y-Gsk" id="Bnu-Ww-qlZ"/>
+                        <outlet property="rankTierLabelTopConstraint" destination="W35-2a-zYW" id="edn-mL-rAX"/>
                         <outlet property="summonerLevelLabel" destination="vBZ-xe-egr" id="J4e-gq-OjS"/>
                         <outlet property="summonerNameLabel" destination="FXu-WU-vMy" id="IuC-7O-Fbg"/>
                         <outlet property="summonerProfileIcon" destination="YiT-hx-g2P" id="2FP-yF-lNu"/>
@@ -223,7 +224,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5qD-Z0-OOj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2228.985507246377" y="31.793478260869566"/>
+            <point key="canvasLocation" x="2228" y="31.03448275862069"/>
         </scene>
         <!--Matches Table View Controller-->
         <scene sceneID="xBh-pX-p0s">

@@ -19,6 +19,7 @@ class SummonerProfileViewController: UIViewController {
     @IBOutlet weak var winLossLabel: UILabel!
     @IBOutlet weak var lpLabel: UILabel!
     @IBOutlet weak var winRatioLabel: UILabel!
+    @IBOutlet weak var rankTierLabelTopConstraint: NSLayoutConstraint!
     
     let communicator = Communicator()
     let gradient = SkeletonGradient(baseColor: UIColor.clouds)
@@ -77,6 +78,7 @@ class SummonerProfileViewController: UIViewController {
     
     fileprivate func configureUIForUnrankedSummoner() {
         self.tierImageView.image = UIImage(named: "provisional")
+        self.rankTierLabelTopConstraint.constant = 60
         self.rankAndTierLabel.text! = "Unranked"
         self.leagueLabel.hide()
         self.winLossLabel.hide()

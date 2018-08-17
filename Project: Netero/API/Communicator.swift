@@ -11,7 +11,7 @@ import Alamofire
 
 class Communicator {
     let apiKey = "RGAPI-a9208b17-cd08-4313-9b10-8c1d419890d5"
-    let endIndexForGetMatchesCall = 5
+    let endIndexForGetMatchesCall = 10
 
     func getSummoner(region: String, summonerName: String, completionHandler: @escaping ([String:Any]?, Error?) -> ()) {
         let encodedName = summonerName.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!

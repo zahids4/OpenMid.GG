@@ -52,7 +52,7 @@ class SummonerProfileViewController: UIViewController {
         let summonerName = summonerObject.stringValueForKey("name")
         let summonerLevel = summonerObject.integerValueForKey("summonerLevel")
         summonerNameLabel.text = summonerName
-        summonerLevelLabel.text = String(summonerLevel)
+        summonerLevelLabel.text = "Level \(summonerLevel)"
     }
 
     
@@ -112,11 +112,13 @@ class SummonerProfileViewController: UIViewController {
     
     fileprivate func constructWinRatioLabel(_ wins: Int,_ losses: Int) {
         let winRatio = getWinRatio(wins, losses)
-        winRatioLabel.text! = "You have won \(winRatio)% of your games"
+        winRatioLabel.text! = "Win Ratio of \(winRatio)%"
     }
     
     fileprivate func setProfileIcon() {
         summonerProfileIcon.setProfileIconWith(id: summonerObject.integerValueForKey("profileIconId"))
+        summonerProfileIcon.layer.borderWidth = 2.0
+        summonerProfileIcon.layer.borderColor = UIColor.black.cgColor
     }
     
     fileprivate func setTierIcon(_ tier: String, _ rank: String) {

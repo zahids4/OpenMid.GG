@@ -18,8 +18,18 @@ class MatchTableViewCell: UITableViewCell {
     
     let communicator = Communicator()
     
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+        addSeperator()
+    }
+    
+    fileprivate func addSeperator() {
+        let screenSize = UIScreen.main.bounds
+        let separatorHeight = CGFloat(2.0)
+        let additionalSeparator = UIView.init(frame: CGRect(x: 0, y: self.frame.size.height-separatorHeight, width: screenSize.width, height: separatorHeight))
+        additionalSeparator.backgroundColor = UIColor.black
+        self.addSubview(additionalSeparator)
     }
     
     func configureUsing(_ match: [String:Any]) {

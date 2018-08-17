@@ -15,9 +15,16 @@ class MatchesTableViewController: UITableViewController {
     var regionPlatform: String!
     var dataSource = [[String:Any]]()
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        addBorderToTable()
         getMatches()
+    }
+    
+    fileprivate func addBorderToTable() {
+        tableView.layer.borderWidth = 2.0
+        tableView.layer.borderColor = UIColor.black.cgColor
     }
     
     fileprivate func getMatches() {

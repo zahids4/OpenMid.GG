@@ -49,7 +49,6 @@ class MatchesTableViewController: UITableViewController {
         
         dispatchGroup.notify(queue: dispatchQueue) {
             DispatchQueue.main.async {
-                print("Finished getting all matches.")
                 self.tableView.reloadData()
             }
         }

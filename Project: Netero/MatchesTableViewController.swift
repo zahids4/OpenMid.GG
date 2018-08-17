@@ -65,14 +65,14 @@ class MatchesTableViewController: UITableViewController {
             let summonerTeam = teamsArray.first(where: {($0["teamId"] as! Int) == teamId})
             let didWin = summonerTeam?.stringValueForKey("win") == "Win"
             let stats = summoner?.stringAnyObjectForKey("stats")
-            let matchObject = self.buildMatchObject(didWin, championId, stats, matchDetails)
+            let matchObject = self.buildMatchObject(didWin, championId, stats, matchDetails, summoner)
             self.dataSource.append(matchObject)
         } else {
             print("An error occured: ", error!)
         }
     }
     
-    fileprivate func buildMatchObject(_ didWin: Bool, _ championId: Int, _ stats: [String : Any]?, _ matchDetails: [String:Any]?) -> [String:Any] {
+    fileprivate func buildMatchObject(_ didWin: Bool, _ championId: Int, _ stats: [String : Any]?, _ matchDetails: [String:Any]?,_ summoner: [String:Any]?) -> [String:Any] {
         var matchObject = [String: Any]()
         matchObject["matchDetails"] = matchDetails
         matchObject["didWin"] = didWin
@@ -80,6 +80,8 @@ class MatchesTableViewController: UITableViewController {
         matchObject["kills"] = stats!.integerValueForKey("kills")
         matchObject["assists"] = stats!.integerValueForKey("assists")
         matchObject["deaths"] = stats!.integerValueForKey("deaths")
+        matchObject["spell1Id"] = summoner!.integerValueForKey("spell1Id")
+        matchObject["spell2Id"] = summoner!.integerValueForKey("spell2Id")
         return matchObject
     }
     

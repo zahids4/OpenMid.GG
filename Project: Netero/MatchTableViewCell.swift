@@ -13,6 +13,8 @@ class MatchTableViewCell: UITableViewCell {
     @IBOutlet weak var championNameLabel: UILabel!
     @IBOutlet weak var matchStatsLabel: UILabel!
     @IBOutlet weak var kdaLabel: UILabel!
+    @IBOutlet weak var spell1Image: UIImageView!
+    @IBOutlet weak var spell2Image: UIImageView!
     
     let communicator = Communicator()
     
@@ -20,14 +22,14 @@ class MatchTableViewCell: UITableViewCell {
         super.awakeFromNib()
     }
     
-    
     func configureUsing(_ match: [String:Any]) {
-        setChampionIconFrom(id: match.integerValueForKey("championId"))
+        setChampionNameAndIconFrom(id: match.integerValueForKey("championId"))
         setBackgroundColor(match)
         setStatsLabels(match)
+        setSpellImagesFrom(match)
     }
     
-    fileprivate func setChampionIconFrom(id: Int) {
+    fileprivate func setChampionNameAndIconFrom(id: Int) {
         communicator.getAllChampions() { allChampions, error in
             if allChampions != nil {
                 for (key, value) in allChampions! {
@@ -63,6 +65,13 @@ class MatchTableViewCell: UITableViewCell {
         } else {
             self.backgroundColor = UIColor(displayP3Red: 176/255, green: 50/255, blue: 53/255, alpha: 0.8)
         }
+    }
+    
+    fileprivate func setSpellImagesFrom(_ match: [String : Any]) {
+        let spell1Name = "spell_\(match.integerValueForKey("spell1Id"))"
+        let spell2Name = "spell_\(match.integerValueForKey("spell2Id"))"
+        spell1Image.image = UIImage(named: spell1Name)
+        spell2Image.image = UIImage(named: spell2Name)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

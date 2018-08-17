@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cM4-Wh-mUd">
-    <device id="retina5_9" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -16,11 +16,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="LandingScreenViewController" customModule="Project__Netero" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9t6-kZ-WaA">
-                                <rect key="frame" x="134" y="428.66666666666669" width="107" height="35"/>
+                                <rect key="frame" x="134" y="356" width="107" height="35"/>
                                 <color key="backgroundColor" red="1" green="0.98405645211195436" blue="0.97618378302580977" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="RF2-Mr-EYF"/>
@@ -32,7 +32,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Kr-mV-iz0">
-                                <rect key="frame" x="51" y="391" width="273" height="30"/>
+                                <rect key="frame" x="51" y="318.5" width="273" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="273" id="hRG-q5-qyt"/>
                                     <constraint firstAttribute="height" constant="30" id="uAe-dt-naW"/>
@@ -42,7 +42,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4cJ-ze-bbh">
-                                <rect key="frame" x="27.666666666666657" y="298" width="320" height="85"/>
+                                <rect key="frame" x="27.5" y="225.5" width="320" height="85"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="85" id="N2W-JZ-OuF"/>
@@ -53,7 +53,7 @@
                                 </connections>
                             </pickerView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="OpenMidGGLogo" translatesAutoresizingMaskIntoConstraints="NO" id="hrC-eh-FRn">
-                                <rect key="frame" x="16" y="104" width="343" height="112"/>
+                                <rect key="frame" x="16" y="80" width="343" height="112"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="343" id="4bi-eq-fbK"/>
                                     <constraint firstAttribute="height" constant="112" id="lPQ-KB-Ly5"/>
@@ -86,35 +86,35 @@
             </objects>
             <point key="canvasLocation" x="1125.5999999999999" y="32.512315270935964"/>
         </scene>
-        <!--Summoner Profile View Controller-->
+        <!--Player Profile-->
         <scene sceneID="SWG-GV-6m3">
             <objects>
-                <viewController id="aFh-HD-Ohg" customClass="SummonerProfileViewController" customModule="Project__Netero" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Player Profile" id="aFh-HD-Ohg" customClass="SummonerProfileViewController" customModule="Project__Netero" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WOE-UZ-OhK">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YiT-hx-g2P">
-                                <rect key="frame" x="8" y="96" width="100" height="100"/>
+                                <rect key="frame" x="8" y="72" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="Kbe-f4-iy6"/>
                                     <constraint firstAttribute="height" constant="100" id="iLr-Rl-5Zs"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Summoner Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FXu-WU-vMy">
-                                <rect key="frame" x="115.99999999999999" y="110" width="224.66666666666663" height="36"/>
+                                <rect key="frame" x="116" y="86" width="224.5" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Summ Level" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vBZ-xe-egr">
-                                <rect key="frame" x="114.99999999999999" y="154" width="226.66666666666663" height="29"/>
+                                <rect key="frame" x="115" y="130" width="226.5" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="twv-4X-Ott">
-                                <rect key="frame" x="8" y="218" width="100" height="100"/>
+                                <rect key="frame" x="8" y="194" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="SOS-GK-Dmo"/>
                                     <constraint firstAttribute="height" constant="100" id="tas-ve-4uq"/>
@@ -124,50 +124,50 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rank + Tier" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LF7-0y-Gsk">
-                                <rect key="frame" x="115" y="213" width="92.666666666666686" height="20.333333333333343"/>
+                                <rect key="frame" x="115" y="189" width="93" height="20.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="League" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zto-kV-3wh">
-                                <rect key="frame" x="116" y="298.33333333333331" width="56" height="21"/>
+                                <rect key="frame" x="116" y="274.5" width="56" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WIN LOSS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9sD-R8-zgR">
-                                <rect key="frame" x="202" y="241" width="79.333333333333314" height="20.333333333333314"/>
+                                <rect key="frame" x="202" y="217" width="79.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Win Ratio Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m2r-f0-phQ">
-                                <rect key="frame" x="116" y="270.33333333333331" width="118.66666666666669" height="20.333333333333314"/>
+                                <rect key="frame" x="116" y="246.5" width="119" height="20"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hTA-ym-hfE">
-                                <rect key="frame" x="8" y="336" width="359" height="434"/>
+                                <rect key="frame" x="8" y="312" width="359" height="347"/>
                                 <connections>
                                     <segue destination="Qc9-FC-035" kind="embed" identifier="matchesTableVCSegue" id="Qdf-eg-eRe"/>
                                 </connections>
                             </containerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LP LABEL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O6r-6Z-ubG">
-                                <rect key="frame" x="116" y="241.33333333333334" width="78" height="21.000000000000028"/>
+                                <rect key="frame" x="116" y="217.5" width="78" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="black_line" translatesAutoresizingMaskIntoConstraints="NO" id="10D-Ey-erN">
-                                <rect key="frame" x="28" y="204" width="319" height="1"/>
+                                <rect key="frame" x="28" y="180" width="319" height="1"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="1iT-Ga-ejl"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="black_line" translatesAutoresizingMaskIntoConstraints="NO" id="yqQ-C5-V3n">
-                                <rect key="frame" x="28" y="327.33333333333331" width="319" height="1"/>
+                                <rect key="frame" x="28" y="303.5" width="319" height="1"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="x6H-hM-zic"/>
@@ -230,16 +230,16 @@
             <objects>
                 <tableViewController id="Qc9-FC-035" customClass="MatchesTableViewController" customModule="Project__Netero" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="FSw-ku-TXz">
-                        <rect key="frame" x="0.0" y="0.0" width="359" height="434"/>
+                        <rect key="frame" x="0.0" y="0.0" width="359" height="347"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.44342765210000001" green="0.87737172839999999" blue="0.99928969140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="separatorColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="matchCell" rowHeight="100" id="xGE-2u-EgM" customClass="MatchTableViewCell" customModule="Project__Netero" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="matchCell" rowHeight="100" id="xGE-2u-EgM" customClass="MatchTableViewCell" customModule="Project__Netero" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="359" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xGE-2u-EgM" id="dqH-pe-7dK">
-                                    <rect key="frame" x="0.0" y="0.0" width="359" height="99.666666666666671"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="325" height="99.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6Sv-id-gru">
@@ -323,8 +323,12 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cM4-Wh-mUd" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4kC-Ad-mfJ">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.44342765210000001" green="0.87737172839999999" blue="0.99928969140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

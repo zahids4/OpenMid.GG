@@ -60,7 +60,7 @@ class MatchTableViewCell: UITableViewCell {
         let kills = match.integerValueForKey("kills")
         let assists = match.integerValueForKey("assists")
         let deaths = match.integerValueForKey("deaths")
-        matchStatsLabel.text! = "\(kills) / \(assists) / \(deaths)"
+        matchStatsLabel.text! = "\(kills) / \(deaths) / \(assists)"
         kdaLabel.text! = createKdaLabel(kills, assists, deaths)
     }
     

@@ -11,9 +11,11 @@ import CoreData
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    
+    let communicator = Communicator()
     var window: UIWindow?
-
+    static var CURRENT_PATCH = String()
+    
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -32,10 +34,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillEnterForeground(_ application: UIApplication) {
         // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+        setLatestPatch()
     }
 
+    fileprivate func setLatestPatch() {
+        communicator.getCallToSetLatestPatch() { patchNumber, error in
+            if patchNumber != nil {
+                AppDelegate.CURRENT_PATCH = patchNumber!
+            } else {
+                AppDelegate.CURRENT_PATCH = "8.17.1"
+            }
+        }
+    }
+    
     func applicationDidBecomeActive(_ application: UIApplication) {
-        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        setLatestPatch()
     }
 
     func applicationWillTerminate(_ application: UIApplication) {

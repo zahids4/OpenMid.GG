@@ -12,6 +12,17 @@ import Alamofire
 class Communicator {
     let apiKey = "RGAPI-a9208b17-cd08-4313-9b10-8c1d419890d5"
     let endIndexForGetMatchesCall = 10
+    
+    func getCallToSetLatestPatch(completionHandler: @escaping (String?, Error?) -> ()) {
+        Alamofire.request("https://ddragon.leagueoflegends.com/api/versions.json").validate().responseJSON { response in
+            switch response.result {
+            case .success(let value):
+                completionHandler((value as! [String]).first, nil)
+            case .failure(let error):
+                completionHandler(nil, error)
+            }
+        }
+    }
 
     func getSummoner(region: String, summonerName: String, completionHandler: @escaping ([String:Any]?, Error?) -> ()) {
         let encodedName = summonerName.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
@@ -75,7 +86,7 @@ class Communicator {
     }
     
     func getAllChampions(completionHandler: @escaping ([String:Any]?, Error?) -> ()) {
-        Alamofire.request("http://ddragon.leagueoflegends.com/cdn/\(ApiKeys.CURRENT_PATCH)/data/en_US/champion.json").validate().responseJSON { response in
+        Alamofire.request("http://ddragon.leagueoflegends.com/cdn/\(AppDelegate.CURRENT_PATCH)/data/en_US/champion.json").validate().responseJSON { response in
             switch response.result {
             case .success(let value):
                 completionHandler((value as! [String:Any])["data"] as? [String:Any], nil)

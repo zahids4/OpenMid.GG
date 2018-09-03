@@ -60,7 +60,7 @@
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.44342765210000001" green="0.87737172839999999" blue="0.99928969140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.99928969140000001" green="0.98586083112184109" blue="0.95882099916858121" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="hrC-eh-FRn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="4R2-tI-oMg"/>
                             <constraint firstItem="9Kr-mV-iz0" firstAttribute="top" secondItem="4cJ-ze-bbh" secondAttribute="bottom" constant="8" id="7Vu-kJ-9w3"/>
@@ -174,7 +174,7 @@
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.44342765210000001" green="0.87737172839999999" blue="0.99928969140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.99928969140000001" green="0.9858608311" blue="0.95882099919999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="vBZ-xe-egr" firstAttribute="leading" secondItem="YiT-hx-g2P" secondAttribute="trailing" constant="7.6666666666666714" id="20O-VB-r0a"/>
                             <constraint firstItem="9sD-R8-zgR" firstAttribute="centerY" secondItem="O6r-6Z-ubG" secondAttribute="centerY" id="4HS-YE-NlR"/>
@@ -233,7 +233,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="FSw-ku-TXz">
                         <rect key="frame" x="0.0" y="0.0" width="359" height="347"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.44342765210000001" green="0.87737172839999999" blue="0.99928969140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.99928969140000001" green="0.9858608311" blue="0.95882099919999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="separatorColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="matchCell" rowHeight="100" id="xGE-2u-EgM" customClass="MatchTableViewCell" customModule="Project__Netero" customModuleProvider="target">
@@ -326,7 +326,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4kC-Ad-mfJ">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.44342765210000001" green="0.87737172839999999" blue="0.99928969140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>

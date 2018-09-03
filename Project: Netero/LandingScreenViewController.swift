@@ -32,10 +32,19 @@ class LandingScreenViewController: UIViewController, UIPickerViewDataSource, UIP
         regionPickerView.delegate = self
         selectedRegion = RiotApiHelpers.REGIONS.first
         searchButton.defaultStyle()
+        addBorderToUIElements()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    fileprivate func addBorderToUIElements() {
+        let elemets = [regionPickerView,searchField,searchButton] as [Any]
+        elemets.forEach { element in
+            (element as AnyObject).layer.borderWidth = 2.0
+            (element as AnyObject).layer.borderColor = UIColor.black.cgColor
+        }
     }
     
     @IBAction func searchPressed(_ sender: Any) {

@@ -14,7 +14,6 @@ class SummonerProfileViewController: UIViewController {
     @IBOutlet weak var summonerLevelLabel: UILabel!
     @IBOutlet weak var summonerProfileIcon: UIImageView!
     @IBOutlet weak var rankAndTierLabel: UILabel!
-    @IBOutlet weak var leagueLabel: UILabel!
     @IBOutlet weak var tierImageView: UIImageView!
     @IBOutlet weak var winLossLabel: UILabel!
     @IBOutlet weak var lpLabel: UILabel!
@@ -80,7 +79,6 @@ class SummonerProfileViewController: UIViewController {
         self.tierImageView.image = UIImage(named: "provisional")
         self.rankTierLabelTopConstraint.constant = 60
         self.rankAndTierLabel.text! = "Unranked"
-        self.leagueLabel.hide()
         self.winLossLabel.hide()
         self.lpLabel.hide()
         self.winRatioLabel.hide()
@@ -92,9 +90,7 @@ class SummonerProfileViewController: UIViewController {
                 let rank = rankObject.stringValueForKey("rank")
                 let tier = rankObject.stringValueForKey("tier")
                 self.setTierIcon(tier, rank)
-                let leagueName = rankObject.stringValueForKey(ApiKeys.LEAGUE_NAME)
                 self.rankAndTierLabel.text! = tier + " " + rank
-                self.leagueLabel.text! = leagueName
             }
         }
     }

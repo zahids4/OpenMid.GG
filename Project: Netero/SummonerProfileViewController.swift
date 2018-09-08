@@ -110,7 +110,7 @@ class SummonerProfileViewController: UIViewController {
     
     fileprivate func constructWinRatioLabel(_ wins: Int,_ losses: Int) {
         let winRatio = getWinRatio(wins, losses)
-        winRatioLabel.text! = "Win Ratio of \(winRatio)%"
+        winRatioLabel.text! = "Win Ratio of \(winRatio) %"
     }
     
     fileprivate func setProfileIcon() {

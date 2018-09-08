@@ -101,7 +101,7 @@ class SummonerProfileViewController: UIViewController {
                 let wins = rankObject.integerValueForKey("wins")
                 let losses = rankObject.integerValueForKey("losses")
                 let leaguePoints = rankObject.integerValueForKey("leaguePoints")
-                winLossLabel.text! = "\(wins) W \(losses) L"
+                winLossLabel.text! = "\(wins) Wins \(losses) Losses"
                 lpLabel.text! = "\(leaguePoints) LP"
                 constructWinRatioLabel(wins, losses)
             }

@@ -17,11 +17,12 @@ extension UIImageView {
         setImageWith(imageUrl: "http://ddragon.leagueoflegends.com/cdn/\(AppDelegate.CURRENT_PATCH)/img/champion/\(name).png")
     }
     
-    func setItemImageWith(id: String) {
+    func setItemImageWith(id: Int) {
         setImageWith(imageUrl: "http://ddragon.leagueoflegends.com/cdn/\(AppDelegate.CURRENT_PATCH)/img/item/\(id).png")
     }
     
     fileprivate func setImageWith(imageUrl: String) {
+        print(imageUrl)
         let url = URL(string: imageUrl)
         let data = try? Data(contentsOf: url!)
         self.image = UIImage(data: data!)

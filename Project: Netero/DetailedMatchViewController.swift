@@ -9,6 +9,14 @@
 import UIKit
 
 class DetailedMatchViewController: UIViewController {
+    @IBOutlet weak var championNameLabel: UILabel!
+    @IBOutlet weak var item0Image: UIImageView!
+    @IBOutlet weak var item1Image: UIImageView!
+    @IBOutlet weak var item2Image: UIImageView!
+    @IBOutlet weak var item3Image: UIImageView!
+    @IBOutlet weak var item4Image: UIImageView!
+    @IBOutlet weak var item5Image: UIImageView!
+
     var match: [String:Any]!
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -22,7 +22,6 @@ extension UIImageView {
     }
     
     fileprivate func setImageWith(imageUrl: String) {
-        print(imageUrl)
         let url = URL(string: imageUrl)
         let data = try? Data(contentsOf: url!)
         self.image = UIImage(data: data!)

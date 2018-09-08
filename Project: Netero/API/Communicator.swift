@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 
 class Communicator {
-    let apiKey = "RGAPI-a9208b17-cd08-4313-9b10-8c1d419890d5"
+    let apiKey = "RGAPI-3cc61eb5-862b-44aa-9215-d570fe8aa4dd"
     let endIndexForGetMatchesCall = 10
     
     func getCallToSetLatestPatch(completionHandler: @escaping (String?, Error?) -> ()) {

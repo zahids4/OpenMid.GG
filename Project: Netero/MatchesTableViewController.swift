@@ -13,6 +13,7 @@ class MatchesTableViewController: UITableViewController {
     
     var accountId: Int!
     var regionPlatform: String!
+    var matchForCell = [String:Any]()
     var dataSource = [[String:Any]]()
     
     
@@ -119,6 +120,15 @@ class MatchesTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        matchForCell = dataSource[indexPath.row]
         tableView.deselectRow(at: indexPath, animated: true)
+        performSegue(withIdentifier: "showDetailedMatchView", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showDetailedMatchView" {
+            let detailedMatchView = segue.destination as! DetailedMatchViewController
+            detailedMatchView.match = matchForCell
+        }
     }
 }

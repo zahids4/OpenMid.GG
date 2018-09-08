@@ -83,11 +83,4 @@ class MatchTableViewCell: UITableViewCell {
         spell1Image.image = UIImage(named: spell1Name)
         spell2Image.image = UIImage(named: spell2Name)
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
 }

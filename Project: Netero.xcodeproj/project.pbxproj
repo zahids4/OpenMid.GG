@@ -22,6 +22,7 @@
 		30220F1620C462AA00CB21D0 /* Communicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30220F1520C462AA00CB21D0 /* Communicator.swift */; };
 		30220F1820C475D300CB21D0 /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30220F1720C475D300CB21D0 /* ErrorHandler.swift */; };
 		30220F1B20C4785F00CB21D0 /* UIButton+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30220F1A20C4785F00CB21D0 /* UIButton+Extensions.swift */; };
+		3061372A21443855000808F8 /* DetailedMatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3061372921443855000808F8 /* DetailedMatchViewController.swift */; };
 		30716B8A2124C56D0060025A /* MatchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30716B892124C56D0060025A /* MatchTableViewCell.swift */; };
 		30716B8C2124CC440060025A /* Doubles+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30716B8B2124CC440060025A /* Doubles+Extensions.swift */; };
 		308EDB9A20F1AB5B00AC65D1 /* UILabel+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308EDB9920F1AB5B00AC65D1 /* UILabel+Extensions.swift */; };
@@ -61,6 +62,7 @@
 		30220F1520C462AA00CB21D0 /* Communicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Communicator.swift; sourceTree = "<group>"; };
 		30220F1720C475D300CB21D0 /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
 		30220F1A20C4785F00CB21D0 /* UIButton+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extensions.swift"; sourceTree = "<group>"; };
+		3061372921443855000808F8 /* DetailedMatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedMatchViewController.swift; sourceTree = "<group>"; };
 		30716B892124C56D0060025A /* MatchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchTableViewCell.swift; sourceTree = "<group>"; };
 		30716B8B2124CC440060025A /* Doubles+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Doubles+Extensions.swift"; sourceTree = "<group>"; };
 		308EDB9920F1AB5B00AC65D1 /* UILabel+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extensions.swift"; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				300ACE4320CD907800E7C31B /* SummonerProfileViewController.swift */,
 				308EDB9B20F1B50300AC65D1 /* MatchesTableViewController.swift */,
 				30716B892124C56D0060025A /* MatchTableViewCell.swift */,
+				3061372921443855000808F8 /* DetailedMatchViewController.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -381,6 +384,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3061372A21443855000808F8 /* DetailedMatchViewController.swift in Sources */,
 				308EDB9A20F1AB5B00AC65D1 /* UILabel+Extensions.swift in Sources */,
 				30220F1620C462AA00CB21D0 /* Communicator.swift in Sources */,
 				30220F1B20C4785F00CB21D0 /* UIButton+Extensions.swift in Sources */,

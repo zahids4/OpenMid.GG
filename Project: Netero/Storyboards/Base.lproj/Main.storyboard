@@ -305,10 +305,37 @@
                             <outlet property="delegate" destination="Qc9-FC-035" id="2JA-Pt-PUM"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <segue destination="Urb-1F-NAj" kind="show" identifier="showDetailedMatchView" id="C32-Ji-aXJ"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="64T-xi-D20" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2228" y="702.70935960591135"/>
+        </scene>
+        <!--Detailed Match View-->
+        <scene sceneID="IE4-5G-UBH">
+            <objects>
+                <viewController title="Detailed Match View" id="Urb-1F-NAj" customClass="DetailedMatchViewController" customModule="Project__Netero" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Nls-nd-uHR">
+                        <rect key="frame" x="0.0" y="0.0" width="359" height="434"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="HERE NOW" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gsf-Tr-ggj">
+                                <rect key="frame" x="135" y="87" width="88" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99928969140000001" green="0.9858608311" blue="0.95882099919999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="vhb-le-F4o"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5PK-IH-53a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2228" y="1216"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="yA4-Ni-6tX">

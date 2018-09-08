@@ -11,25 +11,14 @@ import UIKit
 class DetailedMatchViewController: UIViewController {
     @IBOutlet weak var championNameLabel: UILabel!
     @IBOutlet weak var championIconImage: UIImageView!
-    @IBOutlet weak var item0Image: UIImageView!
-    @IBOutlet weak var item1Image: UIImageView!
-    @IBOutlet weak var item2Image: UIImageView!
-    @IBOutlet weak var item3Image: UIImageView!
-    @IBOutlet weak var item4Image: UIImageView!
-    @IBOutlet weak var item5Image: UIImageView!
-
+    @IBOutlet var itemImages: [UIImageView]!
     let communicator = Communicator()
     var match: [String:Any]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setChampionNameAndIconFrom(id: match.integerValueForKey("championId"))
-        item0Image.setItemImageWith(id: match.integerValueForKey("item0"))
-        item1Image.setItemImageWith(id: match.integerValueForKey("item1"))
-        item2Image.setItemImageWith(id: match.integerValueForKey("item2"))
-        item3Image.setItemImageWith(id: match.integerValueForKey("item3"))
-        item4Image.setItemImageWith(id: match.integerValueForKey("item4"))
-        item5Image.setItemImageWith(id: match.integerValueForKey("item5"))
+        setItemImages()
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,7 +26,18 @@ class DetailedMatchViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    //This is repeated code extract it out! 
+    fileprivate func setItemImages() {
+        for (index, item) in itemImages.enumerated() {
+            let itemId = match.integerValueForKey("item\(index)")
+            if itemId != 0 {
+                item.setItemImageWith(id: itemId)
+            } else {
+                item.image = UIImage(named: "black_line")
+            }
+        }
+    }
+    
+    //This is repeated code extract it out! (Also present in match table view cell)
     fileprivate func setChampionNameAndIconFrom(id: Int) {
         communicator.getAllChampions() { allChampions, error in
             if allChampions != nil {

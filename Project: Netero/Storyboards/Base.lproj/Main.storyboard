@@ -422,12 +422,12 @@
                     <connections>
                         <outlet property="championIconImage" destination="RnZ-CY-Qkc" id="28u-0g-z74"/>
                         <outlet property="championNameLabel" destination="il8-w8-844" id="ft7-Xu-sNt"/>
-                        <outlet property="item0Image" destination="w55-Dl-xw4" id="qUo-a4-jjO"/>
-                        <outlet property="item1Image" destination="Gzy-8g-Jzw" id="VbS-gl-RH1"/>
-                        <outlet property="item2Image" destination="27J-I0-g9p" id="wW1-oh-6Cy"/>
-                        <outlet property="item3Image" destination="D8J-uz-nAM" id="iwu-Qc-aUu"/>
-                        <outlet property="item4Image" destination="daU-2w-iEF" id="zrs-Ir-PFR"/>
-                        <outlet property="item5Image" destination="Iq6-B1-dr2" id="oDK-yp-Pxj"/>
+                        <outletCollection property="itemImages" destination="w55-Dl-xw4" collectionClass="NSMutableArray" id="Xni-36-7KF"/>
+                        <outletCollection property="itemImages" destination="Gzy-8g-Jzw" collectionClass="NSMutableArray" id="v3g-fy-68T"/>
+                        <outletCollection property="itemImages" destination="27J-I0-g9p" collectionClass="NSMutableArray" id="tcW-r5-Y4d"/>
+                        <outletCollection property="itemImages" destination="D8J-uz-nAM" collectionClass="NSMutableArray" id="A9u-zt-ZrP"/>
+                        <outletCollection property="itemImages" destination="daU-2w-iEF" collectionClass="NSMutableArray" id="4Pp-Ik-09b"/>
+                        <outletCollection property="itemImages" destination="Iq6-B1-dr2" collectionClass="NSMutableArray" id="WEQ-Qc-2XG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5PK-IH-53a" userLabel="First Responder" sceneMemberID="firstResponder"/>

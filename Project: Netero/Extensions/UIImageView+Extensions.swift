@@ -10,14 +10,21 @@ import UIKit
 
 extension UIImageView {
     func setProfileIconWith(id: Int) {
-        let url = URL(string: "https://ddragon.leagueoflegends.com/cdn/\(AppDelegate.CURRENT_PATCH)/img/profileicon/\(id).png")
-        let data = try? Data(contentsOf: url!)
-        self.image = UIImage(data: data!)
+        setImageWith(imageUrl: "https://ddragon.leagueoflegends.com/cdn/\(AppDelegate.CURRENT_PATCH)/img/profileicon/\(id).png")
     }
     
     func setChampionIconWith(name: String) {
-        let url = URL(string: "http://ddragon.leagueoflegends.com/cdn/\(AppDelegate.CURRENT_PATCH)/img/champion/\(name).png")
+        setImageWith(imageUrl: "http://ddragon.leagueoflegends.com/cdn/\(AppDelegate.CURRENT_PATCH)/img/champion/\(name).png")
+    }
+    
+    func setItemImageWith(id: String) {
+        setImageWith(imageUrl: "http://ddragon.leagueoflegends.com/cdn/\(AppDelegate.CURRENT_PATCH)/img/item/\(id).png")
+    }
+    
+    fileprivate func setImageWith(imageUrl: String) {
+        let url = URL(string: imageUrl)
         let data = try? Data(contentsOf: url!)
         self.image = UIImage(data: data!)
     }
+
 }

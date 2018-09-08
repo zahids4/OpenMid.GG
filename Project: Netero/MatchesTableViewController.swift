@@ -89,6 +89,9 @@ class MatchesTableViewController: UITableViewController {
         matchObject["deaths"] = stats!.integerValueForKey("deaths")
         matchObject["spell1Id"] = summoner!.integerValueForKey("spell1Id")
         matchObject["spell2Id"] = summoner!.integerValueForKey("spell2Id")
+        for i in 0...4 {
+            matchObject["item\(i)"] = stats!.integerValueForKey("item\(i)")
+        }
         return matchObject
     }
     

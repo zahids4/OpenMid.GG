@@ -27,6 +27,8 @@
 		30716B8C2124CC440060025A /* Doubles+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30716B8B2124CC440060025A /* Doubles+Extensions.swift */; };
 		308EDB9A20F1AB5B00AC65D1 /* UILabel+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308EDB9920F1AB5B00AC65D1 /* UILabel+Extensions.swift */; };
 		308EDB9C20F1B50300AC65D1 /* MatchesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308EDB9B20F1B50300AC65D1 /* MatchesTableViewController.swift */; };
+		30A1269E214DB38D008ACF9B /* ParticipantsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A1269D214DB38D008ACF9B /* ParticipantsTableViewController.swift */; };
+		30A126A0214DB3A8008ACF9B /* ParticipantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A1269F214DB3A8008ACF9B /* ParticipantTableViewCell.swift */; };
 		30BBAED92125F8A700521AE3 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BBAED82125F8A700521AE3 /* String+Extensions.swift */; };
 		30C9523B20D759AA00F64EC0 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9523A20D759AA00F64EC0 /* UIImageView+Extensions.swift */; };
 		30F2650E20D61DDF008B16C5 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F2650D20D61DDF008B16C5 /* Keys.swift */; };
@@ -67,6 +69,8 @@
 		30716B8B2124CC440060025A /* Doubles+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Doubles+Extensions.swift"; sourceTree = "<group>"; };
 		308EDB9920F1AB5B00AC65D1 /* UILabel+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extensions.swift"; sourceTree = "<group>"; };
 		308EDB9B20F1B50300AC65D1 /* MatchesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesTableViewController.swift; sourceTree = "<group>"; };
+		30A1269D214DB38D008ACF9B /* ParticipantsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantsTableViewController.swift; sourceTree = "<group>"; };
+		30A1269F214DB3A8008ACF9B /* ParticipantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantTableViewCell.swift; sourceTree = "<group>"; };
 		30BBAED82125F8A700521AE3 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		30C9523A20D759AA00F64EC0 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
 		30F2650D20D61DDF008B16C5 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
@@ -121,6 +125,8 @@
 				308EDB9B20F1B50300AC65D1 /* MatchesTableViewController.swift */,
 				30716B892124C56D0060025A /* MatchTableViewCell.swift */,
 				3061372921443855000808F8 /* DetailedMatchViewController.swift */,
+				30A1269D214DB38D008ACF9B /* ParticipantsTableViewController.swift */,
+				30A1269F214DB3A8008ACF9B /* ParticipantTableViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -393,11 +399,13 @@
 				300ACE4620CD947E00E7C31B /* StringAny+Extensions.swift in Sources */,
 				30220F1320C0AE9500CB21D0 /* ButtonStyling.swift in Sources */,
 				30220F1120C0AAC500CB21D0 /* LandingScreenViewController.swift in Sources */,
+				30A1269E214DB38D008ACF9B /* ParticipantsTableViewController.swift in Sources */,
 				30716B8A2124C56D0060025A /* MatchTableViewCell.swift in Sources */,
 				30716B8C2124CC440060025A /* Doubles+Extensions.swift in Sources */,
 				300ACE4420CD907800E7C31B /* SummonerProfileViewController.swift in Sources */,
 				308EDB9C20F1B50300AC65D1 /* MatchesTableViewController.swift in Sources */,
 				30220F1820C475D300CB21D0 /* ErrorHandler.swift in Sources */,
+				30A126A0214DB3A8008ACF9B /* ParticipantTableViewCell.swift in Sources */,
 				30220EF620C0A6B600CB21D0 /* Project__Netero.xcdatamodeld in Sources */,
 				30220EEE20C0A6B600CB21D0 /* AppDelegate.swift in Sources */,
 				30F2650E20D61DDF008B16C5 /* Keys.swift in Sources */,

@@ -26,6 +26,7 @@ class DetailedMatchViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    // DUUPPE extract!
     fileprivate func setItemImages() {
         for (index, item) in itemImages.enumerated() {
             let itemId = match.integerValueForKey("item\(index)")
@@ -51,6 +52,15 @@ class DetailedMatchViewController: UIViewController {
                 print("An error occured: ", error as Any)
             }
             
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "participantsTableVCSegue" {
+            let participantsTableVC = segue.destination as! ParticipantsTableViewController
+            let details = match.stringAnyObjectForKey("matchDetails")
+            participantsTableVC.participants = details.arrayForKey("participants") as! [[String:Any]]
+            participantsTableVC.participantIdentities = details.arrayForKey("participantIdentities") as! [[String:Any]]
         }
     }
 

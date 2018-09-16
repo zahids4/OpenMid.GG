@@ -38,6 +38,7 @@ class ParticipantsTableViewController: UITableViewController {
         }
     }
     
+    
     fileprivate func buildParticipantObjectWith(_ participant: [String:Any]) -> [String:Any] {
         var participantObject = [String: Any]()
         let stats = participant.stringAnyObjectForKey("stats")
@@ -46,7 +47,7 @@ class ParticipantsTableViewController: UITableViewController {
         participantObject["kills"] = stats.integerValueForKey("kills")
         participantObject["assists"] = stats.integerValueForKey("assists")
         participantObject["deaths"] = stats.integerValueForKey("deaths")
-        participantObject["win"] = stats.integerValueForKey("win")
+        setDidWin(stats, &participantObject)
         participantObject["cs"] = stats.integerValueForKey("totalMinionsKilled")
         participantObject["spell1Id"] = participant.integerValueForKey("spell1Id")
         participantObject["spell2Id"] = participant.integerValueForKey("spell2Id")
@@ -55,6 +56,14 @@ class ParticipantsTableViewController: UITableViewController {
         }
         
         return participantObject
+    }
+    
+    fileprivate func setDidWin(_ stats: [String : Any], _ participantObject: inout [String : Any]) {
+        if stats.integerValueForKey("win") == 1 {
+            participantObject["didWin"] = true
+        } else {
+            participantObject["didWin"] = false
+        }
     }
 
     override func didReceiveMemoryWarning() {

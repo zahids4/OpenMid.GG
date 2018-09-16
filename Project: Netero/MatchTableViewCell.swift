@@ -26,16 +26,8 @@ class MatchTableViewCell: UITableViewCell {
     
     func configureUsing(_ match: [String:Any]) {
         UtilityHelper.setChampionUIFrom(id: match.integerValueForKey("championId"), championIconImage,  championNameLabel)
-        setBackgroundColor(match)
+        UtilityHelper.setBackgroundColor(match.boolForKey("didWin"), view: self)
         UtilityHelper.setStatsLabels(match, matchStatsLabel, kdaLabel)
         UtilityHelper.setSpellImagesFrom(match, spell1Image, spell2Image)
-    }
-    
-    fileprivate func setBackgroundColor(_ match: [String : Any]) {
-        if match.boolForKey("didWin") {
-            self.backgroundColor = UIColor(displayP3Red: 117/255, green: 251/255, blue: 172/255, alpha: 0.8)
-        } else {
-            self.backgroundColor = UIColor(displayP3Red: 176/255, green: 50/255, blue: 53/255, alpha: 0.8)
-        }
     }
 }

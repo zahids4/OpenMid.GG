@@ -58,4 +58,12 @@ class UtilityHelper {
         let kda =  Double(Double(kills + assists) / Double(deaths)).rounded(toPlaces: 2)
         return "\(kda) KDA"
     }
+    
+    static func setBackgroundColor(_ didWin: Bool, view: UIView) {
+        if didWin {
+            view.backgroundColor = resultColor.green
+        } else {
+            view.backgroundColor = resultColor.red
+        }
+    }
 }

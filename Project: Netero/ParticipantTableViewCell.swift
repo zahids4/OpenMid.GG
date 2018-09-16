@@ -17,6 +17,7 @@ class ParticipantTableViewCell: UITableViewCell {
     @IBOutlet weak var spell2Image: UIImageView!
     @IBOutlet weak var spell1Image: UIImageView!
     @IBOutlet var itemImages: [UIImageView]!
+    @IBOutlet weak var didWinImage: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -37,6 +38,7 @@ class ParticipantTableViewCell: UITableViewCell {
         UtilityHelper.setSpellImagesFrom(participant, spell1Image, spell2Image)
         UtilityHelper.setStatsLabels(participant, matchStatsLabel, kdaLabel)
         setLabels(participant)
+        UtilityHelper.setBackgroundColor(participant.boolForKey("didWin"), view: didWinImage)
     }
     
     fileprivate func setLabels(_ participant: [String:Any]) {

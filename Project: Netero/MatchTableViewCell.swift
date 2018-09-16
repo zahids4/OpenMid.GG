@@ -9,12 +9,14 @@
 import UIKit
 
 class MatchTableViewCell: UITableViewCell {
-    @IBOutlet weak var championIconImage: UIImageView!
     @IBOutlet weak var championNameLabel: UILabel!
+    @IBOutlet weak var championIconImage: UIImageView!
+    @IBOutlet weak var creepScoreLabel: UILabel!
     @IBOutlet weak var matchStatsLabel: UILabel!
     @IBOutlet weak var kdaLabel: UILabel!
-    @IBOutlet weak var spell1Image: UIImageView!
     @IBOutlet weak var spell2Image: UIImageView!
+    @IBOutlet weak var spell1Image: UIImageView!
+    @IBOutlet var itemImages: [UIImageView]!
     
     let communicator = Communicator()
     
@@ -25,9 +27,10 @@ class MatchTableViewCell: UITableViewCell {
     }
     
     func configureUsing(_ match: [String:Any]) {
-        UtilityHelper.setChampionUIFrom(id: match.integerValueForKey("championId"), championIconImage,  championNameLabel)
-        UtilityHelper.setBackgroundColor(match.boolForKey("didWin"), view: self)
-        UtilityHelper.setStatsLabels(match, matchStatsLabel, kdaLabel)
+        UtilityHelper.setChampionUIFrom(id: match.integerValueForKey("championId"), championIconImage, championNameLabel)
+        UtilityHelper.setItemImages(match, itemImages)
         UtilityHelper.setSpellImagesFrom(match, spell1Image, spell2Image)
+        UtilityHelper.setStatsLabels(match, matchStatsLabel, kdaLabel)
+        UtilityHelper.setBackgroundColor(match.boolForKey("didWin"), view: self)
     }
 }

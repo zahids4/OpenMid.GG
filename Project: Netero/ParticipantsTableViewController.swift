@@ -14,9 +14,12 @@ class ParticipantsTableViewController: UITableViewController {
     var participants: [[String:Any]]!
     var participantIdentities: [[String:Any]]!
     var dataSource = [[String:Any]]()
+    var summonerNames = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.addBorder()
+        createSummonerNamesArray()
         createDatasource()
     }
     
@@ -24,6 +27,16 @@ class ParticipantsTableViewController: UITableViewController {
         participants.forEach { p in
             let participantObject = buildParticipantObjectWith(p)
             self.dataSource.append(participantObject)
+        }
+        
+    }
+    
+    fileprivate func createSummonerNamesArray() {
+        print(participantIdentities)
+        participantIdentities.forEach { p in
+            let player = p.stringAnyObjectForKey("player")
+            let name = player.stringValueForKey("summonerName")
+            self.summonerNames.append(name)
         }
         
     }
@@ -57,10 +70,16 @@ class ParticipantsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10
     }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 114.0
+    }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "participantCell", for: indexPath) as! ParticipantTableViewCell
         let participant = dataSource[indexPath.row]
+        let name = summonerNames[indexPath.row]
+        cell.setSummonerName(name)
         cell.configureUsing(participant)
         return cell
     }

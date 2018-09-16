@@ -9,6 +9,7 @@
 import UIKit
 
 class ParticipantTableViewCell: UITableViewCell {
+    @IBOutlet weak var summonerNameLabel: UILabel!
     @IBOutlet weak var championIconImage: UIImageView!
     @IBOutlet weak var creepScoreLabel: UILabel!
     @IBOutlet weak var kdaLabel: UILabel!
@@ -23,6 +24,10 @@ class ParticipantTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+    }
+    
+    func setSummonerName(_ name: String) {
+        summonerNameLabel.text = name
     }
     
     func configureUsing(_ participant: [String:Any]) {

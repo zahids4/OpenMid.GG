@@ -30,7 +30,13 @@ class MatchTableViewCell: UITableViewCell {
         UtilityHelper.setChampionUIFrom(id: match.integerValueForKey("championId"), championIconImage, championNameLabel)
         UtilityHelper.setItemImages(match, itemImages)
         UtilityHelper.setSpellImagesFrom(match, spell1Image, spell2Image)
-        UtilityHelper.setStatsLabels(match, matchStatsLabel, kdaLabel)
         UtilityHelper.setBackgroundColor(match.boolForKey("didWin"), view: self)
+        setLabels(match)
+    }
+    
+    fileprivate func setLabels(_ match: [String:Any]) {
+        let cs = match.integerValueForKey("cs")
+        UtilityHelper.setStatsLabels(match, matchStatsLabel, kdaLabel)
+        creepScoreLabel.text! = "\(cs) CS"
     }
 }

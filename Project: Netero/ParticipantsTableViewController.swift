@@ -28,26 +28,26 @@ class ParticipantsTableViewController: UITableViewController {
             let participantObject = buildParticipantObjectWith(p)
             self.dataSource.append(participantObject)
         }
-        
     }
     
     fileprivate func createSummonerNamesArray() {
-        print(participantIdentities)
         participantIdentities.forEach { p in
             let player = p.stringAnyObjectForKey("player")
             let name = player.stringValueForKey("summonerName")
             self.summonerNames.append(name)
         }
-        
     }
     
     fileprivate func buildParticipantObjectWith(_ participant: [String:Any]) -> [String:Any] {
         var participantObject = [String: Any]()
         let stats = participant.stringAnyObjectForKey("stats")
+        participantObject["teamId"] = participant.integerValueForKey("teamId")
         participantObject["championId"] = participant.integerValueForKey("championId")
         participantObject["kills"] = stats.integerValueForKey("kills")
         participantObject["assists"] = stats.integerValueForKey("assists")
         participantObject["deaths"] = stats.integerValueForKey("deaths")
+        participantObject["win"] = stats.integerValueForKey("win")
+        participantObject["cs"] = stats.integerValueForKey("totalMinionsKilled")
         participantObject["spell1Id"] = participant.integerValueForKey("spell1Id")
         participantObject["spell2Id"] = participant.integerValueForKey("spell2Id")
         for i in 0...5 {

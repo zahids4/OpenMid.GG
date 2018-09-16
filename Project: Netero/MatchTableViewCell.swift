@@ -27,21 +27,8 @@ class MatchTableViewCell: UITableViewCell {
     func configureUsing(_ match: [String:Any]) {
         UtilityHelper.setChampionUIFrom(id: match.integerValueForKey("championId"), championIconImage,  championNameLabel)
         setBackgroundColor(match)
-        setStatsLabels(match)
+        UtilityHelper.setStatsLabels(match, matchStatsLabel, kdaLabel)
         UtilityHelper.setSpellImagesFrom(match, spell1Image, spell2Image)
-    }
-
-    fileprivate func setStatsLabels(_ match: [String : Any]) {
-        let kills = match.integerValueForKey("kills")
-        let assists = match.integerValueForKey("assists")
-        let deaths = match.integerValueForKey("deaths")
-        matchStatsLabel.text! = "\(kills) / \(deaths) / \(assists)"
-        kdaLabel.text! = createKdaLabel(kills, assists, deaths)
-    }
-    
-    fileprivate func createKdaLabel(_ kills: Int,_ assists: Int, _ deaths: Int) -> String {
-        let kda =  Double(Double(kills + assists) / Double(deaths)).rounded(toPlaces: 2)
-        return "\(kda) KDA"
     }
     
     fileprivate func setBackgroundColor(_ match: [String : Any]) {

@@ -45,4 +45,17 @@ class UtilityHelper {
         spell1Image.image = UIImage(named: spell1Name)
         spell2Image.image = UIImage(named: spell2Name)
     }
+    
+    static func setStatsLabels(_ statsSource: [String : Any], _ matchStatsLabel: UILabel, _ kdaLabel: UILabel) {
+        let kills = statsSource.integerValueForKey("kills")
+        let assists = statsSource.integerValueForKey("assists")
+        let deaths = statsSource.integerValueForKey("deaths")
+        matchStatsLabel.text! = "\(kills) / \(deaths) / \(assists)"
+        kdaLabel.text! = createKdaLabel(kills, assists, deaths)
+    }
+    
+    static func createKdaLabel(_ kills: Int,_ assists: Int, _ deaths: Int) -> String {
+        let kda =  Double(Double(kills + assists) / Double(deaths)).rounded(toPlaces: 2)
+        return "\(kda) KDA"
+    }
 }

@@ -12,6 +12,7 @@ class ParticipantTableViewCell: UITableViewCell {
     @IBOutlet weak var summonerNameLabel: UILabel!
     @IBOutlet weak var championIconImage: UIImageView!
     @IBOutlet weak var creepScoreLabel: UILabel!
+    @IBOutlet weak var matchStatsLabel: UILabel!
     @IBOutlet weak var kdaLabel: UILabel!
     @IBOutlet weak var spell2Image: UIImageView!
     @IBOutlet weak var spell1Image: UIImageView!
@@ -34,5 +35,13 @@ class ParticipantTableViewCell: UITableViewCell {
         UtilityHelper.setChampionUIFrom(id: participant.integerValueForKey("championId"), championIconImage)
         UtilityHelper.setItemImages(participant, itemImages)
         UtilityHelper.setSpellImagesFrom(participant, spell1Image, spell2Image)
+        UtilityHelper.setStatsLabels(participant, matchStatsLabel, kdaLabel)
+        setLabels(participant)
+    }
+    
+    fileprivate func setLabels(_ participant: [String:Any]) {
+        let cs = participant.integerValueForKey("cs")
+        UtilityHelper.setStatsLabels(participant, matchStatsLabel, kdaLabel)
+        creepScoreLabel.text! = "\(cs) CS"
     }
 }

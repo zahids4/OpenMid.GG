@@ -21,7 +21,6 @@ class UtilityHelper {
             } else {
                 print("An error occured: ", error as Any)
             }
-            
         }
     }
 }

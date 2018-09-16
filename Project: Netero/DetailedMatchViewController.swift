@@ -17,28 +17,13 @@ class DetailedMatchViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        UtilityHelper.setChampionNameAndIconFrom(id: match.integerValueForKey("championId")) { key in
-            self.championNameLabel.text! = key.convertFromApiNameToChampionName().toSpaceSeperated
-            self.championIconImage.setChampionIconWith(name: key)
-        }
-        setItemImages()
+        UtilityHelper.setChampionUIFrom(id: match.integerValueForKey("championId"), championIconImage,  championNameLabel)
+        UtilityHelper.setItemImages(match, itemImages)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    // DUUPPE extract!
-    fileprivate func setItemImages() {
-        for (index, item) in itemImages.enumerated() {
-            let itemId = match.integerValueForKey("item\(index)")
-            if itemId != 0 {
-                item.setItemImageWith(id: itemId)
-            } else {
-                item.image = UIImage(named: "black_line")
-            }
-        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

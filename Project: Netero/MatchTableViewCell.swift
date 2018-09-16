@@ -21,26 +21,14 @@ class MatchTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        addSeperator()
-    }
-    
-    fileprivate func addSeperator() {
-        let screenSize = UIScreen.main.bounds
-        let separatorHeight = CGFloat(2.0)
-        let additionalSeparator = UIView.init(frame: CGRect(x: 0, y: self.frame.size.height-separatorHeight, width: screenSize.width, height: separatorHeight))
-        additionalSeparator.backgroundColor = UIColor.black
-        self.addSubview(additionalSeparator)
+        CellHelper.addSeperator(self)
     }
     
     func configureUsing(_ match: [String:Any]) {
-        UtilityHelper.setChampionNameAndIconFrom(id: match.integerValueForKey("championId")) { key in
-            self.championNameLabel.text! = key.convertFromApiNameToChampionName().toSpaceSeperated
-            self.championIconImage.setChampionIconWith(name: key)
-        }
-        
+        UtilityHelper.setChampionUIFrom(id: match.integerValueForKey("championId"), championIconImage,  championNameLabel)
         setBackgroundColor(match)
         setStatsLabels(match)
-        setSpellImagesFrom(match)
+        UtilityHelper.setSpellImagesFrom(match, spell1Image, spell2Image)
     }
 
     fileprivate func setStatsLabels(_ match: [String : Any]) {
@@ -62,12 +50,5 @@ class MatchTableViewCell: UITableViewCell {
         } else {
             self.backgroundColor = UIColor(displayP3Red: 176/255, green: 50/255, blue: 53/255, alpha: 0.8)
         }
-    }
-    
-    fileprivate func setSpellImagesFrom(_ match: [String : Any]) {
-        let spell1Name = "spell_\(match.integerValueForKey("spell1Id"))"
-        let spell2Name = "spell_\(match.integerValueForKey("spell2Id"))"
-        spell1Image.image = UIImage(named: spell1Name)
-        spell2Image.image = UIImage(named: spell2Name)
     }
 }

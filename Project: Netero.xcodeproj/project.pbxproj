@@ -29,6 +29,7 @@
 		308EDB9C20F1B50300AC65D1 /* MatchesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308EDB9B20F1B50300AC65D1 /* MatchesTableViewController.swift */; };
 		30A1269E214DB38D008ACF9B /* ParticipantsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A1269D214DB38D008ACF9B /* ParticipantsTableViewController.swift */; };
 		30A126A0214DB3A8008ACF9B /* ParticipantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A1269F214DB3A8008ACF9B /* ParticipantTableViewCell.swift */; };
+		30A1CA90214E0A0A001F1B0D /* UtilityHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A1CA8F214E0A0A001F1B0D /* UtilityHelper.swift */; };
 		30BBAED92125F8A700521AE3 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BBAED82125F8A700521AE3 /* String+Extensions.swift */; };
 		30C9523B20D759AA00F64EC0 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9523A20D759AA00F64EC0 /* UIImageView+Extensions.swift */; };
 		30F2650E20D61DDF008B16C5 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F2650D20D61DDF008B16C5 /* Keys.swift */; };
@@ -71,6 +72,7 @@
 		308EDB9B20F1B50300AC65D1 /* MatchesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesTableViewController.swift; sourceTree = "<group>"; };
 		30A1269D214DB38D008ACF9B /* ParticipantsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantsTableViewController.swift; sourceTree = "<group>"; };
 		30A1269F214DB3A8008ACF9B /* ParticipantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantTableViewCell.swift; sourceTree = "<group>"; };
+		30A1CA8F214E0A0A001F1B0D /* UtilityHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilityHelper.swift; sourceTree = "<group>"; };
 		30BBAED82125F8A700521AE3 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		30C9523A20D759AA00F64EC0 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
 		30F2650D20D61DDF008B16C5 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 		30220EEC20C0A6B600CB21D0 /* Project: Netero */ = {
 			isa = PBXGroup;
 			children = (
+				30A1CA8E214E096F001F1B0D /* Helpers */,
 				300ACE3F20CD8F5100E7C31B /* API */,
 				30220EED20C0A6B600CB21D0 /* AppDelegate.swift */,
 				30220EF720C0A6B800CB21D0 /* Assets.xcassets */,
@@ -205,6 +208,14 @@
 				30BBAED82125F8A700521AE3 /* String+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		30A1CA8E214E096F001F1B0D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				30A1CA8F214E0A0A001F1B0D /* UtilityHelper.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		46B029E2B5BF23078BAC7527 /* Frameworks */ = {
@@ -404,6 +415,7 @@
 				30716B8C2124CC440060025A /* Doubles+Extensions.swift in Sources */,
 				300ACE4420CD907800E7C31B /* SummonerProfileViewController.swift in Sources */,
 				308EDB9C20F1B50300AC65D1 /* MatchesTableViewController.swift in Sources */,
+				30A1CA90214E0A0A001F1B0D /* UtilityHelper.swift in Sources */,
 				30220F1820C475D300CB21D0 /* ErrorHandler.swift in Sources */,
 				30A126A0214DB3A8008ACF9B /* ParticipantTableViewCell.swift in Sources */,
 				30220EF620C0A6B600CB21D0 /* Project__Netero.xcdatamodeld in Sources */,

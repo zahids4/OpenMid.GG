@@ -33,29 +33,16 @@ class MatchTableViewCell: UITableViewCell {
     }
     
     func configureUsing(_ match: [String:Any]) {
-        setChampionNameAndIconFrom(id: match.integerValueForKey("championId"))
+        UtilityHelper.setChampionNameAndIconFrom(id: match.integerValueForKey("championId")) { key in
+            self.championNameLabel.text! = key.convertFromApiNameToChampionName().toSpaceSeperated
+            self.championIconImage.setChampionIconWith(name: key)
+        }
+        
         setBackgroundColor(match)
         setStatsLabels(match)
         setSpellImagesFrom(match)
     }
-    
-    fileprivate func setChampionNameAndIconFrom(id: Int) {
-        communicator.getAllChampions() { allChampions, error in
-            if allChampions != nil {
-                for (key, value) in allChampions! {
-                    if Int((value as! [String:Any]).stringValueForKey("key")) == id {
-                        self.championNameLabel.text! = key.convertFromApiNameToChampionName().toSpaceSeperated
-                        self.championIconImage.setChampionIconWith(name: key)
-                    }
-                }
-            } else {
-                print("An error occured: ", error as Any)
-            }
-            
-        }
-    }
-    
-    
+
     fileprivate func setStatsLabels(_ match: [String : Any]) {
         let kills = match.integerValueForKey("kills")
         let assists = match.integerValueForKey("assists")

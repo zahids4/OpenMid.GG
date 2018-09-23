@@ -89,11 +89,11 @@ class ParticipantsTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "participantCell", for: indexPath) as! ParticipantTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "matchCell", for: indexPath) as! MatchTableViewCell
         let participant = dataSource[indexPath.row]
         let name = summonerNames[indexPath.row]
-        cell.setSummonerName(name)
         cell.configureUsing(participant)
+        cell.setSummonerName(name)
         return cell
     }
 }

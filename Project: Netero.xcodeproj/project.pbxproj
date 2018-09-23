@@ -28,7 +28,6 @@
 		308EDB9A20F1AB5B00AC65D1 /* UILabel+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308EDB9920F1AB5B00AC65D1 /* UILabel+Extensions.swift */; };
 		308EDB9C20F1B50300AC65D1 /* MatchesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308EDB9B20F1B50300AC65D1 /* MatchesTableViewController.swift */; };
 		30A1269E214DB38D008ACF9B /* ParticipantsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A1269D214DB38D008ACF9B /* ParticipantsTableViewController.swift */; };
-		30A126A0214DB3A8008ACF9B /* ParticipantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A1269F214DB3A8008ACF9B /* ParticipantTableViewCell.swift */; };
 		30A1CA90214E0A0A001F1B0D /* UtilityHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A1CA8F214E0A0A001F1B0D /* UtilityHelper.swift */; };
 		30A1CA92214E1258001F1B0D /* CellHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A1CA91214E1258001F1B0D /* CellHelper.swift */; };
 		30A1CA94214E1371001F1B0D /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A1CA93214E1371001F1B0D /* UITableView+Extensions.swift */; };
@@ -73,7 +72,6 @@
 		308EDB9920F1AB5B00AC65D1 /* UILabel+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extensions.swift"; sourceTree = "<group>"; };
 		308EDB9B20F1B50300AC65D1 /* MatchesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesTableViewController.swift; sourceTree = "<group>"; };
 		30A1269D214DB38D008ACF9B /* ParticipantsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantsTableViewController.swift; sourceTree = "<group>"; };
-		30A1269F214DB3A8008ACF9B /* ParticipantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantTableViewCell.swift; sourceTree = "<group>"; };
 		30A1CA8F214E0A0A001F1B0D /* UtilityHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilityHelper.swift; sourceTree = "<group>"; };
 		30A1CA91214E1258001F1B0D /* CellHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellHelper.swift; sourceTree = "<group>"; };
 		30A1CA93214E1371001F1B0D /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
@@ -132,7 +130,6 @@
 				30716B892124C56D0060025A /* MatchTableViewCell.swift */,
 				3061372921443855000808F8 /* DetailedMatchViewController.swift */,
 				30A1269D214DB38D008ACF9B /* ParticipantsTableViewController.swift */,
-				30A1269F214DB3A8008ACF9B /* ParticipantTableViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -425,7 +422,6 @@
 				30220F1820C475D300CB21D0 /* ErrorHandler.swift in Sources */,
 				30A1CA94214E1371001F1B0D /* UITableView+Extensions.swift in Sources */,
 				30A1CA92214E1258001F1B0D /* CellHelper.swift in Sources */,
-				30A126A0214DB3A8008ACF9B /* ParticipantTableViewCell.swift in Sources */,
 				30220EF620C0A6B600CB21D0 /* Project__Netero.xcdatamodeld in Sources */,
 				30220EEE20C0A6B600CB21D0 /* AppDelegate.swift in Sources */,
 				30F2650E20D61DDF008B16C5 /* Keys.swift in Sources */,

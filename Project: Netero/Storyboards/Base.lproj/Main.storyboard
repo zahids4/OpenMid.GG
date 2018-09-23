@@ -297,12 +297,6 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Champion Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fIS-tE-7mg">
-                                            <rect key="frame" x="94.333333333333314" y="8" width="139" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RLw-MA-6Y6">
                                             <rect key="frame" x="92" y="37" width="30" height="30"/>
                                             <constraints>
@@ -319,6 +313,12 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hWg-Bs-V4M">
                                             <rect key="frame" x="244" y="84" width="22.666666666666686" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Champion Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fIS-tE-7mg">
+                                            <rect key="frame" x="93" y="8" width="139" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -350,16 +350,16 @@
                                         <constraint firstItem="gbw-4W-HhU" firstAttribute="leading" secondItem="jbS-EL-735" secondAttribute="trailing" constant="8" id="mbw-Il-fgL"/>
                                         <constraint firstAttribute="bottom" secondItem="ecO-x6-XbV" secondAttribute="bottom" constant="8.5" id="o2Y-WG-06O"/>
                                         <constraint firstItem="jbS-EL-735" firstAttribute="leading" secondItem="poX-R7-7bV" secondAttribute="trailing" constant="8" id="s3Y-kq-Fgf"/>
-                                        <constraint firstItem="fIS-tE-7mg" firstAttribute="centerX" secondItem="dhb-qc-ucj" secondAttribute="centerX" constant="1.1666666666667425" id="uOQ-hX-ZEF"/>
+                                        <constraint firstItem="fIS-tE-7mg" firstAttribute="centerX" secondItem="dhb-qc-ucj" secondAttribute="centerX" id="uOQ-hX-ZEF"/>
                                         <constraint firstItem="RLw-MA-6Y6" firstAttribute="top" secondItem="dhb-qc-ucj" secondAttribute="top" constant="37" id="wDQ-lz-6fg"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="championIconImage" destination="Fsh-JG-keK" id="iPn-er-Xis"/>
-                                    <outlet property="championNameLabel" destination="fIS-tE-7mg" id="hCm-ls-Jps"/>
                                     <outlet property="creepScoreLabel" destination="hWg-Bs-V4M" id="Zax-CA-QGK"/>
                                     <outlet property="kdaLabel" destination="ccy-29-6fI" id="IIg-HM-BQr"/>
                                     <outlet property="matchStatsLabel" destination="gbw-4W-HhU" id="ABV-bG-ugJ"/>
+                                    <outlet property="nameLabel" destination="fIS-tE-7mg" id="hCm-ls-Jps"/>
                                     <outlet property="spell1Image" destination="RLw-MA-6Y6" id="SlX-fG-gNR"/>
                                     <outlet property="spell2Image" destination="ecO-x6-XbV" id="SFt-Ak-s4w"/>
                                     <outletCollection property="itemImages" destination="quY-tu-wSn" collectionClass="NSMutableArray" id="LO2-X1-7R7"/>
@@ -534,7 +534,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="participantCell" rowHeight="114" id="3fK-tp-GZh" customClass="ParticipantTableViewCell" customModule="Project__Netero" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="matchCell" rowHeight="114" id="3fK-tp-GZh" customClass="MatchTableViewCell" customModule="Project__Netero" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="341" height="114"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3fK-tp-GZh" id="kPG-JJ-55r">
@@ -628,20 +628,12 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iPP-Oq-N2B">
-                                            <rect key="frame" x="321" y="0.0" width="20" height="114"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="20" id="x0z-HM-spH"/>
-                                            </constraints>
-                                        </imageView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="trailing" secondItem="iPP-Oq-N2B" secondAttribute="trailing" id="1BW-c7-qaJ"/>
                                         <constraint firstItem="WDu-jz-Odp" firstAttribute="centerY" secondItem="T0b-X7-0DD" secondAttribute="centerY" id="3Gu-JJ-mQh"/>
                                         <constraint firstItem="T0b-X7-0DD" firstAttribute="leading" secondItem="1cy-ZK-pas" secondAttribute="trailing" constant="8" id="6GW-Vj-Phm"/>
                                         <constraint firstItem="1cy-ZK-pas" firstAttribute="top" secondItem="kPG-JJ-55r" secondAttribute="top" constant="37" id="7au-1m-VSp"/>
                                         <constraint firstItem="YYT-f3-Hvz" firstAttribute="centerY" secondItem="t9n-Xu-oTh" secondAttribute="centerY" constant="4.5" id="8Nu-JI-Cpa"/>
-                                        <constraint firstAttribute="bottom" secondItem="iPP-Oq-N2B" secondAttribute="bottom" constant="-0.33000000000000002" id="CZX-Lf-sse"/>
                                         <constraint firstItem="T0b-X7-0DD" firstAttribute="top" secondItem="kPG-JJ-55r" secondAttribute="top" constant="37" id="Cnc-YH-xZC"/>
                                         <constraint firstItem="Zzv-zt-Q0n" firstAttribute="leading" secondItem="T0b-X7-0DD" secondAttribute="trailing" constant="8" id="Dwg-A3-685"/>
                                         <constraint firstItem="t9n-Xu-oTh" firstAttribute="centerY" secondItem="Kuy-KU-GA9" secondAttribute="centerY" id="H4q-I2-474"/>
@@ -661,7 +653,6 @@
                                         <constraint firstItem="6z7-W6-I7G" firstAttribute="leading" secondItem="Kuy-KU-GA9" secondAttribute="trailing" constant="8" id="rYy-b4-vXg"/>
                                         <constraint firstItem="cli-WX-h4l" firstAttribute="leading" secondItem="WDu-jz-Odp" secondAttribute="trailing" constant="8" id="ty5-AE-Ra4"/>
                                         <constraint firstItem="2S6-yc-QGV" firstAttribute="centerY" secondItem="Kuy-KU-GA9" secondAttribute="centerY" id="uxG-Kz-kCi"/>
-                                        <constraint firstItem="iPP-Oq-N2B" firstAttribute="top" secondItem="kPG-JJ-55r" secondAttribute="top" id="v8R-HW-fLO"/>
                                         <constraint firstItem="bLw-vN-wRA" firstAttribute="centerX" secondItem="kPG-JJ-55r" secondAttribute="centerX" constant="1.1666666666667425" id="wja-WU-Vf7"/>
                                         <constraint firstItem="Xj4-b8-gor" firstAttribute="leading" secondItem="Zzv-zt-Q0n" secondAttribute="trailing" constant="8" id="xMA-fn-Ppv"/>
                                         <constraint firstItem="cli-WX-h4l" firstAttribute="top" secondItem="uEd-g1-34Q" secondAttribute="bottom" constant="2.5" id="xeX-GQ-7dU"/>
@@ -670,20 +661,19 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="championIconImage" destination="1cy-ZK-pas" id="hXh-6p-xo9"/>
-                                    <outlet property="creepScoreLabel" destination="YYT-f3-Hvz" id="dxG-GP-0AV"/>
-                                    <outlet property="didWinImage" destination="iPP-Oq-N2B" id="E46-ZV-IYq"/>
-                                    <outlet property="kdaLabel" destination="cli-WX-h4l" id="jZF-xq-CKb"/>
-                                    <outlet property="matchStatsLabel" destination="uEd-g1-34Q" id="G7i-WO-Qq6"/>
-                                    <outlet property="spell1Image" destination="T0b-X7-0DD" id="vfC-yt-VI8"/>
-                                    <outlet property="spell2Image" destination="Kuy-KU-GA9" id="gd6-8j-J7g"/>
-                                    <outlet property="summonerNameLabel" destination="bLw-vN-wRA" id="XKg-OG-FFB"/>
-                                    <outletCollection property="itemImages" destination="Zzv-zt-Q0n" collectionClass="NSMutableArray" id="sPM-0d-WMI"/>
-                                    <outletCollection property="itemImages" destination="Xj4-b8-gor" collectionClass="NSMutableArray" id="0A5-rO-Mv6"/>
-                                    <outletCollection property="itemImages" destination="WDu-jz-Odp" collectionClass="NSMutableArray" id="EKk-WF-jMN"/>
-                                    <outletCollection property="itemImages" destination="6z7-W6-I7G" collectionClass="NSMutableArray" id="UfR-bz-b5x"/>
-                                    <outletCollection property="itemImages" destination="2S6-yc-QGV" collectionClass="NSMutableArray" id="1QM-ge-J2e"/>
-                                    <outletCollection property="itemImages" destination="t9n-Xu-oTh" collectionClass="NSMutableArray" id="61R-2U-3VV"/>
+                                    <outlet property="championIconImage" destination="1cy-ZK-pas" id="XtW-NF-kdj"/>
+                                    <outlet property="creepScoreLabel" destination="YYT-f3-Hvz" id="vG9-JL-EI8"/>
+                                    <outlet property="kdaLabel" destination="cli-WX-h4l" id="ql7-3E-8BQ"/>
+                                    <outlet property="matchStatsLabel" destination="uEd-g1-34Q" id="jM6-d5-U2w"/>
+                                    <outlet property="nameLabel" destination="bLw-vN-wRA" id="yGh-0C-W7p"/>
+                                    <outlet property="spell1Image" destination="T0b-X7-0DD" id="GBj-Ee-XcZ"/>
+                                    <outlet property="spell2Image" destination="Kuy-KU-GA9" id="nrW-Ig-kWF"/>
+                                    <outletCollection property="itemImages" destination="Zzv-zt-Q0n" collectionClass="NSMutableArray" id="5VO-HC-L1d"/>
+                                    <outletCollection property="itemImages" destination="Xj4-b8-gor" collectionClass="NSMutableArray" id="Kmz-HJ-ZaX"/>
+                                    <outletCollection property="itemImages" destination="WDu-jz-Odp" collectionClass="NSMutableArray" id="2Sc-PB-DLV"/>
+                                    <outletCollection property="itemImages" destination="6z7-W6-I7G" collectionClass="NSMutableArray" id="qgX-Cy-VkO"/>
+                                    <outletCollection property="itemImages" destination="2S6-yc-QGV" collectionClass="NSMutableArray" id="vRd-Iw-0j3"/>
+                                    <outletCollection property="itemImages" destination="t9n-Xu-oTh" collectionClass="NSMutableArray" id="UcO-Ua-kku"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

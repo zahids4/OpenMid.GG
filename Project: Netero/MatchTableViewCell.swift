@@ -9,7 +9,7 @@
 import UIKit
 
 class MatchTableViewCell: UITableViewCell {
-    @IBOutlet weak var championNameLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var championIconImage: UIImageView!
     @IBOutlet weak var creepScoreLabel: UILabel!
     @IBOutlet weak var matchStatsLabel: UILabel!
@@ -27,11 +27,15 @@ class MatchTableViewCell: UITableViewCell {
     }
     
     func configureUsing(_ match: [String:Any]) {
-        UtilityHelper.setChampionUIFrom(id: match.integerValueForKey("championId"), championIconImage, championNameLabel)
+        UtilityHelper.setChampionUIFrom(id: match.integerValueForKey("championId"), championIconImage, nameLabel)
         UtilityHelper.setItemImages(match, itemImages)
         UtilityHelper.setSpellImagesFrom(match, spell1Image, spell2Image)
         UtilityHelper.setBackgroundColor(match.boolForKey("didWin"), view: self)
         setLabels(match)
+    }
+    
+    func setSummonerName(_ name: String) {
+        nameLabel.text = name
     }
     
     fileprivate func setLabels(_ match: [String:Any]) {

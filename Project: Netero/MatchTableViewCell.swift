@@ -26,12 +26,22 @@ class MatchTableViewCell: UITableViewCell {
         CellHelper.addSeperator(self)
     }
     
+    
     func configureUsing(_ match: [String:Any]) {
-        UtilityHelper.setChampionUIFrom(id: match.integerValueForKey("championId"), championIconImage, nameLabel)
         UtilityHelper.setItemImages(match, itemImages)
         UtilityHelper.setSpellImagesFrom(match, spell1Image, spell2Image)
-        UtilityHelper.setBackgroundColor(match.boolForKey("didWin"), view: self)
+        setChampionUIForCells(match)
         setLabels(match)
+    }
+    
+    fileprivate func setChampionUIForCells(_ match: [String : Any]) {
+        if match.boolForKey("isMatchCell") {
+            UtilityHelper.setBackgroundColor(match.boolForKey("didWin"), view: self)
+            UtilityHelper.setChampionUIFrom(id: match.integerValueForKey("championId"), championIconImage, nameLabel)
+        }
+        else {
+            UtilityHelper.setChampionUIFrom(id: match.integerValueForKey("championId"), championIconImage)
+        }
     }
     
     func setSummonerName(_ name: String) {

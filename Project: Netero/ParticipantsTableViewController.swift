@@ -51,6 +51,7 @@ class ParticipantsTableViewController: UITableViewController {
         participantObject["cs"] = stats.integerValueForKey("totalMinionsKilled")
         participantObject["spell1Id"] = participant.integerValueForKey("spell1Id")
         participantObject["spell2Id"] = participant.integerValueForKey("spell2Id")
+        participantObject["isMatchCell"] = false
         for i in 0...5 {
             participantObject["item\(i)"] = stats.integerValueForKey("item\(i)")
         }

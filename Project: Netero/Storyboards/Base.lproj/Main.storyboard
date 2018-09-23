@@ -676,6 +676,48 @@
                                     <outletCollection property="itemImages" destination="t9n-Xu-oTh" collectionClass="NSMutableArray" id="UcO-Ua-kku"/>
                                 </connections>
                             </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="blueTeamCell" id="dSZ-BK-b1L">
+                                <rect key="frame" x="0.0" y="142" width="341" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dSZ-BK-b1L" id="xpL-Mi-eje">
+                                    <rect key="frame" x="0.0" y="0.0" width="341" height="43.666666666666664"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blue Team" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TX3-dq-Ic8">
+                                            <rect key="frame" x="16.000000000000007" y="0.0" width="114.66666666666669" height="44"/>
+                                            <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="22"/>
+                                            <color key="textColor" red="0.0" green="0.70744091956100164" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="TX3-dq-Ic8" firstAttribute="top" secondItem="xpL-Mi-eje" secondAttribute="top" id="G9s-Oi-ILl"/>
+                                        <constraint firstItem="TX3-dq-Ic8" firstAttribute="leading" secondItem="xpL-Mi-eje" secondAttribute="leading" constant="16" id="IlX-13-sKq"/>
+                                        <constraint firstAttribute="bottom" secondItem="TX3-dq-Ic8" secondAttribute="bottom" id="aS2-qa-ouC"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="redTeamCell" id="3qj-TC-iEY">
+                                <rect key="frame" x="0.0" y="186" width="341" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3qj-TC-iEY" id="bPn-q6-lcF">
+                                    <rect key="frame" x="0.0" y="0.0" width="341" height="43.666666666666664"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Red Team" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xjk-cV-XyK">
+                                            <rect key="frame" x="15.999999999999993" y="0.0" width="109.33333333333331" height="43"/>
+                                            <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="22"/>
+                                            <color key="textColor" red="1" green="0.037429042764917875" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="xjk-cV-XyK" secondAttribute="bottom" id="0xD-N6-syu"/>
+                                        <constraint firstItem="xjk-cV-XyK" firstAttribute="leading" secondItem="bPn-q6-lcF" secondAttribute="leading" constant="16" id="M9Q-bz-em6"/>
+                                        <constraint firstItem="xjk-cV-XyK" firstAttribute="top" secondItem="bPn-q6-lcF" secondAttribute="top" id="Upl-9e-4V1"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="DXa-ag-tt7" id="rvF-on-vtA"/>

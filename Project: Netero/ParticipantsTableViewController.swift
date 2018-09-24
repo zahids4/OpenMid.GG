@@ -13,36 +13,54 @@ class ParticipantsTableViewController: UITableViewController {
     
     var participants: [[String:Any]]!
     var participantIdentities: [[String:Any]]!
-    var dataSource = [[String:Any]]()
-    var summonerNames = [String]()
+    var dataSource = [String:Any]()
+    var summonerNames = [String]() {
+        didSet {
+            createDatasource()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.addBorder()
         createSummonerNamesArray()
-        createDatasource()
     }
     
     fileprivate func createDatasource() {
-        participants.forEach { p in
-            let participantObject = buildParticipantObjectWith(p)
-            self.dataSource.append(participantObject)
+        var blueTeam = [[String:Any]]()
+        var redTeam = [[String:Any]]()
+        
+        for (index, participant) in participants.enumerated() {
+            let participantObject = buildParticipantObjectWith(participant, index)
+            if participant.integerValueForKey("teamId") == 100 {
+                blueTeam.append(participantObject)
+            } else {
+                redTeam.append(participantObject)
+            }
         }
+        
+        dataSource["blueTeam"] = blueTeam
+        dataSource["redTeam"] = redTeam
     }
     
     fileprivate func createSummonerNamesArray() {
+        var names = [String]()
+        
         participantIdentities.forEach { p in
             let player = p.stringAnyObjectForKey("player")
             let name = player.stringValueForKey("summonerName")
-            self.summonerNames.append(name)
+            names.append(name)
         }
+        
+        summonerNames = names
     }
     
     
-    fileprivate func buildParticipantObjectWith(_ participant: [String:Any]) -> [String:Any] {
+    fileprivate func buildParticipantObjectWith(_ participant: [String:Any],_ index: Int) -> [String:Any] {
         var participantObject = [String: Any]()
         let stats = participant.stringAnyObjectForKey("stats")
         participantObject["teamId"] = participant.integerValueForKey("teamId")
+        participantObject["name"] = summonerNames[index]
         participantObject["championId"] = participant.integerValueForKey("championId")
         participantObject["kills"] = stats.integerValueForKey("kills")
         participantObject["assists"] = stats.integerValueForKey("assists")
@@ -74,11 +92,12 @@ class ParticipantsTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return 2
     }
+    
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return 5
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -91,10 +110,15 @@ class ParticipantsTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "matchCell", for: indexPath) as! MatchTableViewCell
-        let participant = dataSource[indexPath.row]
-        let name = summonerNames[indexPath.row]
+        var participant = [String:Any]()
+        if indexPath.section == 0 {
+            participant = dataSource.arrayOfStringAnyObjectForKey("blueTeam")[indexPath.row]
+        } else {
+            participant = dataSource.arrayOfStringAnyObjectForKey("redTeam")[indexPath.row]
+        }
+        
         cell.configureUsing(participant)
-        cell.setSummonerName(name)
+        cell.setSummonerName(participant.stringValueForKey("name"))
         return cell
     }
 }

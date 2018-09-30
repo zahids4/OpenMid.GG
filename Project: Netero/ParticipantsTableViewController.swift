@@ -13,6 +13,7 @@ class ParticipantsTableViewController: UITableViewController {
     
     var participants: [[String:Any]]!
     var participantIdentities: [[String:Any]]!
+    var didBlueTeamWin: Bool!
     var dataSource = [String:Any]()
     var summonerNames = [String]() {
         didSet {
@@ -24,6 +25,7 @@ class ParticipantsTableViewController: UITableViewController {
         super.viewDidLoad()
         tableView.addBorder()
         createSummonerNamesArray()
+        tableView.register(UINib(nibName: "TeamHeaderTableViewCell", bundle: nil), forCellReuseIdentifier: "teamHeader")
     }
     
     fileprivate func createDatasource() {
@@ -98,6 +100,12 @@ class ParticipantsTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 5
+    }
+    
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = tableView.dequeueReusableCell(withIdentifier: "teamHeader") as! TeamHeaderTableViewCell
+        headerView.configueHeader(section: section, didBlueTeamWin: true)
+        return headerView
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

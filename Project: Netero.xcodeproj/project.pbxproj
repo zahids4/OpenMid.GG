@@ -32,9 +32,9 @@
 		30A1CA92214E1258001F1B0D /* CellHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A1CA91214E1258001F1B0D /* CellHelper.swift */; };
 		30A1CA94214E1371001F1B0D /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A1CA93214E1371001F1B0D /* UITableView+Extensions.swift */; };
 		30BBAED92125F8A700521AE3 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BBAED82125F8A700521AE3 /* String+Extensions.swift */; };
-		30C39BB5215894410052DE3D /* TeamSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30C39BB4215894410052DE3D /* TeamSectionHeader.xib */; };
-		30C39BB8215895250052DE3D /* TeamSectionHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C39BB7215895250052DE3D /* TeamSectionHeaderTableViewCell.swift */; };
 		30C9523B20D759AA00F64EC0 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9523A20D759AA00F64EC0 /* UIImageView+Extensions.swift */; };
+		30DC51F9216148BB002C0C30 /* TeamHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DC51F7216148BB002C0C30 /* TeamHeaderTableViewCell.swift */; };
+		30DC51FA216148BB002C0C30 /* TeamHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30DC51F8216148BB002C0C30 /* TeamHeaderTableViewCell.xib */; };
 		30F2650E20D61DDF008B16C5 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F2650D20D61DDF008B16C5 /* Keys.swift */; };
 /* End PBXBuildFile section */
 
@@ -78,9 +78,9 @@
 		30A1CA91214E1258001F1B0D /* CellHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellHelper.swift; sourceTree = "<group>"; };
 		30A1CA93214E1371001F1B0D /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
 		30BBAED82125F8A700521AE3 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
-		30C39BB4215894410052DE3D /* TeamSectionHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TeamSectionHeader.xib; sourceTree = "<group>"; };
-		30C39BB7215895250052DE3D /* TeamSectionHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamSectionHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		30C9523A20D759AA00F64EC0 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
+		30DC51F7216148BB002C0C30 /* TeamHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		30DC51F8216148BB002C0C30 /* TeamHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TeamHeaderTableViewCell.xib; sourceTree = "<group>"; };
 		30F2650D20D61DDF008B16C5 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		4DC1F49AD8FEEE5072AECCAE /* Pods-Project: NeteroTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project: NeteroTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Project: NeteroTests/Pods-Project: NeteroTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7D4DAE9685F5567565B17909 /* Pods-Project: NeteroTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project: NeteroTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Project: NeteroTests/Pods-Project: NeteroTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -134,7 +134,7 @@
 				30716B892124C56D0060025A /* MatchTableViewCell.swift */,
 				3061372921443855000808F8 /* DetailedMatchViewController.swift */,
 				30A1269D214DB38D008ACF9B /* ParticipantsTableViewController.swift */,
-				30C39BB7215895250052DE3D /* TeamSectionHeaderTableViewCell.swift */,
+				30DC51F7216148BB002C0C30 /* TeamHeaderTableViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -230,7 +230,7 @@
 		30C39BB6215894EE0052DE3D /* XIBS */ = {
 			isa = PBXGroup;
 			children = (
-				30C39BB4215894410052DE3D /* TeamSectionHeader.xib */,
+				30DC51F8216148BB002C0C30 /* TeamHeaderTableViewCell.xib */,
 			);
 			path = XIBS;
 			sourceTree = "<group>";
@@ -342,7 +342,7 @@
 				30220EFB20C0A6B800CB21D0 /* LaunchScreen.storyboard in Resources */,
 				30220EF820C0A6B800CB21D0 /* Assets.xcassets in Resources */,
 				30220EF320C0A6B600CB21D0 /* Main.storyboard in Resources */,
-				30C39BB5215894410052DE3D /* TeamSectionHeader.xib in Resources */,
+				30DC51FA216148BB002C0C30 /* TeamHeaderTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,7 +422,6 @@
 				3061372A21443855000808F8 /* DetailedMatchViewController.swift in Sources */,
 				308EDB9A20F1AB5B00AC65D1 /* UILabel+Extensions.swift in Sources */,
 				30220F1620C462AA00CB21D0 /* Communicator.swift in Sources */,
-				30C39BB8215895250052DE3D /* TeamSectionHeaderTableViewCell.swift in Sources */,
 				30220F1B20C4785F00CB21D0 /* UIButton+Extensions.swift in Sources */,
 				30C9523B20D759AA00F64EC0 /* UIImageView+Extensions.swift in Sources */,
 				30BBAED92125F8A700521AE3 /* String+Extensions.swift in Sources */,
@@ -431,6 +430,7 @@
 				30220F1120C0AAC500CB21D0 /* LandingScreenViewController.swift in Sources */,
 				30A1269E214DB38D008ACF9B /* ParticipantsTableViewController.swift in Sources */,
 				30716B8A2124C56D0060025A /* MatchTableViewCell.swift in Sources */,
+				30DC51F9216148BB002C0C30 /* TeamHeaderTableViewCell.swift in Sources */,
 				30716B8C2124CC440060025A /* Doubles+Extensions.swift in Sources */,
 				300ACE4420CD907800E7C31B /* SummonerProfileViewController.swift in Sources */,
 				308EDB9C20F1B50300AC65D1 /* MatchesTableViewController.swift in Sources */,

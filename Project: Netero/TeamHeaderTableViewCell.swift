@@ -1,14 +1,14 @@
 //
-//  TeamSectionHeaderTableViewCell.swift
+//  TeamHeaderTableViewCell.swift
 //  Project: Netero
 //
-//  Created by Saim Zahid on 2018-09-23.
+//  Created by Saim Zahid on 2018-09-30.
 //  Copyright © 2018 Saim Zahid. All rights reserved.
 //
 
 import UIKit
 
-class TeamSectionHeaderTableViewCell: UITableViewCell {
+class TeamHeaderTableViewCell: UITableViewCell {
     @IBOutlet weak var teamName: UILabel!
     @IBOutlet weak var dinWinImageView: UIImageView!
     
@@ -29,6 +29,5 @@ class TeamSectionHeaderTableViewCell: UITableViewCell {
         } else {
             dinWinImageView.backgroundColor = UIColor.red
         }
-
     }
 }

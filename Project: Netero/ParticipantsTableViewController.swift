@@ -26,6 +26,7 @@ class ParticipantsTableViewController: UITableViewController {
         tableView.addBorder()
         createSummonerNamesArray()
         tableView.register(UINib(nibName: "TeamHeaderTableViewCell", bundle: nil), forCellReuseIdentifier: "teamHeader")
+        didBlueTeamWin = dataSource.arrayOfStringAnyObjectForKey("blueTeam").first?.boolForKey("didWin")
     }
     
     fileprivate func createDatasource() {
@@ -104,7 +105,13 @@ class ParticipantsTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = tableView.dequeueReusableCell(withIdentifier: "teamHeader") as! TeamHeaderTableViewCell
-        headerView.configueHeader(section: section, didBlueTeamWin: true)
+
+        if section == 0 {
+            headerView.configueBlueTeamHeader(didBlueTeamWin)
+        } else {
+            headerView.configureRedTeamHeader(didBlueTeamWin)
+        }
+
         return headerView
     }
     

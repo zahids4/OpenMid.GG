@@ -17,17 +17,24 @@ class TeamHeaderTableViewCell: UITableViewCell {
         // Initialization code
     }
     
-    func configueHeader(section: Int, didBlueTeamWin: Bool) {
-        if section == 0 {
-            teamName.text! = "Blue Team"
-        } else {
-            teamName.text! = "Red Team"
-        }
-        
+    func configureRedTeamHeader(_ didBlueTeamWin: Bool) {
+        teamName.text! = "Red Team"
+        teamName.textColor = resultColor.red
+        setDidWinImage(!didBlueTeamWin)
+    }
+    
+    
+    func configueBlueTeamHeader(_ didBlueTeamWin: Bool) {
+        teamName.text! = "Blue Team"
+        teamName.textColor = UIColor.blue
+        setDidWinImage(didBlueTeamWin)
+    }
+    
+    fileprivate func setDidWinImage(_ didBlueTeamWin: Bool) {
         if didBlueTeamWin {
-            dinWinImageView.backgroundColor = UIColor.green
+            dinWinImageView.backgroundColor = resultColor.green
         } else {
-            dinWinImageView.backgroundColor = UIColor.red
+            dinWinImageView.backgroundColor = resultColor.red
         }
     }
 }

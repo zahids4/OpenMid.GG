@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,26 +20,35 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TEAM NAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="htv-hu-1UU">
-                        <rect key="frame" x="9" y="0.0" width="114" height="43"/>
+                        <rect key="frame" x="9" y="0.0" width="114" height="43.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0u3-eI-cDE">
-                        <rect key="frame" x="276" y="0.0" width="44" height="44"/>
+                        <rect key="frame" x="276" y="0.0" width="44" height="43.5"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="44" id="zVW-8B-JhJ"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="black_line" translatesAutoresizingMaskIntoConstraints="NO" id="qnC-Mn-Ksm">
+                        <rect key="frame" x="0.0" y="42.5" width="320" height="1"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="Ag0-dN-ab5"/>
                         </constraints>
                     </imageView>
                 </subviews>
                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstItem="0u3-eI-cDE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="8MX-lN-PCe"/>
+                    <constraint firstItem="qnC-Mn-Ksm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="A76-cY-TSY"/>
+                    <constraint firstAttribute="bottom" secondItem="qnC-Mn-Ksm" secondAttribute="bottom" id="AXH-Sv-Tvw"/>
                     <constraint firstItem="htv-hu-1UU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="9" id="BHY-Fm-X33"/>
                     <constraint firstAttribute="trailing" secondItem="0u3-eI-cDE" secondAttribute="trailing" id="Lfc-zW-ycS"/>
                     <constraint firstItem="htv-hu-1UU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="QaM-xf-A10"/>
                     <constraint firstAttribute="bottom" secondItem="htv-hu-1UU" secondAttribute="bottom" id="Tcs-YM-9vx"/>
                     <constraint firstAttribute="bottom" secondItem="0u3-eI-cDE" secondAttribute="bottom" id="ffj-wS-zLH"/>
+                    <constraint firstAttribute="trailing" secondItem="qnC-Mn-Ksm" secondAttribute="trailing" id="fmU-yf-hdX"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -47,6 +56,10 @@
                 <outlet property="dinWinImageView" destination="0u3-eI-cDE" id="7mP-8E-eHQ"/>
                 <outlet property="teamName" destination="htv-hu-1UU" id="Q0f-gU-yye"/>
             </connections>
+            <point key="canvasLocation" x="137.59999999999999" y="129.53523238380811"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="black_line" width="2400" height="1260"/>
+    </resources>
 </document>

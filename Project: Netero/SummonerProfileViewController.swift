@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SkeletonView
 
 class SummonerProfileViewController: UIViewController {
     @IBOutlet weak var summonerNameLabel: UILabel!
@@ -21,7 +20,6 @@ class SummonerProfileViewController: UIViewController {
     @IBOutlet weak var rankTierLabelTopConstraint: NSLayoutConstraint!
     
     let communicator = Communicator()
-    let gradient = SkeletonGradient(baseColor: UIColor.clouds)
     
     var summonerObject: [String:Any]!
     var regionPlatform: String!

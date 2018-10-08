@@ -14,6 +14,6 @@ struct ApiKeys {
 }
 
 struct RiotApiHelpers {
-    static let REGIONS = ["North America", "Korea", "Japan", "Europe West", "Europe Nordic &    East", "Oceania", "Brazil", "LAS", "LAN", "Russia", "Turkey", "PBE"]
+    static let REGIONS = ["NA", "KR", "JPN", "EUW", "EUN", "OCE", "BRA", "LAS", "LAN", "RUS", "TRK", "PBE"]
 }
 

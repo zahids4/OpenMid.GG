@@ -42,7 +42,7 @@ class LandingScreenViewController: UIViewController, UIPickerViewDataSource, UIP
     fileprivate func addBorderToUIElements() {
         let elemets = [regionPickerView,searchField,searchButton] as [Any]
         elemets.forEach { element in
-            (element as AnyObject).layer.borderWidth = 2.0
+            (element as AnyObject).layer.borderWidth = 0.5
             (element as AnyObject).layer.borderColor = UIColor.black.cgColor
         }
     }
@@ -81,6 +81,7 @@ class LandingScreenViewController: UIViewController, UIPickerViewDataSource, UIP
         return 1
     }
     
+    
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return RiotApiHelpers.REGIONS.count
     }
@@ -97,27 +98,27 @@ class LandingScreenViewController: UIViewController, UIPickerViewDataSource, UIP
 extension LandingScreenViewController {
     func getRegionsAsscoiatedPlatform(_ region: String) -> String {
         switch region {
-        case "North America":
+        case "NA":
             return "NA1"
         case "Korea":
             return "KR"
-        case "Japan":
+        case "JPN":
             return "JP1"
-        case "Europe West":
+        case "EUW":
             return "EUW1"
-        case "Europe Nordic & East":
+        case "EUN":
             return "EUN1"
-        case "Oceania":
+        case "OCE":
             return "OC1"
-        case "Brazil":
+        case "BRA":
             return "BR1"
         case "LAS":
             return "LA2"
         case "LAN":
             return "LA1"
-        case "Russia":
+        case "RUS":
             return "RU"
-        case "Turkey":
+        case "TRK":
             return "TR1"
         case "PBE":
             return "PBE1"

@@ -6,8 +6,7 @@ target 'Project: Netero' do
   use_frameworks!
 
   # Pods for Project: Netero
-  pod 'Alamofire'
-  pod "SkeletonView"
+  pod 'Alamofire', '~> 4.7'
 
   target 'Project: NeteroTests' do
     inherit! :search_paths

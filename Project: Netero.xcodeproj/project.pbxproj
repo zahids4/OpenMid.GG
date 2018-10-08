@@ -308,9 +308,11 @@
 				TargetAttributes = {
 					30220EE920C0A6B600CB21D0 = {
 						CreatedOnToolsVersion = 9.4;
+						LastSwiftMigration = 1000;
 					};
 					30220F0020C0A6B800CB21D0 = {
 						CreatedOnToolsVersion = 9.4;
+						LastSwiftMigration = 1000;
 						TestTargetID = 30220EE920C0A6B600CB21D0;
 					};
 				};
@@ -610,7 +612,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "saim.zahid.Project--Netero";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -629,7 +631,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "saim.zahid.Project--Netero";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -650,7 +652,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "saim.zahid.Project--NeteroTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Project: Netero.app/Project: Netero";
 			};
@@ -672,7 +674,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "saim.zahid.Project--NeteroTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Project: Netero.app/Project: Netero";
 			};

@@ -9,7 +9,7 @@
 import UIKit
 class ErrorHandler {
     func showErrorAlert(alertTitle: String, message: String, vc: UIViewController) {
-        let alert = UIAlertController(title: alertTitle, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        let alert = UIAlertController(title: alertTitle, message: message, preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         vc.present(alert, animated: true, completion: nil)
     }

@@ -6,7 +6,7 @@ target 'Project: Netero' do
   use_frameworks!
 
   # Pods for Project: Netero
-  pod 'Alamofire', '~> 4.7'
+  pod 'Alamofire'
   pod "SkeletonView"
 
   target 'Project: NeteroTests' do

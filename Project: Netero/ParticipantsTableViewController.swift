@@ -14,6 +14,7 @@ class ParticipantsTableViewController: UITableViewController {
     var participants: [[String:Any]]!
     var participantIdentities: [[String:Any]]!
     var didBlueTeamWin: Bool!
+    var teams = [[String:Any]]()
     var dataSource = [String:Any]()
     var summonerNames = [String]() {
         didSet {
@@ -23,6 +24,7 @@ class ParticipantsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(teams)
         tableView.addBorder()
         createSummonerNamesArray()
         tableView.register(UINib(nibName: "TeamHeaderTableViewCell", bundle: nil), forCellReuseIdentifier: "teamHeader")
@@ -107,9 +109,9 @@ class ParticipantsTableViewController: UITableViewController {
         let headerView = tableView.dequeueReusableCell(withIdentifier: "teamHeader") as! TeamHeaderTableViewCell
 
         if section == 0 {
-            headerView.configueBlueTeamHeader(didBlueTeamWin)
+            headerView.configueBlueTeamHeader(teams[0])
         } else {
-            headerView.configureRedTeamHeader(didBlueTeamWin)
+            headerView.configureRedTeamHeader(teams[1])
         }
 
         return headerView

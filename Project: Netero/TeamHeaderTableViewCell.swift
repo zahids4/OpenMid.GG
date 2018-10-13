@@ -11,26 +11,38 @@ import UIKit
 class TeamHeaderTableViewCell: UITableViewCell {
     @IBOutlet weak var teamName: UILabel!
     @IBOutlet weak var dinWinImageView: UIImageView!
+    @IBOutlet weak var towersLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
     }
     
-    func configureRedTeamHeader(_ didBlueTeamWin: Bool) {
+    func configureRedTeamHeader(_ redTeam: [String:Any]) {
         teamName.text! = "Red Team"
         teamName.textColor = resultColor.red
-        setDidWinImage(!didBlueTeamWin)
+        setDidWinImage(redTeam)
+        setTowerLabel(redTeam)
     }
     
     
-    func configueBlueTeamHeader(_ didBlueTeamWin: Bool) {
+    func configueBlueTeamHeader(_ blueTeam: [String:Any]) {
         teamName.text! = "Blue Team"
         teamName.textColor = UIColor.blue
-        setDidWinImage(didBlueTeamWin)
+        setDidWinImage(blueTeam)
+        setTowerLabel(blueTeam)
     }
     
-    fileprivate func setDidWinImage(_ didBlueTeamWin: Bool) {
-        if didBlueTeamWin {
+    fileprivate func setTowerLabel(_ team: [String : Any]) {
+        towersLabel.text = String(team.integerValueForKey("towerKills"))
+    }
+    
+    fileprivate func setDidWinImage(_ team: [String : Any]) {
+        let didTeamWin = team.stringValueForKey("win") == "Win"
+        setDidWinImage(didTeamWin)
+    }
+    
+    fileprivate func setDidWinImage(_ didWin: Bool) {
+        if didWin {
             dinWinImageView.backgroundColor = resultColor.green
         } else {
             dinWinImageView.backgroundColor = resultColor.red

@@ -14,7 +14,6 @@ class DetailedMatchViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(match.stringAnyObjectForKey("matchDetails").arrayForKey("teams"))
     }
 
     override func didReceiveMemoryWarning() {
@@ -26,8 +25,10 @@ class DetailedMatchViewController: UIViewController {
         if segue.identifier == "participantsTableVCSegue" {
             let participantsTableVC = segue.destination as! ParticipantsTableViewController
             let details = match.stringAnyObjectForKey("matchDetails")
+            participantsTableVC.teams = details.arrayOfStringAnyObjectForKey("teams")
             participantsTableVC.participants = details.arrayForKey("participants") as? [[String:Any]]
             participantsTableVC.participantIdentities = details.arrayForKey("participantIdentities") as? [[String:Any]]
+            
         }
     }
 

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SkeletonView
 
 class MatchesTableViewController: UITableViewController {
     let communicator = Communicator()
@@ -19,6 +20,7 @@ class MatchesTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.showAnimatedGradientSkeleton()
         tableView.addBorder()
         getMatches()
     }
@@ -52,6 +54,7 @@ class MatchesTableViewController: UITableViewController {
         
         dispatchGroup.notify(queue: dispatchQueue) {
             DispatchQueue.main.async {
+                self.tableView.hideSkeleton()
                 self.tableView.reloadData()
             }
         }

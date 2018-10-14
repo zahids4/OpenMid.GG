@@ -1,9 +1,9 @@
 PODS:
-  - Alamofire (4.7.2)
-  - SkeletonView (1.2)
+  - Alamofire (4.7.3)
+  - SkeletonView (1.4.1)
 
 DEPENDENCIES:
-  - Alamofire (~> 4.7)
+  - Alamofire
   - SkeletonView
 
 SPEC REPOS:
@@ -12,9 +12,9 @@ SPEC REPOS:
     - SkeletonView
 
 SPEC CHECKSUMS:
-  Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
-  SkeletonView: d68962d45d1af038f6a110d2274b183df8f82752
+  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  SkeletonView: 60d6ce7edb0cb4c7758db33c74add50392b3c475
 
-PODFILE CHECKSUM: 991f9ccbc2d11429ecaa25a74e45dff7d8885010
+PODFILE CHECKSUM: e5b3e81296869004b674e295450153b6f18e085f
 
 COCOAPODS: 1.5.3

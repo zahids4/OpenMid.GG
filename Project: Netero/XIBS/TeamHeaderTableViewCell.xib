@@ -37,6 +37,12 @@
                             <constraint firstAttribute="height" constant="1" id="Ag0-dN-ab5"/>
                         </constraints>
                     </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lQY-9M-O4R">
+                        <rect key="frame" x="153" y="13" width="18" height="30"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TowerIcon" translatesAutoresizingMaskIntoConstraints="NO" id="bhF-ea-QQc">
                         <rect key="frame" x="115" y="13" width="30" height="30"/>
                         <constraints>
@@ -44,8 +50,15 @@
                             <constraint firstAttribute="height" constant="30" id="Vyn-k6-ENI"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lQY-9M-O4R">
-                        <rect key="frame" x="153" y="11" width="18" height="34.5"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="KDAIcon" translatesAutoresizingMaskIntoConstraints="NO" id="UxF-0O-9u1">
+                        <rect key="frame" x="187" y="13" width="30" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="eMw-GO-zx2"/>
+                            <constraint firstAttribute="width" constant="30" id="qmd-ew-mh7"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KDA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bmv-oU-Cv2">
+                        <rect key="frame" x="225" y="13" width="34" height="30"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -58,27 +71,35 @@
                     <constraint firstAttribute="bottom" secondItem="qnC-Mn-Ksm" secondAttribute="bottom" id="AXH-Sv-Tvw"/>
                     <constraint firstItem="htv-hu-1UU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="9" id="BHY-Fm-X33"/>
                     <constraint firstItem="bhF-ea-QQc" firstAttribute="leading" secondItem="htv-hu-1UU" secondAttribute="trailing" constant="8" id="ELo-sB-Ph3"/>
+                    <constraint firstItem="qnC-Mn-Ksm" firstAttribute="top" secondItem="bmv-oU-Cv2" secondAttribute="bottom" constant="12.5" id="I6r-sW-Txk"/>
                     <constraint firstAttribute="trailing" secondItem="0u3-eI-cDE" secondAttribute="trailing" id="Lfc-zW-ycS"/>
                     <constraint firstItem="htv-hu-1UU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="QaM-xf-A10"/>
                     <constraint firstAttribute="bottom" secondItem="htv-hu-1UU" secondAttribute="bottom" id="Tcs-YM-9vx"/>
-                    <constraint firstItem="lQY-9M-O4R" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10.5" id="Yxa-At-bQy"/>
+                    <constraint firstItem="UxF-0O-9u1" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="13" id="a3q-ct-5LX"/>
+                    <constraint firstItem="bmv-oU-Cv2" firstAttribute="leading" secondItem="UxF-0O-9u1" secondAttribute="trailing" constant="8" id="bXL-ZI-LBp"/>
+                    <constraint firstItem="lQY-9M-O4R" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="13" id="cpd-Zj-a6x"/>
                     <constraint firstAttribute="bottom" secondItem="0u3-eI-cDE" secondAttribute="bottom" id="ffj-wS-zLH"/>
                     <constraint firstAttribute="trailing" secondItem="qnC-Mn-Ksm" secondAttribute="trailing" id="fmU-yf-hdX"/>
+                    <constraint firstItem="UxF-0O-9u1" firstAttribute="leading" secondItem="lQY-9M-O4R" secondAttribute="trailing" constant="16" id="hWp-d1-FVj"/>
                     <constraint firstItem="lQY-9M-O4R" firstAttribute="leading" secondItem="bhF-ea-QQc" secondAttribute="trailing" constant="8" id="jAa-ob-Hts"/>
+                    <constraint firstItem="qnC-Mn-Ksm" firstAttribute="top" secondItem="lQY-9M-O4R" secondAttribute="bottom" constant="12.5" id="mDf-o6-e8N"/>
                     <constraint firstItem="bhF-ea-QQc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="13" id="mDo-cF-oVd"/>
-                    <constraint firstItem="qnC-Mn-Ksm" firstAttribute="top" secondItem="lQY-9M-O4R" secondAttribute="bottom" constant="10.5" id="pHK-Tg-lZX"/>
+                    <constraint firstItem="qnC-Mn-Ksm" firstAttribute="top" secondItem="UxF-0O-9u1" secondAttribute="bottom" constant="12.5" id="oRG-5G-cUT"/>
+                    <constraint firstItem="bmv-oU-Cv2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="13" id="vqo-lf-8B1"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="dinWinImageView" destination="0u3-eI-cDE" id="7mP-8E-eHQ"/>
+                <outlet property="statsLabel" destination="bmv-oU-Cv2" id="cut-Bt-6aZ"/>
                 <outlet property="teamName" destination="htv-hu-1UU" id="Q0f-gU-yye"/>
                 <outlet property="towersLabel" destination="lQY-9M-O4R" id="AUZ-Jv-Cjv"/>
             </connections>
-            <point key="canvasLocation" x="137.59999999999999" y="129.53523238380811"/>
+            <point key="canvasLocation" x="137.59999999999999" y="129.08545727136433"/>
         </tableViewCell>
     </objects>
     <resources>
+        <image name="KDAIcon" width="200" height="200"/>
         <image name="TowerIcon" width="36.355030059814453" height="36.355030059814453"/>
         <image name="black_line" width="2400" height="1260"/>
     </resources>

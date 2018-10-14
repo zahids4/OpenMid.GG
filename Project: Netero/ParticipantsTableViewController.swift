@@ -9,8 +9,9 @@
 import UIKit
 
 class ParticipantsTableViewController: UITableViewController {
-    let communicator = Communicator()
+    typealias voidHandler = () -> ()
     
+    let communicator = Communicator()
     var participants: [[String:Any]]!
     var participantIdentities: [[String:Any]]!
     var didBlueTeamWin: Bool!
@@ -18,20 +19,21 @@ class ParticipantsTableViewController: UITableViewController {
     var dataSource = [String:Any]()
     var summonerNames = [String]() {
         didSet {
-            createDatasource()
+            createDatasource() {
+                self.createTeamsKDAObject()
+            }
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(teams)
         tableView.addBorder()
         createSummonerNamesArray()
         tableView.register(UINib(nibName: "TeamHeaderTableViewCell", bundle: nil), forCellReuseIdentifier: "teamHeader")
         didBlueTeamWin = dataSource.arrayOfStringAnyObjectForKey("blueTeam").first?.boolForKey("didWin")
     }
     
-    fileprivate func createDatasource() {
+    fileprivate func createDatasource(_ completionHandler: @escaping voidHandler) {
         var blueTeam = [[String:Any]]()
         var redTeam = [[String:Any]]()
         
@@ -46,6 +48,32 @@ class ParticipantsTableViewController: UITableViewController {
         
         dataSource["blueTeam"] = blueTeam
         dataSource["redTeam"] = redTeam
+        completionHandler()
+    }
+    
+    fileprivate func createTeamsKDAObject() {
+        let blueTeam = dataSource.arrayOfStringAnyObjectForKey("blueTeam")
+        let redTeam = dataSource.arrayOfStringAnyObjectForKey("redTeam")
+        teams[0]["stats"] = getKDAObjectFor(blueTeam)
+        teams[1]["stats"] = getKDAObjectFor(redTeam)
+    }
+    
+    fileprivate func getKDAObjectFor(_ team: [[String:Any]]) -> [String:Any] {
+        var allKills = 0
+        var allAssists = 0
+        var allDeaths = 0
+        
+        for player in team {
+            let kills = player.integerValueForKey("kills")
+            let assists = player.integerValueForKey("assists")
+            let deaths = player.integerValueForKey("deaths")
+            
+            allKills += kills
+            allAssists += assists
+            allDeaths += deaths
+        }
+        
+        return ["kills": allKills, "assists": allAssists, "deaths": allDeaths]
     }
     
     fileprivate func createSummonerNamesArray() {

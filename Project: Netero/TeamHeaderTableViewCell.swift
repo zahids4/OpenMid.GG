@@ -12,6 +12,7 @@ class TeamHeaderTableViewCell: UITableViewCell {
     @IBOutlet weak var teamName: UILabel!
     @IBOutlet weak var dinWinImageView: UIImageView!
     @IBOutlet weak var towersLabel: UILabel!
+    @IBOutlet weak var statsLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -20,16 +21,19 @@ class TeamHeaderTableViewCell: UITableViewCell {
     func configureRedTeamHeader(_ redTeam: [String:Any]) {
         teamName.text! = "Red Team"
         teamName.textColor = resultColor.red
-        setDidWinImage(redTeam)
-        setTowerLabel(redTeam)
+        setHeaderUI(redTeam)
     }
-    
     
     func configueBlueTeamHeader(_ blueTeam: [String:Any]) {
         teamName.text! = "Blue Team"
-        teamName.textColor = UIColor.blue
-        setDidWinImage(blueTeam)
-        setTowerLabel(blueTeam)
+        teamName.textColor = resultColor.blue
+        setHeaderUI(blueTeam)
+    }
+    
+    fileprivate func setHeaderUI(_ team: [String : Any]) {
+        setDidWinImage(team)
+        setTowerLabel(team)
+        UtilityHelper.setStatsLabel(team.stringAnyObjectForKey("stats"), statsLabel)
     }
     
     fileprivate func setTowerLabel(_ team: [String : Any]) {

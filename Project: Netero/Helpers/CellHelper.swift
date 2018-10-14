@@ -22,4 +22,5 @@ class CellHelper {
 struct resultColor {
     static let green = UIColor(displayP3Red: 117/255, green: 251/255, blue: 172/255, alpha: 0.8)
     static let red = UIColor(displayP3Red: 176/255, green: 50/255, blue: 53/255, alpha: 0.8)
+    static let blue = UIColor(displayP3Red: 143/255, green: 221/255, blue: 251/255, alpha: 1.0)
 }

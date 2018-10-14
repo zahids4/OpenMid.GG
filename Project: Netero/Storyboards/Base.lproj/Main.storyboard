@@ -393,28 +393,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U8z-1A-F0i">
-                                <rect key="frame" x="16" y="202" width="341" height="590"/>
+                                <rect key="frame" x="16" y="100" width="341" height="692"/>
                                 <connections>
                                     <segue destination="DXa-ag-tt7" kind="embed" identifier="participantsTableVCSegue" id="57Z-Pl-9kf"/>
                                 </connections>
                             </containerView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="black_line" translatesAutoresizingMaskIntoConstraints="NO" id="gZ4-er-wWn">
-                                <rect key="frame" x="28" y="193" width="319" height="1"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="1" id="0SI-Bi-Js3"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.99928969140000001" green="0.9858608311" blue="0.95882099919999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="gZ4-er-wWn" secondAttribute="trailing" constant="12" id="KuE-gP-px1"/>
-                            <constraint firstItem="U8z-1A-F0i" firstAttribute="top" secondItem="gZ4-er-wWn" secondAttribute="bottom" constant="8" id="Lx0-Hq-hRn"/>
-                            <constraint firstItem="U8z-1A-F0i" firstAttribute="top" secondItem="Nls-nd-uHR" secondAttribute="top" constant="202" id="NbU-Bu-xhx"/>
+                            <constraint firstItem="U8z-1A-F0i" firstAttribute="top" secondItem="Nls-nd-uHR" secondAttribute="top" constant="100" id="NbU-Bu-xhx"/>
                             <constraint firstItem="vhb-le-F4o" firstAttribute="trailing" secondItem="U8z-1A-F0i" secondAttribute="trailing" constant="18" id="P96-8a-MTY"/>
                             <constraint firstItem="vhb-le-F4o" firstAttribute="bottom" secondItem="U8z-1A-F0i" secondAttribute="bottom" constant="20" id="rrd-hs-1bg"/>
                             <constraint firstItem="U8z-1A-F0i" firstAttribute="leading" secondItem="vhb-le-F4o" secondAttribute="leading" constant="16" id="vmx-cT-hSV"/>
-                            <constraint firstItem="gZ4-er-wWn" firstAttribute="leading" secondItem="Nls-nd-uHR" secondAttribute="leadingMargin" constant="12" id="zP3-Nc-jQU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vhb-le-F4o"/>
                     </view>
@@ -423,14 +413,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5PK-IH-53a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2226.4000000000001" y="1503.6945812807883"/>
+            <point key="canvasLocation" x="2226.4000000000001" y="1503.1484257871066"/>
         </scene>
         <!--Participants Table View Controller-->
         <scene sceneID="qtt-PQ-0c7">
             <objects>
                 <tableViewController id="DXa-ag-tt7" customClass="ParticipantsTableViewController" customModule="Project__Netero" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="7yz-V6-o7X">
-                        <rect key="frame" x="0.0" y="0.0" width="341" height="590"/>
+                        <rect key="frame" x="0.0" y="0.0" width="341" height="692"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
@@ -586,7 +576,7 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blue Team" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TX3-dq-Ic8">
                                             <rect key="frame" x="16" y="0.0" width="114.5" height="43.5"/>
                                             <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="22"/>
-                                            <color key="textColor" red="0.0" green="0.70744091956100164" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="textColor" red="0.44342765210000001" green="0.87737172839999999" blue="0.99928969140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -627,7 +617,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rc1-Iu-Ncb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2248.8000000000002" y="2369.3349753694583"/>
+            <point key="canvasLocation" x="2226" y="2373"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="yA4-Ni-6tX">

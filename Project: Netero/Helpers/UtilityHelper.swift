@@ -54,6 +54,13 @@ class UtilityHelper {
         kdaLabel.text! = createKdaLabel(kills, assists, deaths)
     }
     
+    static func setStatsLabel(_ statsSource: [String : Any], _ matchStatsLabel: UILabel) {
+        let kills = statsSource.integerValueForKey("kills")
+        let assists = statsSource.integerValueForKey("assists")
+        let deaths = statsSource.integerValueForKey("deaths")
+        matchStatsLabel.text! = "\(kills) / \(deaths) / \(assists)"
+    }
+    
     static func createKdaLabel(_ kills: Int,_ assists: Int, _ deaths: Int) -> String {
         let kda =  Double(Double(kills + assists) / Double(deaths)).rounded(toPlaces: 2)
         return "\(kda) KDA"

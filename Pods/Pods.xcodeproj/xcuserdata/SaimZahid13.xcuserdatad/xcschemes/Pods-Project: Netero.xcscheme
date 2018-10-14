@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6F78EC19D8A3F3B58E860548B0166709"
+               BlueprintIdentifier = "C9C1218E75F0D2A8370265EA2EB7DD62"
                BuildableName = "Pods_Project__Netero.framework"
                BlueprintName = "Pods-Project: Netero"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6F78EC19D8A3F3B58E860548B0166709"
+            BlueprintIdentifier = "C9C1218E75F0D2A8370265EA2EB7DD62"
             BuildableName = "Pods_Project__Netero.framework"
             BlueprintName = "Pods-Project: Netero"
             ReferencedContainer = "container:Pods.xcodeproj">

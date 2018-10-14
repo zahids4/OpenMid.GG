@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SkeletonView
 
 class MatchesTableViewController: UITableViewController {
     let communicator = Communicator()
@@ -20,7 +19,7 @@ class MatchesTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.showAnimatedGradientSkeleton()
+        tableView.addGradient()
         tableView.addBorder()
         getMatches()
     }

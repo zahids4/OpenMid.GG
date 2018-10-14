@@ -25,6 +25,7 @@
 		3061372A21443855000808F8 /* DetailedMatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3061372921443855000808F8 /* DetailedMatchViewController.swift */; };
 		30716B8A2124C56D0060025A /* MatchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30716B892124C56D0060025A /* MatchTableViewCell.swift */; };
 		30716B8C2124CC440060025A /* Doubles+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30716B8B2124CC440060025A /* Doubles+Extensions.swift */; };
+		308151C8217408B400861C82 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308151C7217408B400861C82 /* UIView+Extensions.swift */; };
 		308EDB9A20F1AB5B00AC65D1 /* UILabel+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308EDB9920F1AB5B00AC65D1 /* UILabel+Extensions.swift */; };
 		308EDB9C20F1B50300AC65D1 /* MatchesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308EDB9B20F1B50300AC65D1 /* MatchesTableViewController.swift */; };
 		30A1269E214DB38D008ACF9B /* ParticipantsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A1269D214DB38D008ACF9B /* ParticipantsTableViewController.swift */; };
@@ -71,6 +72,7 @@
 		3061372921443855000808F8 /* DetailedMatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedMatchViewController.swift; sourceTree = "<group>"; };
 		30716B892124C56D0060025A /* MatchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchTableViewCell.swift; sourceTree = "<group>"; };
 		30716B8B2124CC440060025A /* Doubles+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Doubles+Extensions.swift"; sourceTree = "<group>"; };
+		308151C7217408B400861C82 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		308EDB9920F1AB5B00AC65D1 /* UILabel+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extensions.swift"; sourceTree = "<group>"; };
 		308EDB9B20F1B50300AC65D1 /* MatchesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesTableViewController.swift; sourceTree = "<group>"; };
 		30A1269D214DB38D008ACF9B /* ParticipantsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantsTableViewController.swift; sourceTree = "<group>"; };
@@ -225,6 +227,7 @@
 				30716B8B2124CC440060025A /* Doubles+Extensions.swift */,
 				30BBAED82125F8A700521AE3 /* String+Extensions.swift */,
 				30A1CA93214E1371001F1B0D /* UITableView+Extensions.swift */,
+				308151C7217408B400861C82 /* UIView+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -434,6 +437,7 @@
 				30716B8A2124C56D0060025A /* MatchTableViewCell.swift in Sources */,
 				30DC51F9216148BB002C0C30 /* TeamHeaderTableViewCell.swift in Sources */,
 				30716B8C2124CC440060025A /* Doubles+Extensions.swift in Sources */,
+				308151C8217408B400861C82 /* UIView+Extensions.swift in Sources */,
 				300ACE4420CD907800E7C31B /* SummonerProfileViewController.swift in Sources */,
 				308EDB9C20F1B50300AC65D1 /* MatchesTableViewController.swift in Sources */,
 				30A1CA90214E0A0A001F1B0D /* UtilityHelper.swift in Sources */,

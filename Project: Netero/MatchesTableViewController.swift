@@ -24,6 +24,11 @@ class MatchesTableViewController: UITableViewController {
         getMatches()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.isUserInteractionEnabled = true
+    }
+    
     fileprivate func getMatches() {
         communicator.getCallForSummunorMatches(regionPlatform, String(accountId)) { matches, error in
             if matches != nil {
@@ -124,6 +129,7 @@ class MatchesTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         matchForCell = dataSource[indexPath.row]
         tableView.deselectRow(at: indexPath, animated: true)
+        tableView.isUserInteractionEnabled = false
         performSegue(withIdentifier: "showDetailedMatchView", sender: self)
     }
     

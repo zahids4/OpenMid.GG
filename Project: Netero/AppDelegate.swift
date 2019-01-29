@@ -42,7 +42,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             if patchNumber != nil {
                 AppDelegate.CURRENT_PATCH = patchNumber!
             } else {
-                AppDelegate.CURRENT_PATCH = "8.18.1"
+                AppDelegate.CURRENT_PATCH = "9.1.1"
             }
         }
     }

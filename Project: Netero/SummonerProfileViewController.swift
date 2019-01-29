@@ -129,7 +129,7 @@ class SummonerProfileViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "matchesTableVCSegue" {
             let matchesTableVC = segue.destination as! MatchesTableViewController
-            matchesTableVC.accountId = summonerObject.integerValueForKey("accountId")
+            matchesTableVC.accountId = summonerObject.stringValueForKey("accountId")
             matchesTableVC.regionPlatform = regionPlatform
         }
     }

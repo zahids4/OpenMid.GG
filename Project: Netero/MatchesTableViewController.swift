@@ -11,7 +11,7 @@ import UIKit
 class MatchesTableViewController: UITableViewController {
     let communicator = Communicator()
     
-    var accountId: Int!
+    var accountId: String!
     var regionPlatform: String!
     var matchForCell = [String:Any]()
     var dataSource = [[String:Any]]()

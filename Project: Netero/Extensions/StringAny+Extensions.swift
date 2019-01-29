@@ -33,7 +33,7 @@ extension Dictionary where Key == String {
         return self[key] as! Array
     }
     
-    func id() -> Int {
-        return self["id"] as! Int
+    func id() -> String {
+        return self["id"] as! String
     }
 }

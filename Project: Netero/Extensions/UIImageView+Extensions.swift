@@ -22,9 +22,11 @@ extension UIImageView {
     }
     
     fileprivate func setImageWith(imageUrl: String) {
-        let url = URL(string: imageUrl)
-        let data = try? Data(contentsOf: url!)
-        self.image = UIImage(data: data!)
+        DispatchQueue.main.async {
+            let url = URL(string: imageUrl)
+            let data = try? Data(contentsOf: url!)
+            self.image = UIImage(data: data!)
+        }
     }
 
 }

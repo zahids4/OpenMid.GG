@@ -11,18 +11,20 @@ import UIKit
 class UtilityHelper {
     static func setChampionUIFrom(id: Int, _ championIconImage: UIImageView, _ championNameLabel: UILabel? = nil) {
         let communicator = Communicator()
-        communicator.getAllChampions() { allChampions, error in
-            if allChampions != nil {
-                for (key, value) in allChampions! {
-                    if Int((value as! [String:Any]).stringValueForKey("key")) == id {
-                        if championNameLabel != nil {
-                            championNameLabel?.text! = key.convertFromApiNameToChampionName().toSpaceSeperated
+        DispatchQueue.global(qos: .userInteractive).async {
+            communicator.getAllChampions() { allChampions, error in
+                if allChampions != nil {
+                    for (key, value) in allChampions! {
+                        if Int((value as! [String:Any]).stringValueForKey("key")) == id {
+                            if championNameLabel != nil {
+                                championNameLabel?.text! = key.convertFromApiNameToChampionName().toSpaceSeperated
+                            }
+                            championIconImage.setChampionIconWith(name: key)
                         }
-                        championIconImage.setChampionIconWith(name: key)
                     }
+                } else {
+                    print("An error occured: ", error as Any)
                 }
-            } else {
-                print("An error occured: ", error as Any)
             }
         }
     }

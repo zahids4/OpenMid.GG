@@ -23,6 +23,7 @@ class SummonerProfileViewController: UIViewController {
     
     var summonerObject: [String:Any]!
     var regionPlatform: String!
+    var stringifiedSummunorId: String!
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -56,8 +57,9 @@ class SummonerProfileViewController: UIViewController {
     
     fileprivate func getSummunorRankAttributes(_ summonerObject: [String:Any]) {
         let summonerId = summonerObject.id()
-        let stringifiedSummunorId = String(summonerId)
-        communicator.getCallForSummunorRank(regionPlatform, stringifiedSummunorId) { rankObjects, error in
+        stringifiedSummunorId = String(summonerId)
+        communicator.getCallForSummunorRank(regionPlatform, stringifiedSummunorId) {
+            rankObjects, error in
             if rankObjects != nil {
                 if (rankObjects?.isEmpty)! {
                     self.configureUIForUnrankedSummoner()
@@ -84,6 +86,7 @@ class SummonerProfileViewController: UIViewController {
     
     fileprivate func constructRankingAttributes(_ rankObjects: [[String : Any]]?) {
         for rankObject in rankObjects! {
+
             if rankObject.stringValueForKey("queueType") == ApiKeys.RANKED_SOLO {
                 let rank = rankObject.stringValueForKey("rank")
                 let tier = rankObject.stringValueForKey("tier")

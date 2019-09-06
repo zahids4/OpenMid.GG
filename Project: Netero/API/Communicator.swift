@@ -75,7 +75,7 @@ class Communicator {
     }
     
     func getCallForSummunorRank(_ region: String,_ summonerId: String,_ completionHandler: @escaping ([[String:Any]]?, Error?) -> ()) {
-        Alamofire.request("https://\(region).api.riotgames.com/lol/league/v4/positions/by-summoner/\(summonerId)?api_key=" + apiKey).validate().responseJSON { response in
+        Alamofire.request("https://\(region).api.riotgames.com/lol/league/v4/entries/by-summoner/\(summonerId)?api_key=" + apiKey).validate().responseJSON { response in
             switch response.result {
             case .success(let value):
                 completionHandler(value as? [[String:Any]], nil)

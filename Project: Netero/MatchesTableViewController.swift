@@ -22,6 +22,7 @@ class MatchesTableViewController: UITableViewController {
         tableView.addGradient()
         tableView.addBorder()
         getMatches()
+        self.tableView.estimatedRowHeight = 114.0
     }
     
     override func viewWillAppear(_ animated: Bool) {

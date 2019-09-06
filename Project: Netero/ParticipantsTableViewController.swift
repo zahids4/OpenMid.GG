@@ -31,6 +31,7 @@ class ParticipantsTableViewController: UITableViewController {
         createSummonerNamesArray()
         tableView.register(UINib(nibName: "TeamHeaderTableViewCell", bundle: nil), forCellReuseIdentifier: "teamHeader")
         didBlueTeamWin = dataSource.arrayOfStringAnyObjectForKey("blueTeam").first?.boolForKey("didWin")
+        self.tableView.estimatedRowHeight = 114.0
     }
     
     fileprivate func createDatasource(_ completionHandler: @escaping voidHandler) {
@@ -158,7 +159,7 @@ class ParticipantsTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "matchCell", for: indexPath) as! MatchTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "participantCell", for: indexPath) as! MatchTableViewCell
         var participant = [String:Any]()
         if indexPath.section == 0 {
             participant = dataSource.arrayOfStringAnyObjectForKey("blueTeam")[indexPath.row]
